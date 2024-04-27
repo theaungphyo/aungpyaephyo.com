@@ -12,10 +12,6 @@ export async function generateMetadata({ params: { slug } }: Props) {
 }
 export async function generateStaticParams() {
   const posts = getBlogPosts();
-  if (posts.length === 0)
-    return {
-      slug: null,
-    };
   return posts.map((post) => ({
     slug: post.slug,
   }));
