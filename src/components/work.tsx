@@ -23,11 +23,11 @@ const Work = () => {
                 <div>
                   <p className="text-[16px]">{experience.title}</p>
                 </div>
-                <span  className="text-sm">
+                <span className="text-sm">
                   {experience.durationStart} - {experience.durationEnd}
                 </span>
               </div>
-              <p className="text-[#646464] dark:text-[#b4b4b4] text-xs">{experience.company}</p>
+              <p className="text-xs text-[#646464] dark:text-[#b4b4b4]">{experience.company}</p>
             </div>
           </div>
         ))}
