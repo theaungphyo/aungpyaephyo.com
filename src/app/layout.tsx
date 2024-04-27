@@ -19,7 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Provider>
           <main
             className={cn(
-              'mx-auto flex min-h-screen w-full max-w-screen-md flex-col items-center justify-center px-4 py-7',
+              'mx-auto flex min-h-screen w-full max-w-screen-md flex-col items-center justify-center px-4 pb-9',
             )}
           >
             <Navigation />
