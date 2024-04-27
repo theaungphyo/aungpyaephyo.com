@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { blurDataImage } from '@/lib/utils'
 import Blogs from '@/components/blogs'
+import Projects from '@/components/projects'
 const Page = () => {
   return (
     <div>
@@ -28,7 +29,6 @@ const Page = () => {
             </p>
           </div>
         </div>
-
         <Image
           alt="Carlos Cuesta"
           src="/02.JPG"
@@ -39,7 +39,8 @@ const Page = () => {
           height={176}
         />
       </div>
-      <Blogs/>
+      <Blogs />
+      <Projects/>
     </div>
   )
 }

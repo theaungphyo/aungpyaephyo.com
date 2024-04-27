@@ -87,7 +87,6 @@
 .prose .anchor {
   @apply invisible absolute no-underline;
   cursor: pointer;
-
   margin-left: -1em;
   padding-right: 0.5em;
   width: 80%;
@@ -134,12 +133,12 @@
   @apply m-0;
 }
 
-.prose h1,
-h2,
-h3,
-h4 {
-  @apply font-medium tracking-tighter scroll-mt-[55px]  !important;
-}
+/*.prose h1,*/
+/*h2,*/
+/*h3,*/
+/*h4 {*/
+/*  @apply font-semibold tracking-tighter scroll-mt-[55px] !important;*/
+/*}*/
 
 .prose strong {
   @apply font-medium;

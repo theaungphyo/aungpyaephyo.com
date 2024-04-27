@@ -15,12 +15,40 @@ export const montserrat = Montserrat({
 });
 export const generateMetaData = () => {
   return {
+    metadataBase: new URL('https://aungpyaephyo.vercel.app'),
     title: {
-      default: "Aung Pyae Phyo",
-      template: "%s | Aung Pyae Phyo"
+      default: 'Aung Pyae Phyo',
+      template: '%s | Aung Pyae Phyo',
     },
-    description: "Expreienced Frontend Developer"
-  } as Metadata;
+    description: 'Developer, writer, and creator.',
+    openGraph: {
+      title: 'Aung Pyae Phyo',
+      description: 'Developer, writer, and creator.',
+      url: 'https://aungpyaephyo.vercel.app',
+      siteName: 'Aung Pyae Phyo',
+      locale: 'en_US',
+      type: 'website',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    twitter: {
+      title: 'Aung Pyae Phyo',
+      card: 'summary_large_image',
+    },
+    // verification: {
+    //   google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
+    //   yandex: '14d2e73487fa6c71',
+    // },
+} as Metadata;
 };
 export const formatDate = (date : string)=> moment(date).format('ll')
 

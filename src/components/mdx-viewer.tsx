@@ -200,7 +200,7 @@ const components: Record<string, React.ComponentType<any>> = {
   Table,
 };
 
-export async function MdxViewer(props: CustomMDXProps) {
+export function MdxViewer(props: CustomMDXProps) {
   return (
     <MDXRemote
       {...props}
