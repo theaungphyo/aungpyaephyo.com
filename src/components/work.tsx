@@ -12,9 +12,9 @@ const Work = () => {
             className="flex items-center gap-3 transition hover:!opacity-100 group-hover:opacity-50"
           >
             <Image
-              width={50}
-              height={50}
-              className="!h-[50px] !w-[50px] rounded"
+              width={45}
+              height={45}
+              className="rounded"
               src={experience.logo}
               alt="Frontend"
             />
@@ -23,11 +23,11 @@ const Work = () => {
                 <div>
                   <p className="text-[16px]">{experience.title}</p>
                 </div>
-                <span>
+                <span  className="text-sm">
                   {experience.durationStart} - {experience.durationEnd}
                 </span>
               </div>
-              <p className="text-[#646464] dark:text-[#b4b4b4]">{experience.company}</p>
+              <p className="text-[#646464] dark:text-[#b4b4b4] text-xs">{experience.company}</p>
             </div>
           </div>
         ))}

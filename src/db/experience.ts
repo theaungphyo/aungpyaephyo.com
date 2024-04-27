@@ -1,11 +1,11 @@
 const experiences = [
   {
     id: 1,
-    title: 'Full-Stack Developer',
+    title: 'Fullstack Developer',
     company: 'Freelance',
     description: 'I work at Freelance in Feb 1, 2023 as Full stack developer.',
     durationStart: 'Feb 2023',
-    durationEnd: 'Present',
+    durationEnd: 'Now',
     skills: [
       'Javascript',
       'Typescript',
