@@ -4,10 +4,6 @@ export const navigation_links = [
     href: '/',
   },
   {
-    title: 'work',
-    href: '/work',
-  },
-  {
     title: 'project',
     href: '/project',
   },
