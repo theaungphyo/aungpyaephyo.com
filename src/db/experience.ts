@@ -17,6 +17,7 @@ const experiences = [
       'MongoDB',
       'Postgresql',
     ],
+    logo: 'https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/company-logo/linkedin_3536505.png',
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const experiences = [
     durationStart: 'Nov 2023',
     durationEnd: 'Mar',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
+    logo: 'https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/company-logo/cropped-MML_icon-192x192.png',
   },
 ];
 export default experiences;

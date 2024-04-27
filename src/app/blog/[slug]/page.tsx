@@ -1,6 +1,7 @@
 import { getBlogPosts } from '@/db/blog';
 import { MdxViewer } from '@/components/mdx-viewer';
 import { formatDate } from '@/lib/utils';
+import { notFound } from 'next/navigation';
 // or Dynamic metadata
 interface Props {
   params: { slug: string };
@@ -18,7 +19,7 @@ export async function generateStaticParams() {
 }
 const Page = ({ params: { slug } }: Props) => {
   const blog = getBlogPosts().find((b) => b.slug === slug);
-  if (!blog) return null;
+  if (!blog) notFound();
   return (
     <div>
       <header className="mb-6 pb-4">

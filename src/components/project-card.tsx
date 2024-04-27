@@ -1,10 +1,11 @@
 import { ProjectType } from '@/types/projec.type';
 import { cn } from '@/lib/utils';
-import { Building, Calendar, ExternalLink } from 'lucide-react';
+import { Building, ExternalLink } from 'lucide-react';
+import SkillCard from '@/components/skill-card';
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
-    <li className=" border-neutral-150 grid gap-2.5 rounded-lg border p-4 transition-colors hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600">
+    <li className="border-neutral-150 grid gap-2.5 rounded-lg border p-4 transition-colors hover:border-neutral-400 dark:border-neutral-800 dark:hover:border-neutral-600">
       <p className="group flex cursor-pointer items-center gap-x-3 font-semibold">
         {project.title}{' '}
         {project.demo && (
@@ -24,17 +25,12 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
             <Building size={17} /> {project.made_at}{' '}
           </p>
         )}
-        <p className={cn('flex items-center gap-x-1 text-sm font-medium opacity-80')}>
-          <Calendar size={16} /> {project.year}
-        </p>
       </div>
+      <p className="text-sm opacity-80">{project.description}</p>
       <div className="flex items-center gap-2.5 text-sm">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
           {project.skills.split(',').map((p) => (
-            <span key={p} className="flex items-center gap-x-2 text-xs opacity-70">
-              {' '}
-              <span className="block size-2 rounded-full bg-black dark:bg-white"></span> {p}
-            </span>
+            <SkillCard key={p} skill={p} />
           ))}
         </div>
       </div>
