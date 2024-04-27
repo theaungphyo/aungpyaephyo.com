@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 export interface BaseProps {
-  children : ReactNode
+  children: ReactNode;
 }

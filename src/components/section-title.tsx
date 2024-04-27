@@ -1,11 +1,11 @@
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 type Props = {
-  title: string
-  href?: string
-  viewAll?: boolean
-}
+  title: string;
+  href?: string;
+  viewAll?: boolean;
+};
 
 const SectionTitle = (props: Props) => {
   if (props.href) {
@@ -13,7 +13,7 @@ const SectionTitle = (props: Props) => {
       <Link
         className={cn(
           props.viewAll ? 'flex' : 'inline-flex',
-          'items-center gap-3 my-6 justify-between group cursor-pointer',
+          'group my-6 cursor-pointer items-center justify-between gap-3',
         )}
         href={props.href}
       >
@@ -22,15 +22,15 @@ const SectionTitle = (props: Props) => {
         </h2>
 
         {props.viewAll && (
-          <span className="px-2 py-[3px] border text-center rounded-lg cursor-pointer text-xs bg-white dark:bg-neutral-900 dark:border-neutral-700">
+          <span className="cursor-pointer rounded-lg border bg-white px-2 py-[3px] text-center text-xs dark:border-neutral-700 dark:bg-neutral-900">
             View all →
           </span>
         )}
       </Link>
-    )
+    );
   }
 
-  return <h2 className="my-6 block text-lg font-bold">{props.title}</h2>
-}
+  return <h2 className="my-6 block text-lg font-bold">{props.title}</h2>;
+};
 
-export default SectionTitle
+export default SectionTitle;
