@@ -1,33 +1,18 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
 import { MoonIcon, SunIcon } from 'lucide-react';
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild className="border-none ring-0">
-        <button className="flex size-10 items-center justify-center rounded-full opacity-50 outline-none transition-opacity hover:opacity-100">
-          {theme === 'light' ? <SunIcon className="size-5" /> : <MoonIcon className="size-5" />}
-          <span className="sr-only">Toggle theme</span>
-        </button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
-          <DropdownMenuRadioItem value="light">Light</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="dark">Dark</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="system">Auto</DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <button
+      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      className="flex size-10 items-center justify-center rounded-full opacity-50 outline-none transition-opacity hover:opacity-100"
+    >
+      {theme === 'light' ? <SunIcon className="size-5" /> : <MoonIcon className="size-5" />}
+      <span className="sr-only">Toggle theme</span>
+    </button>
   );
 }
 

@@ -16,7 +16,7 @@ const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
 const Navigation = () => {
   const path = usePathname();
   return (
-    <div className="flex w-full items-center justify-between">
+    <div className="flex w-full items-center  justify-between py-5">
       <div className="flex items-center gap-x-5">
         {navigation_links.map((link) => (
           <Link

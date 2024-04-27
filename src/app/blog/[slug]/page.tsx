@@ -1,8 +1,26 @@
 import { getBlogPosts } from '@/db/blog';
 import { MdxViewer } from '@/components/mdx-viewer';
 import { formatDate } from '@/lib/utils';
-
-const Page = ({ params: { slug } }: { params: { slug: string } }) => {
+// or Dynamic metadata
+interface Props {
+  params: { slug: string };
+}
+export async function generateMetadata({ params: { slug } }: Props) {
+  return {
+    title: getBlogPosts().find((b) => b.slug === slug)?.metadata.title,
+  };
+}
+export async function generateStaticParams() {
+  const posts = getBlogPosts();
+  if (posts.length === 0)
+    return {
+      slug: null,
+    };
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+const Page = ({ params: { slug } }: Props) => {
   const blog = getBlogPosts().find((b) => b.slug === slug);
   if (!blog) return null;
   return (
