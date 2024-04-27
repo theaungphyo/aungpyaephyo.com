@@ -1,11 +1,11 @@
-import Projects from '@/components/projects'
+import Projects from '@/components/projects';
 
 const Page = () => {
   return (
     <div>
-      <Projects all/>
+      <Projects all />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

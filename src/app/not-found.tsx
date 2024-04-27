@@ -1,9 +1,9 @@
 const NotFound = () => {
   return (
-    <div className="flex-1  dark:text-white w-full flex flex-col justify-center items-center">
+    <div className="flex  w-full flex-1 flex-col items-center justify-center dark:text-white">
       404 | Page Not Found
     </div>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

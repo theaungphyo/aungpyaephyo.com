@@ -1,11 +1,11 @@
-import Blogs from '@/components/blogs'
+import Blogs from '@/components/blogs';
 
 const Page = () => {
   return (
     <div>
-      <Blogs all/>
+      <Blogs all />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
