@@ -4,7 +4,13 @@ import { ThemeProvider } from 'next-themes';
 
 const Provider = ({ children }: BaseProps) => {
   return (
-    <ThemeProvider storageKey="theme" attribute="class" defaultTheme="system" enableSystem>
+    <ThemeProvider
+      disableTransitionOnChange
+      storageKey="theme"
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+    >
       {children}
     </ThemeProvider>
   );

@@ -1,7 +1,7 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import { blurDataImage } from '@/lib/utils';
-
 const Hero = () => {
   return (
     <div className="flex justify-between gap-8 pb-5">
@@ -11,8 +11,8 @@ const Hero = () => {
           <span className="inline-block origin-[70%_70%] animate-wave">👋🏼</span>
         </h1>
 
-        <div className="grid gap-4">
-          <p className="sm:max-w-md">
+        <div className="grid gap-4 opacity-80">
+          <p className="sm:max-w-md ">
             {"I'm a Experienced Front-End Developer based in Mandalay, Myanmar. I"}{' '}
             <Link className="underline" href="https://github.com/aungpyaephyo1412">
               {' '}
@@ -28,7 +28,7 @@ const Hero = () => {
 
           <p className="sm:max-w-md">
             I love working in-between product, engineering and developer experience, currently at{' '}
-            <Link className="underline" href="https://walmal.com.mm">
+            <Link className="underline" href="https://walmal.vercel.app">
               walmal
             </Link>
             .

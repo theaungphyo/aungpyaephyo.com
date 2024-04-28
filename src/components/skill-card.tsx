@@ -60,6 +60,8 @@ export const IMAGE = (image: string) => {
       return MUI;
     case 'shadcnui':
       return ShadcnUI;
+    case 'radixui':
+      return ShadcnUI;
     case 'supabase':
       return SUPABase;
     case 'zod':

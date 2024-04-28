@@ -17,7 +17,7 @@ const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
 
 function Navigation() {
   return (
-    <aside className=" z-50 w-full bg-white py-5 tracking-tight dark:bg-[rgb(5,5,5)]">
+    <aside className="z-50 w-full py-5 tracking-tight">
       <div>
         <LayoutGroup>
           <nav
@@ -62,7 +62,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
       <span className=" px-4 py-1 text-sm capitalize">{name}</span>
       {path === pathname ? (
         <motion.div
-          className="absolute inset-0 z-[-1]  rounded-full  bg-neutral-100 from-transparent to-neutral-900 dark:bg-neutral-600 dark:bg-gradient-to-r"
+          className="absolute inset-0 z-[-1]  rounded-full  bg-neutral-200 bg-gradient-to-r from-transparent to-neutral-100 dark:bg-neutral-600 dark:bg-gradient-to-r dark:to-neutral-900"
           layoutId="sidebar"
           transition={{
             type: 'spring',

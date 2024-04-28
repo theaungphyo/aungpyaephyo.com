@@ -82,6 +82,9 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "wave": 'wave 1.2s ease infinite',
       },
+      backgroundImage : {
+        "bg-light" : "url('/bg.png')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate"),require('@tailwindcss/typography'),],

@@ -17,7 +17,7 @@ const BlogPost = ({ slug, title, publishedAt }: Props) => {
       <Link
         href={`/blog/${slug}`}
         title={title}
-        className="block h-full w-full rounded-md p-1.5 text-sm outline-none transition-all focus-within:bg-neutral-100 hover:bg-neutral-100 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500"
+        className="block h-full w-full rounded-md p-1.5 text-sm outline-none transition-all focus-within:bg-neutral-200 hover:bg-neutral-200 focus:ring-1 focus:ring-neutral-400 dark:focus-within:bg-neutral-900 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500"
       >
         <article className="flex flex-col-reverse sm:flex-row sm:items-baseline sm:gap-5">
           <time
