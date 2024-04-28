@@ -14,7 +14,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         suppressHydrationWarning
         className={cn(
           montserrat.className,
-          'bg-white text-neutral-800 dark:bg-[rgb(5,5,5)] dark:text-neutral-200 antialiased',
+          'bg-white text-neutral-800 antialiased dark:bg-[rgb(5,5,5)] dark:text-neutral-200',
         )}
       >
         <SpeedInsights />
