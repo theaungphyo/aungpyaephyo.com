@@ -17,7 +17,7 @@ const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
 
 function Navigation() {
   return (
-    <aside className="sticky top-0 z-50 w-full bg-white py-7 tracking-tight dark:bg-[rgb(5,5,5)]">
+    <aside className=" z-50 w-full bg-white py-5 tracking-tight dark:bg-[rgb(5,5,5)]">
       <div>
         <LayoutGroup>
           <nav
