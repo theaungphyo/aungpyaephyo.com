@@ -17,8 +17,8 @@ const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
 
 function Navigation() {
   return (
-    <aside className="w-full py-7 tracking-tight">
-      <div className="lg:sticky lg:top-20">
+    <aside className="w-full py-7 tracking-tight sticky top-0 z-50 dark:bg-[rgb(5,5,5)] bg-white">
+      <div>
         <LayoutGroup>
           <nav
             className="fade relative flex scroll-pr-6 flex-row items-start justify-between px-0 pb-0 md:relative md:overflow-auto"
@@ -53,26 +53,26 @@ function NavItem({ path, name }: { path: string; name: string }) {
       key={path}
       href={path}
       className={cx(
-        'flex align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200',
+        'relative flex align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200',
         {
           'text-neutral-500': !isActive,
         },
       )}
     >
-      <span className="relative px-2 py-1">
+      <span className=" px-4 text-sm py-1 capitalize">
         {name}
-        {path === pathname ? (
-          <motion.div
-            className="absolute inset-0 top-7 z-[-1] mx-2 h-[1px] bg-neutral-100 from-transparent to-neutral-900 dark:bg-neutral-600 dark:bg-gradient-to-r"
-            layoutId="sidebar"
-            transition={{
-              type: 'spring',
-              stiffness: 350,
-              damping: 30,
-            }}
-          />
-        ) : null}
       </span>
+      {path === pathname ? (
+        <motion.div
+          className="absolute rounded-full inset-0  z-[-1]  bg-neutral-100 from-transparent to-neutral-900 dark:bg-neutral-600 dark:bg-gradient-to-r"
+          layoutId="sidebar"
+          transition={{
+            type: 'spring',
+            stiffness: 350,
+            damping: 30,
+          }}
+        />
+      ) : null}
     </Link>
   );
 }

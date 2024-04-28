@@ -14,7 +14,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         suppressHydrationWarning
         className={cn(
           montserrat.className,
-          'bg-white text-neutral-800 dark:bg-[rgb(5,5,5)] dark:text-neutral-200',
+          'bg-white text-neutral-800 dark:bg-[rgb(5,5,5)] dark:text-neutral-200 antialiased',
         )}
       >
         <SpeedInsights />
@@ -26,7 +26,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             )}
           >
             <Navigation />
-            <section className="flex w-full flex-1 flex-col pt-8">{children}</section>
+            <section className="flex w-full flex-1 flex-col ">{children}</section>
           </main>
         </Provider>
       </body>

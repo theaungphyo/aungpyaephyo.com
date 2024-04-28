@@ -2,6 +2,7 @@ import { getBlogPosts } from '@/db/blog';
 import { MdxViewer } from '@/components/mdx-viewer';
 import { formatDate } from '@/lib/utils';
 import { notFound } from 'next/navigation';
+import moment from 'moment'
 // or Dynamic metadata
 interface Props {
   params: { slug: string };
@@ -27,8 +28,7 @@ const Page = ({ params: { slug } }: Props) => {
         <time className="text-sm opacity-70" dateTime="2021-05-03 22:00">
           {formatDate(blog.metadata.publishedAt)}
         </time>
-        {/*<span className="text-sm opacity-70 before:px-1 before:content-[&quot;•&quot;]">11 min read</span><span*/}
-        {/*  className="text-sm opacity-70 before:px-1 before:content-[&quot;•&quot;]">5,142 views</span>*/}
+        <span className="text-sm opacity-70 before:px-1 before:content-[&quot;•&quot;]">{moment(blog.metadata.publishedAt, "YYYYMMDD").fromNow()}</span>
       </header>
       <article className="prose prose-lg relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-img:rounded-lg">
         <MdxViewer source={blog.content} />
