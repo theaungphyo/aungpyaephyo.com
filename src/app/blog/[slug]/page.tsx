@@ -28,7 +28,7 @@ const Page = ({ params: { slug } }: Props) => {
         <time className="text-sm opacity-70" dateTime="2021-05-03 22:00">
           {formatDate(blog.metadata.publishedAt)}
         </time>
-        <span className='before:content-["•"] text-sm opacity-70 before:px-1'>
+        <span className='text-sm opacity-70 before:px-1 before:content-["•"]'>
           {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
         </span>
       </header>
