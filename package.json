@@ -16,8 +16,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "pnpm prettier:format",
-      "pnpm eslint:format"
+      "npm run format:fix"
     ]
   },
   "dependencies": {
