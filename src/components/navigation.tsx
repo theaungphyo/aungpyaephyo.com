@@ -1,5 +1,4 @@
 'use client';
-import { cn } from '@/lib/utils';
 import { LayoutGroup, motion } from 'framer-motion';
 import { SunIcon } from 'lucide-react';
 import dynamic from 'next/dynamic';
@@ -40,20 +39,24 @@ function Navigation() {
   );
 }
 
+let cx = (...classes: any[]) => classes.filter(Boolean).join(' ');
+
 function NavItem({ path, name }: { path: string; name: string }) {
   let pathname = usePathname() || '/';
   if (pathname.includes('/blog/')) {
     pathname = '/blog';
   }
-  const isActive = path === pathname;
+  let isActive = path === pathname;
 
   return (
     <Link
       key={path}
       href={path}
-      className={cn(
+      className={cx(
         'relative flex align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200',
-        isActive && 'text-neutral-500'
+        {
+          'text-neutral-500': !isActive,
+        }
       )}
     >
       <span className=' px-4 py-1 text-sm capitalize'>{name}</span>
