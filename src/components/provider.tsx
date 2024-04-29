@@ -6,9 +6,9 @@ const Provider = ({ children }: BaseProps) => {
   return (
     <ThemeProvider
       disableTransitionOnChange
-      storageKey="theme"
-      attribute="class"
-      defaultTheme="system"
+      storageKey='theme'
+      attribute='class'
+      defaultTheme='system'
       enableSystem
     >
       {children}

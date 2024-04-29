@@ -1,21 +1,34 @@
 'use client';
-import { ProjectType } from '@/types/projec.type';
-import Image from 'next/image';
 import SkillCard from '@/components/skill-card';
-import moment from 'moment/moment';
+import { cn } from '@/lib/utils';
+import { ProjectType } from '@/types/projec.type';
 import { Eye } from 'lucide-react';
-const ProjectCard = ({ project }: { project: ProjectType }) => {
+import moment from 'moment/moment';
+const ProjectCard = ({
+  project,
+  all,
+}: {
+  project: ProjectType;
+  all: boolean;
+}) => {
   return (
-    <div className="relative transition-opacity">
-      <div className="animated-list flex flex-row flex-wrap justify-between gap-2 transition hover:!opacity-100 group-hover:opacity-50">
-        <div className="flex flex-1 flex-col gap-3">
+    <div
+      className={cn(
+        'group relative block h-full w-full cursor-pointer rounded-md border border-transparent p-2 text-sm outline-none transition-all focus-within:bg-neutral-100 hover:border-gray-400 hover:bg-neutral-100 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:border-gray-800 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500  lg:px-4 lg:py-3 lg:hover:!opacity-100 lg:group-hover/list:opacity-50',
+        !all && 'bg-neutral-100 px-4 py-3 dark:bg-neutral-900'
+      )}
+    >
+      <div className='animated-list flex flex-row justify-between gap-2 transition hover:!opacity-100 group-hover:opacity-50'>
+        <div className='space-y-3'>
           <div>
-            <span className="w-32 text-[#646464] dark:text-[#b4b4b4]">{project.year}</span>
+            <span className='w-32 text-[#646464] dark:text-[#b4b4b4]'>
+              {project.year}
+            </span>
             <span className='text-sm opacity-70 before:px-1 before:content-["•"]'>
               {moment(project.year, 'YYYYMMDD').fromNow()}
             </span>
           </div>
-          <p className="max-sm:text-md flex items-center gap-x-3 font-semibold leading-tight transition dark:text-[#fff]">
+          <p className='max-sm:text-md flex items-center gap-x-3 font-semibold leading-tight transition dark:text-[#fff]'>
             {project.title}
             {project.demo && (
               <a href={project.demo} target={'_blank'} rel={'noreferrer'}>
@@ -23,21 +36,14 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
               </a>
             )}
           </p>
-          <div className="flex flex-wrap gap-3">
+          <p className='text-gray-800/55 dark:text-gray-100/55'>
+            [ {project.description} ]
+          </p>
+          <div className='flex flex-wrap gap-3'>
             {project.skills.split(',').map((skill) => (
               <SkillCard skill={skill} key={skill} />
             ))}
           </div>
-        </div>
-        <div className="relative mt-4 h-[150px] w-full overflow-hidden rounded md:mt-0 md:h-auto md:!w-[100px]">
-          <Image
-            priority
-            src={`https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
-            sizes={'500'}
-            alt={project.title}
-            fill
-            className=" !object-cover object-top"
-          />
         </div>
       </div>
     </div>

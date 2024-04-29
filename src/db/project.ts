@@ -53,7 +53,8 @@ export const projects = [
   {
     id: 6,
     title: 'MM Pad',
-    description: 'Developed the MMPad at Myanmar Media Linkage Company Limited in 2023.',
+    description:
+      'Developed the MMPad at Myanmar Media Linkage Company Limited in 2023.',
     demo: '',
     image: '1708971791352Screenshot from 2024-02-27 00-46-45.png',
     skills: 'Typescript,Next.js,NextAuth,Zod,ReactHookForm,RadixUI',

@@ -24,7 +24,8 @@ const experiences = [
     title: 'Frontend Developer',
     company: 'Myanmar Media Linkage',
     companyLink: 'https://mml.com.mm/',
-    description: 'I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer.',
+    description:
+      'I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer.',
     durationStart: 'Nov 2023',
     durationEnd: 'Mar',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],

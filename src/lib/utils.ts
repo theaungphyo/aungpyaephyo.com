@@ -1,8 +1,8 @@
-import { type ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { clsx, type ClassValue } from 'clsx';
+import moment from 'moment';
 import { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import moment from 'moment';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

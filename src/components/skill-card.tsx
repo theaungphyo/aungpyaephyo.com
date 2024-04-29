@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import {
   Express,
   Framer,
@@ -19,16 +18,17 @@ import {
   TS,
   ZOD,
 } from '@/images';
+import Image from 'next/image';
 
 const SkillCard = ({ skill }: { skill: string }) => {
   return (
-    <span className="flex items-center gap-x-2 text-xs opacity-70">
+    <span className='flex items-center gap-x-2 text-xs opacity-70'>
       <Image
         src={IMAGE(skill)}
         alt={skill}
         width={15}
         height={15}
-        className="rounded object-contain"
+        className='rounded object-contain'
       />{' '}
       {skill}
     </span>
