@@ -76,10 +76,17 @@ function CustomLink(props: CustomLinkProps) {
   }
 
   if (href.startsWith('#')) {
-    return <a {...props} />;
+    return <a {...props} aria-label={`link to ${props.href}`} />;
   }
 
-  return <a target='_blank' rel='noopener noreferrer' {...props} />;
+  return (
+    <a
+      target='_blank'
+      rel='noopener noreferrer'
+      {...props}
+      aria-label={`link to ${props.href}`}
+    />
+  );
 }
 
 function RoundedImage(props: RoundedImageProps) {
