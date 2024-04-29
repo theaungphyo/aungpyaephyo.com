@@ -12,7 +12,7 @@ const Projects = ({ all = false }: { all?: boolean }) => {
       {!all && <SectionTitle title={'Projects'} href={'/project'} viewAll />}
       <ul
         className={cn(
-          !all ? 'grid gap-7 lg:grid-cols-2' : 'group/list space-y-7 '
+          !all ? 'grid gap-7 lg:grid-cols-2' : 'group/list/node space-y-7 '
         )}
       >
         {allProjects.map((project) => (

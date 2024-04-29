@@ -14,8 +14,7 @@ const ProjectCard = ({
   return (
     <div
       className={cn(
-        'group relative block h-full w-full cursor-pointer rounded-md border border-transparent p-2 text-sm outline-none transition-all focus-within:bg-neutral-100 hover:border-gray-400 hover:bg-neutral-100 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:border-gray-800 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500  lg:px-4 lg:py-3 lg:hover:!opacity-100 lg:group-hover/list:opacity-50',
-        !all && 'bg-neutral-100 px-4 py-3 dark:bg-neutral-900'
+        'group relative block h-full w-full cursor-pointer rounded-md border border-transparent p-2 text-sm outline-none focus-within:bg-neutral-100 hover:border-gray-400 hover:bg-neutral-100 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:border-gray-600 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500  px-4 py-3 bg-neutral-100 dark:bg-neutral-900'
       )}
     >
       <div className='animated-list flex flex-row justify-between gap-2 transition hover:!opacity-100 group-hover:opacity-50'>
