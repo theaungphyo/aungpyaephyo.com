@@ -1,37 +1,53 @@
 import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
+import {
   Express,
   Framer,
   HookForm,
   JS,
-  Mogo,
+  MDX,
   MUI,
-  NextAuth,
+  Mogo,
   NEXTJS,
-  NextUi,
   NODEJS,
+  NextAuth,
+  NextUi,
   POSTGRES,
   REACT,
   Redux,
-  ShadcnUI,
   SUPABase,
-  Tail,
+  ShadcnUI,
   TS,
+  Tail,
   ZOD,
 } from '@/images';
 import Image from 'next/image';
 
 const SkillCard = ({ skill }: { skill: string }) => {
   return (
-    <span className='flex items-center gap-x-2 text-xs opacity-70'>
-      <Image
-        src={IMAGE(skill)}
-        alt={skill}
-        width={15}
-        height={15}
-        className='rounded object-contain'
-      />{' '}
-      {skill}
-    </span>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <span className='relative rounded overflow-hidden size-5'>
+            <Image
+              src={IMAGE(skill)}
+              alt={skill}
+              sizes={'15'}
+              className='rounded'
+              fill
+              priority
+            />
+          </span>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>{skill}</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 };
 export const IMAGE = (image: string) => {
@@ -76,6 +92,8 @@ export const IMAGE = (image: string) => {
       return Redux;
     case 'mongodb':
       return Mogo;
+    case 'mdx-remote':
+      return MDX;
     default:
       return TS;
   }

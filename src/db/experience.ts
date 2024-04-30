@@ -31,5 +31,26 @@ const experiences = [
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
     logo: 'https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/company-logo/cropped-MML_icon-192x192.png',
   },
+  {
+    id: 3,
+    title: 'Fullstack Developer',
+    company: 'Walmal Ecommerce',
+    description:
+      'I work at Freelance in April 1, 2024 as Full stack developer.',
+    durationStart: 'April 1',
+    durationEnd: 'Now',
+    skills: [
+      'Javascript',
+      'Typescript',
+      'React.js',
+      'Redux',
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Postgresql',
+    ],
+    logo: 'https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/company-logo/rsz_walmalpng%20(1).png',
+  },
 ];
 export default experiences;

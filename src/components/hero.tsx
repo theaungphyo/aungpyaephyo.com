@@ -16,13 +16,16 @@ const Hero = () => {
             {
               "I'm a Experienced Front-End Developer based in Mandalay, Myanmar. I"
             }{' '}
-            <Link
+            <a
+              target={'_blank'}
+              rel={'noreferrer'}
+              aria-label={'link'}
               className='underline'
               href='https://github.com/aungpyaephyo1412'
             >
               {' '}
               code{' '}
-            </Link>
+            </a>
             ,{' '}
             <Link className='underline' href={'/blog'}>
               {' '}
@@ -34,9 +37,15 @@ const Hero = () => {
           <p className='sm:max-w-md'>
             I love working in-between product, engineering and developer
             experience, currently at{' '}
-            <Link className='underline' href='https://walmal.vercel.app'>
+            <a
+              target={'_blank'}
+              rel={'noreferrer'}
+              aria-label={'link to walmal'}
+              className='underline'
+              href='https://walmal.vercel.app'
+            >
               walmal
-            </Link>
+            </a>
             .
           </p>
         </div>

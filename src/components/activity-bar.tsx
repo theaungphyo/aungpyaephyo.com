@@ -23,8 +23,8 @@ const ActivityBar = () => {
         blockSize={10}
         colorScheme={theme === 'light' ? 'light' : 'dark'}
         theme={{
-          dark: ['#57606a', '#9BE9A8', '#40C463', '#40C463', '#216E39'],
-          light: ['#EBEDF0', '#9BE9A8', '#40C463', '#40C463', '#216E39'],
+          dark: ['#57606a', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
+          light: ['#EBEDF0', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
         }}
       />
       <ScrollBar orientation={'horizontal'} />

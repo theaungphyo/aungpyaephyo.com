@@ -1,5 +1,4 @@
 'use client';
-import SkillCard from '@/components/skill-card';
 import { cn } from '@/lib/utils';
 import { ProjectType } from '@/types/projec.type';
 import { Eye } from 'lucide-react';
@@ -34,14 +33,14 @@ const ProjectCard = ({
             </a>
           )}
         </p>
-        <p className='text-gray-800/55 dark:text-gray-100/55'>
+        <p className='text-gray-800/80 dark:text-gray-300/55'>
           [ {project.description} ]
         </p>
-        <div className='flex flex-wrap gap-3'>
-          {project.skills.split(',').map((skill) => (
-            <SkillCard skill={skill} key={skill} />
-          ))}
-        </div>
+        {/*<div className='flex flex-wrap gap-3'>*/}
+        {/*  {project.skills.split(',').map((skill) => (*/}
+        {/*    <SkillCard skill={skill} key={skill} />*/}
+        {/*  ))}*/}
+        {/*</div>*/}
       </div>
     </div>
   );

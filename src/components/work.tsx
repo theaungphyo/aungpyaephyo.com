@@ -14,7 +14,7 @@ const Work = () => {
             <Image
               width={45}
               height={45}
-              className='rounded'
+              className='rounded object-cover'
               src={experience.logo}
               alt='Frontend'
             />

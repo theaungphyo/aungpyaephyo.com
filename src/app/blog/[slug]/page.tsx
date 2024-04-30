@@ -32,7 +32,7 @@ const Page = ({ params: { slug } }: Props) => {
           {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
         </span>
       </header>
-      <article className='prose prose-lg relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-img:rounded-lg'>
+      <article className='tracking-wide prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-img:rounded-lg'>
         <MdxViewer source={blog.content} />
       </article>
     </div>
