@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils';
 
 const Projects = ({ all = false }: { all?: boolean }) => {
   const allProjects = all
-    ? projects.sort((a, b) => b.year - a.year)
-    : projects.sort((a, b) => b.year - a.year).filter((p, index) => index < 4);
+    ? projects.sort((a, b) => b.id - a.id)
+    : projects.sort((a, b) => b.id - a.id).filter((p, index) => index < 4);
   return (
     <div className='pb-5'>
       {!all && <SectionTitle title={'Projects'} href={'/project'} viewAll />}
@@ -16,7 +16,7 @@ const Projects = ({ all = false }: { all?: boolean }) => {
         )}
       >
         {allProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} all={all} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </ul>
     </div>

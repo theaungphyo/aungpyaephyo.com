@@ -60,7 +60,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
       )}
     >
       <span className=' px-4 py-1 text-sm capitalize'>{name}</span>
-      {path === pathname ? (
+      {path === pathname && (
         <motion.div
           className='absolute inset-0 z-[-1]  rounded-full  bg-neutral-200 bg-gradient-to-r from-transparent to-neutral-100 dark:bg-neutral-600 dark:bg-gradient-to-r dark:to-neutral-900'
           layoutId='sidebar'
@@ -70,7 +70,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
             damping: 30,
           }}
         />
-      ) : null}
+      )}
     </Link>
   );
 }

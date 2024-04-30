@@ -1,15 +1,10 @@
 'use client';
 import { cn } from '@/lib/utils';
+import '@/styles/language.css';
 import { ProjectType } from '@/types/projec.type';
 import { Eye } from 'lucide-react';
 import moment from 'moment/moment';
-const ProjectCard = ({
-  project,
-  all,
-}: {
-  project: ProjectType;
-  all: boolean;
-}) => {
+const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
     <div
       className={cn(
@@ -34,13 +29,17 @@ const ProjectCard = ({
           )}
         </p>
         <p className='text-gray-800/80 dark:text-gray-300/55'>
-          [ {project.description} ]
+          {project.description}
         </p>
-        {/*<div className='flex flex-wrap gap-3'>*/}
-        {/*  {project.skills.split(',').map((skill) => (*/}
-        {/*    <SkillCard skill={skill} key={skill} />*/}
-        {/*  ))}*/}
-        {/*</div>*/}
+        <div className='flex items-center gap-1'>
+          <div
+            className={cn(
+              'h-2 w-2 rounded-full',
+              `language-project-${project.skill}`
+            )}
+          ></div>
+          <span className='opacity-70 capitalize'>{project.skill}</span>
+        </div>
       </div>
     </div>
   );
