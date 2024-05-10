@@ -52,10 +52,10 @@ const Hero = () => {
       </div>
       <Image
         alt='Carlos Cuesta'
-        src='/02.JPG'
+        src='/02.jpg'
         placeholder='blur'
         blurDataURL={blurDataImage}
-        className='hidden h-44 w-44 transform-gpu rounded object-cover object-bottom sm:block'
+        className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block'
         width={176}
         height={176}
       />
