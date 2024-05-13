@@ -55,7 +55,7 @@ const Hero = () => {
         src='/02.jpg'
         placeholder='blur'
         blurDataURL={blurDataImage}
-        className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block'
+        className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block object-bottom'
         width={176}
         height={176}
       />

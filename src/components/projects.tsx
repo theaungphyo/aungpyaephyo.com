@@ -16,7 +16,7 @@ const Projects = ({ all = false }: { all?: boolean }) => {
         )}
       >
         {allProjects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} all={all} />
         ))}
       </ul>
     </div>

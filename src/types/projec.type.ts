@@ -5,7 +5,7 @@ export const ProjectSchema = z.object({
   description: z.string().min(1),
   image: z.string().min(1),
   demo: z.string().nullish(),
-  skill: z.string().min(1),
+  skills: z.array(z.string()),
   year: z.number().min(1),
   made_at: z.string().nullish(),
   apk: z.string().nullish(),
