@@ -1,5 +1,5 @@
 'use client';
-import { cn } from '@/lib/utils';
+import {blurDataImage, cn} from '@/lib/utils';
 import '@/styles/language.css';
 import { ProjectType } from '@/types/projec.type';
 import { SquareArrowOutUpRight } from 'lucide-react';
@@ -27,6 +27,7 @@ const ProjectCard = ({
             fill
             priority
             className='object-cover object-left-top'
+            blurDataURL={blurDataImage}
           />
         </div>
       )}
