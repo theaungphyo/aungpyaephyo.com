@@ -11,7 +11,7 @@ const Page = () => {
         title={'Show my project'}
         description={'Open source and private contribution projects'}
       />
-      <Projects all />
+      <Projects />
     </div>
   );
 };

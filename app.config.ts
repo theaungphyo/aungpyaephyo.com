@@ -1,8 +1,8 @@
 export const navigation_links = [
-  // {
-  //   title: 'home',
-  //   href: '/',
-  // },
+  {
+    title: 'home',
+    href: '/',
+  },
   {
     title: 'about',
     href: '/about',

@@ -1,4 +1,5 @@
 import ConnectLinks from '@/components/connect-link';
+import Gallery from '@/components/gallery';
 import PageTitle from '@/components/page-title';
 import Section from '@/components/section';
 import Image from 'next/image';
@@ -8,11 +9,14 @@ const Page = () => {
   return (
     <div>
       <PageTitle title={'About'} description={'A glimpse into me.'} />
+      <div className='hidden md:block'>
+        <Gallery />
+      </div>
       <div className='w-full space-y-24'>
-        <div className='mb-8 relative flex'>
+        <div className='relative flex md:hidden'>
           <div className='animate-in '>
             <Image
-              src={'/about-1.JPG'}
+              src={'/about-4.jpg'}
               alt={'me and lily'}
               width={324}
               height={139}
@@ -30,22 +34,12 @@ const Page = () => {
               priority
             />
           </div>
-          <div className='animate-in '>
-            <Image
-              src={'/about-3.JPG'}
-              alt={'me and lily'}
-              width={324}
-              height={139}
-              className='pointer-events-none h-60 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md'
-              priority
-            />
-          </div>
         </div>
         <Section heading='About' headingAlignment='left'>
           <div className='flex flex-col gap-6'>
             <p>
               Hi, I&apos;m Aung Pyae Phyo, born in Kyaukse and raised in
-              Kyaukse, Texas. I have been coding for{' '}
+              Kyaukse, Mandalay, Myanmar. I have been coding for{' '}
               {new Date().getFullYear() - 2022} years. As a software Developer,
               I specialize in full-stack web development.
             </p>
