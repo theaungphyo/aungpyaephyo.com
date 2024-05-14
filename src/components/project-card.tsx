@@ -48,7 +48,10 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <div className='font-medium text-primary hover:underline'>
             {project.title}
           </div>
-          <time className='text-secondary'> · {project.year}</time>
+          <time className='text-neutral-500 dark:text-neutral-300'>
+            {' '}
+            · {project.year}
+          </time>
         </div>
 
         <p className='line-clamp-3 text-tertiary'>{project.description}</p>
