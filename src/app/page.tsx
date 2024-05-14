@@ -1,7 +1,6 @@
 import ActivityBar from '@/components/activity-bar';
 import Blogs from '@/components/blogs';
 import Hero from '@/components/hero';
-import Projects from '@/components/projects';
 import Work from '@/components/work';
 const Page = () => {
   return (
@@ -9,7 +8,6 @@ const Page = () => {
       <Hero />
       <Blogs />
       <Work />
-      <Projects />
       <ActivityBar />
     </div>
   );

@@ -1,14 +1,18 @@
 import Blogs from '@/components/blogs';
+import PageTitle from '@/components/page-title';
+import { getBlogPosts } from '@/db/blog';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Blog',
 };
 const Page = () => {
+  const blogs = getBlogPosts();
   return (
     <div>
-      <h1 className='mb-8 text-2xl font-medium tracking-tighter'>
-        Read my blog
-      </h1>
+      <PageTitle
+        title={'Read my blog'}
+        description={`${blogs.length} posts so far. Stay tuned for more!`}
+      />
       <Blogs all />
     </div>
   );

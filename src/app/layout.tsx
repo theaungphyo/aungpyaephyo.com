@@ -1,9 +1,11 @@
 import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
-import { cn, generateMetaData, montserrat } from '@/lib/utils';
+import { cn, generateMetaData } from '@/lib/utils';
 import '@/styles/app.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
 import { Metadata } from 'next';
 export const metadata: Metadata = generateMetaData();
 
@@ -11,11 +13,14 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html
+      lang='en'
+      suppressHydrationWarning
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+    >
       <body
         suppressHydrationWarning
         className={cn(
-          montserrat.className,
           'bg-white/50 text-neutral-800 antialiased dark:bg-[rgb(5,5,5)] dark:text-neutral-200'
         )}
       >

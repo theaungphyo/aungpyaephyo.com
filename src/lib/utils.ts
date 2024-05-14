@@ -1,18 +1,12 @@
 import { clsx, type ClassValue } from 'clsx';
 import moment from 'moment';
 import { Metadata } from 'next';
-import { Montserrat } from 'next/font/google';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-export const montserrat = Montserrat({
-  weight: ['300', '400', '500', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['Arial', 'sans-serif'],
-});
+
 export const generateMetaData = () => {
   return {
     metadataBase: new URL('https://aungpyaephyo.vercel.app'),

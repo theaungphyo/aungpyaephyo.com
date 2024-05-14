@@ -1,0 +1,18 @@
+const PageTitle = ({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) => {
+  return (
+    <div className='pb-8'>
+      <h1 className='animate-in text-3xl font-bold tracking-tight text-primary mb-2'>
+        {title}
+      </h1>
+      <p className='animate-in text-secondary-foreground/50'>{description}</p>
+    </div>
+  );
+};
+
+export default PageTitle;

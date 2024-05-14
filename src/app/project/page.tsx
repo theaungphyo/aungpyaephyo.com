@@ -1,3 +1,4 @@
+import PageTitle from '@/components/page-title';
 import Projects from '@/components/projects';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
@@ -6,9 +7,10 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <div>
-      <h1 className='mb-8 text-2xl font-medium tracking-tighter'>
-        My projects
-      </h1>
+      <PageTitle
+        title={'Show my project'}
+        description={'Open source and private contribution projects'}
+      />
       <Projects all />
     </div>
   );

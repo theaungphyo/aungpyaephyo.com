@@ -1,10 +1,9 @@
 'use client';
-import {blurDataImage, cn} from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import '@/styles/language.css';
 import { ProjectType } from '@/types/projec.type';
 import { SquareArrowOutUpRight } from 'lucide-react';
 import moment from 'moment/moment';
-import Image from 'next/image';
 const ProjectCard = ({
   project,
   all,
@@ -18,19 +17,6 @@ const ProjectCard = ({
         'relative size-full cursor-pointer rounded-md border border-transparent p-2 text-sm outline-none focus-within:bg-neutral-100 hover:border-gray-400 hover:bg-neutral-100 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:border-gray-600 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500  px-4 py-3 bg-neutral-100 dark:bg-neutral-900'
       )}
     >
-      {all && (
-        <div className='relative w-full h-[300px] mb-5 rounded overflow-hidden'>
-          <Image
-            src={`https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
-            alt={''}
-            sizes={'599'}
-            fill
-            priority
-            className='object-cover object-left-top'
-            blurDataURL={blurDataImage}
-          />
-        </div>
-      )}
       <div className='space-y-3'>
         <p className='max-sm:text-md w-full justify-between flex items-center gap-x-3 font-semibold leading-tight dark:text-[#fff]'>
           {project.title}

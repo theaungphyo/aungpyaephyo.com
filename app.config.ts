@@ -1,15 +1,19 @@
 export const navigation_links = [
+  // {
+  //   title: 'home',
+  //   href: '/',
+  // },
   {
-    title: 'home',
-    href: '/',
-  },
-  {
-    title: 'project',
-    href: '/project',
+    title: 'about',
+    href: '/about',
   },
   {
     title: 'blog',
     href: '/blog',
+  },
+  {
+    title: 'project',
+    href: '/project',
   },
 ];
 
