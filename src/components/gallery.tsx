@@ -1,5 +1,6 @@
 'use client';
 
+import { blurDataImage } from '@/lib/utils';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
@@ -79,6 +80,7 @@ function Photo({
       >
         <div className={shared} style={{ backfaceVisibility: 'hidden' }}>
           <Image
+            blurDataURL={blurDataImage}
             src={src}
             alt={alt}
             width={width}

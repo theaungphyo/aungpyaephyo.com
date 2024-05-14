@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           rel='noopener noreferrer'
           className='flex select-none overflow-clip rounded-lg border border-secondary bg-tertiary'
         >
-          <div className='w-full md:w-[150px] h-[100px] relative'>
+          <div className='w-full md:w-[150px] h-[120px] relative'>
             <Image
               src={`https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
               alt={project.title}
@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         </a>
       ) : (
         <div className='flex select-none overflow-clip rounded-lg border border-secondary bg-tertiary'>
-          <div className='w-full md:w-[150px] h-[100px] relative'>
+          <div className='w-full md:w-[150px] h-[120px] relative'>
             <Image
               src={`https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
               alt={project.title}

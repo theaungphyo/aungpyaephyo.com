@@ -2,6 +2,7 @@ import ConnectLinks from '@/components/connect-link';
 import Gallery from '@/components/gallery';
 import PageTitle from '@/components/page-title';
 import Section from '@/components/section';
+import { blurDataImage } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -16,6 +17,7 @@ const Page = () => {
         <div className='relative flex md:hidden'>
           <div className='animate-in '>
             <Image
+              blurDataURL={blurDataImage}
               src={'/about-4.jpg'}
               alt={'me and lily'}
               width={324}
@@ -26,7 +28,8 @@ const Page = () => {
           </div>
           <div className='animate-in'>
             <Image
-              src={'/about-2.JPG'}
+              blurDataURL={blurDataImage}
+              src={'/about-1.JPG'}
               alt={'me and lily'}
               width={220}
               height={240}
