@@ -1,6 +1,12 @@
 'use client';
-const Error = ({ error }: { error: Error }) => {
-  return <div>{error.message}</div>;
+const Error = () => {
+  return (
+    <div>
+      <div>
+        <p>Oh no, something went wrong... maybe refresh?</p>
+      </div>
+    </div>
+  );
 };
 
 export default Error;

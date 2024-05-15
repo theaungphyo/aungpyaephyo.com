@@ -1,4 +1,5 @@
 'use client';
+import SectionTitle from '@/components/section-title';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
@@ -17,7 +18,8 @@ const ActivityBar = () => {
     return null;
   }
   return (
-    <ScrollArea className='py-5'>
+    <ScrollArea className='py-8'>
+      <SectionTitle title={'My Github Activity'} />
       <GitHubCalendar
         username='aungpyaephyo1412'
         blockSize={10}

@@ -17,9 +17,20 @@ const variants = {
   },
 };
 
-const PageTransition = ({ children }: { children: ReactNode }) => (
+const PageTransition = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => (
   <AnimatePresence>
-    <motion.div initial='initial' animate='enter' variants={variants}>
+    <motion.div
+      initial='initial'
+      animate='enter'
+      variants={variants}
+      className={className}
+    >
       {children}
     </motion.div>
   </AnimatePresence>

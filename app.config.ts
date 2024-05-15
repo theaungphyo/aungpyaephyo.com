@@ -11,10 +11,10 @@ export const navigation_links = [
     title: 'blog',
     href: '/blog',
   },
-  {
-    title: 'project',
-    href: '/project',
-  },
+  // {
+  //   title: 'project',
+  //   href: '/project',
+  // },
 ];
 
 export const shortNames = {

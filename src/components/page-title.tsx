@@ -6,7 +6,7 @@ const PageTitle = ({
   description: string;
 }) => {
   return (
-    <div className='pt-8 pb-12'>
+    <div className='pb-12'>
       <h1 className='animate-in text-3xl font-bold tracking-tight text-primary mb-2'>
         {title}
       </h1>

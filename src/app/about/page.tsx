@@ -26,7 +26,7 @@ const Page = () => {
               priority
             />
           </div>
-          <div className='animate-in'>
+          <div className='animate-in mt-5'>
             <Image
               blurDataURL={blurDataImage}
               src={'/about-1.JPG'}
