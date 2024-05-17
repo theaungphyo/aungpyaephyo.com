@@ -1,76 +1,41 @@
 'use client';
-import { cn } from '@/lib/utils';
 import '@/styles/language.css';
 import { ProjectType } from '@/types/projec.type';
+import { Eye } from 'lucide-react';
 import Image from 'next/image';
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
-    <li
-      key={project.id}
-      className={cn(
-        'w-full flex flex-col gap-4 py-6 transition-opacity first:pt-0 last:pb-0 md:flex-row md:gap-6'
-      )}
-    >
-      {project.demo ? (
-        <a
-          href={`${project.demo}`}
-          target='_blank'
-          rel='noopener noreferrer'
-          className='flex select-none overflow-clip rounded-lg border border-secondary bg-tertiary'
-        >
-          <div className='w-full md:w-[150px] h-[120px] relative'>
+    <li className='w-full group rounded cursor-pointer hover:bg-sky-100 hover:dark:bg-slate-700 hover:!opacity-100 group-hover/projects:opacity-50'>
+      <div className='w-full px-2 lg:px-4 py-2 flex items-start gap-2 lg:gap-3'>
+        <div className='relative size-[56px] rounded'>
+          <div className='relative size-full'>
             <Image
-              src={`https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
-              alt={project.title}
               fill
               priority
-              sizes='599'
-              className='object-cover'
-            />
-          </div>
-        </a>
-      ) : (
-        <div className='flex select-none overflow-clip rounded-lg border border-secondary bg-tertiary'>
-          <div className='w-full md:w-[150px] h-[120px] relative'>
-            <Image
-              src={`https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
+              sizes={'56'}
+              src={project.image}
               alt={project.title}
-              fill
-              priority
-              sizes='599'
-              className='object-cover'
+              className='group-hover:drop-shadow rounded object-cover'
             />
           </div>
         </div>
-      )}
-      <div className='space-y-2 flex-1'>
-        <div className='flex gap-x-2'>
-          <div className='font-medium text-primary hover:underline'>
-            {project.title}
+        <div className='flex-1'>
+          <div className='flex items-center gap-x-2'>
+            <span className='text-[15px] font-bold text-black dark:text-slate-50 group-hover:underline'>
+              {project.title}
+            </span>
+            {project.demo && (
+              <a
+                target='_blank'
+                rel='noreferrer'
+                href={project.demo}
+                className='text-black dark:text-white transition-colors border border-transparent bg-sky-100 group-hover:border-slate-800/10 rounded-full px-1 dark:bg-slate-700 hover:dark:bg-slate-700 group-hover:dark:border-sky-100/10'
+              >
+                <Eye size={14} />
+              </a>
+            )}
           </div>
-          <time className='text-neutral-500 dark:text-neutral-300'>
-            {' '}
-            · {project.year}
-          </time>
-        </div>
-
-        <p className='line-clamp-3 text-tertiary'>{project.description}</p>
-        <div className='flex items-center'>
-          {project.skills.map((icon, index) => (
-            <div
-              key={index}
-              className='border border-white/[.2] rounded-full bg-neutral-300 dark:bg-black w-8 h-8 flex justify-center items-center relative overflow-hidden'
-              style={{
-                transform: `translateX(-${5 * index + 2}px)`,
-              }}
-            >
-              <img
-                src={`https://skillicons.dev/icons?i=${icon}`}
-                alt='icon5'
-                className='p-2 object-contain'
-              />
-            </div>
-          ))}
+          <p className='text-[13px]'>{project.description}</p>
         </div>
       </div>
     </li>

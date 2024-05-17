@@ -7,7 +7,7 @@ const Projects = () => {
 
   return (
     <div className='pb-5'>
-      <ul className={cn('group/list/node space-y-7 ')}>
+      <ul className={cn('group/projects space-y-1 ')}>
         {allProjects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
