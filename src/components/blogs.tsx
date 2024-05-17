@@ -10,18 +10,13 @@ const sort = (a: string, b: string) => {
   return 1;
 };
 const Blogs = ({ all = false }: { all?: boolean }) => {
-  const blogs = all
-    ? getBlogPosts().sort((a, b) =>
-        sort(a.metadata.publishedAt, b.metadata.publishedAt)
-      )
-    : getBlogPosts()
-        .sort((a, b) => sort(a.metadata.publishedAt, b.metadata.publishedAt))
-        .filter((b, i) => i < 8);
+  const blogs = getBlogPosts()
+    .sort((a, b) => sort(a.metadata.publishedAt, b.metadata.publishedAt))
+    .filter((b, i) => i < 8);
 
   const groupBlogs = groupBy(blogs, (blog) =>
     blog.metadata.publishedAt.substring(0, 4)
   );
-  console.log(groupBlogs);
   return (
     <div className='pb-5'>
       {!all && <SectionTitle title={'Writings'} href={'/blog'} viewAll />}
