@@ -18,19 +18,21 @@ const ActivityBar = () => {
     return null;
   }
   return (
-    <ScrollArea className='py-8'>
+    <div className='py-8'>
       <SectionTitle title={'My Github Activity'} />
-      <GitHubCalendar
-        username='aungpyaephyo1412'
-        blockSize={10}
-        colorScheme={theme === 'light' ? 'light' : 'dark'}
-        theme={{
-          dark: ['#57606a', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
-          light: ['#EBEDF0', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
-        }}
-      />
-      <ScrollBar orientation={'horizontal'} />
-    </ScrollArea>
+      <ScrollArea className='pb-3'>
+        <GitHubCalendar
+          username='aungpyaephyo1412'
+          blockSize={10}
+          colorScheme={theme === 'light' ? 'light' : 'dark'}
+          theme={{
+            dark: ['#57606a', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
+            light: ['#EBEDF0', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
+          }}
+        />
+        <ScrollBar orientation={'horizontal'} />
+      </ScrollArea>
+    </div>
   );
 };
 
