@@ -98,4 +98,15 @@ export const projects = [
     made_at: '',
     year: 2024,
   },
+  {
+    id: 10,
+    title: 'Walmal Ecommerce',
+    demo: 'https://walmal.vercel.app',
+    image: 'https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9',
+    skills: ['js', 'react', 'redux', 'php', 'laravel', 'mysql'],
+    made_at: 'Walmal Shopping',
+    year: 2024,
+    description:
+      'Walmart.com.mm is a robust e-commerce platform built with TypeScript, Next.js, Redux, Node.js, Express.js, PostgreSQL, and hosted on Vercel, ensuring a fast, scalable, and seamless online shopping experience.',
+  },
 ];

@@ -35,7 +35,9 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
               </a>
             )}
           </div>
-          <p className='text-[13px] pt-1'>{project.description}</p>
+          <p className='text-[13px] pt-1 text-secondary-foreground/60'>
+            {project.description}
+          </p>
         </div>
       </div>
     </li>
