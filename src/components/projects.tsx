@@ -14,7 +14,7 @@ const Projects = () => {
         .map(([year, posts]) => (
           <Fragment key={year}>
             <GroupTitle name={year} />
-            <ul className={cn('group/projects space-y-1 mb-5 ')}>
+            <ul className={cn('group/projects space-y-5 mb-5 ')}>
               {posts
                 .sort((a, b) => a.title.localeCompare(b.title))
                 .map((project) => (

@@ -4,3 +4,14 @@ publishedAt: '2024-05-20'
 ---
 
 ### Hello World
+
+<Code filename='hello.tsx'>
+  {`
+'use server';
+export const getData = async () => {
+    const response = await fetch('https://yourapi.com/api/route');
+    if (!response.ok) throw new Error('Server Error');
+    return await response.json();
+};
+`}
+</Code>

@@ -16,8 +16,10 @@ export const navigation_links = [
     href: '/project',
   },
 ];
-
-export const shortNames = {
+type ShortNameOBJ = {
+  [key: string]: string;
+};
+export const shortNames: ShortNameOBJ = {
   js: 'javascript',
   ts: 'typescript',
   py: 'python',

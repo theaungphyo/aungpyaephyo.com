@@ -133,15 +133,16 @@
 }
 
 .prose pre {
-  @apply overflow-x-auto rounded-lg border border-neutral-900 bg-[#282C34];
+  @apply overflow-x-auto rounded-none rounded-b-lg  bg-[#282C34] mt-0;
 }
 
 .prose code {
-  @apply rounded-lg px-1 py-0.5;
+  @apply rounded-b-lg;
+  /*px-1 py-0.5*/
 }
 
 .prose pre code {
-  @apply p-0;
+  @apply p-0 mt-0;
   border: initial;
   line-height: 1.5;
 }
@@ -155,12 +156,12 @@
   @apply m-0;
 }
 
-/*.prose h1,*/
-/*h2,*/
-/*h3,*/
-/*h4 {*/
-/*  @apply font-semibold tracking-tighter scroll-mt-[55px] !important;*/
-/*}*/
+.prose h1,
+h2,
+h3,
+h4 {
+  @apply font-semibold tracking-tighter scroll-mt-[55px] !important;
+}
 
 .prose strong {
   @apply font-medium;

@@ -1,9 +1,9 @@
+import CodeBlock from '@/components/code-block';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { highlight } from 'sugar-high';
-
 interface TableProps {
   data: {
     headers: string[];
@@ -205,6 +205,7 @@ const components: Record<string, React.ComponentType<any>> = {
   ConsCard,
   code: Code,
   Table,
+  Code: CodeBlock,
 };
 
 export function MdxViewer(props: CustomMDXProps) {

@@ -67,7 +67,9 @@ const Page = () => {
                 className='group lg:hover:!opacity-100 lg:group-hover/link:opacity-50 transition-all col-span-1'
                 key={link.label}
               >
-                <Link
+                <a
+                  rel='noreferrer'
+                  target={'_blank'}
                   href={link.href}
                   className='inline-grid w-full rounded-lg bg-[#F9F9F9] dark:bg-[#191919] p-4 no-underline transition-opacity '
                 >
@@ -87,7 +89,7 @@ const Page = () => {
                       />
                     </svg>
                   </div>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

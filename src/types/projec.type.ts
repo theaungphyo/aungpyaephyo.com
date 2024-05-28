@@ -9,5 +9,6 @@ export const ProjectSchema = z.object({
   year: z.number().min(1),
   made_at: z.string().nullish(),
   apk: z.string().nullish(),
+  github: z.string().optional(),
 });
 export type ProjectType = z.infer<typeof ProjectSchema>;
