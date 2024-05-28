@@ -18,7 +18,7 @@ const CodeBlock = ({
     if (copy) {
       const timeOutId = setTimeout(() => {
         setCopy(false);
-      }, 5000);
+      }, 2000);
 
       return () => {
         clearTimeout(timeOutId);

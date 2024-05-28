@@ -21,29 +21,6 @@ const ConnectLinks: ConnectLink[] = [
     ),
   },
   {
-    label: 'CV',
-    href: 'https://cv-aungpyaephyo.vercel.app',
-    icon: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        fill='none'
-        stroke='currentColor'
-        strokeWidth='2'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        className='lucide lucide-app-window size-4'
-      >
-        <rect x='2' y='4' width='20' height='16' rx='2'></rect>
-        <path d='M10 4v4'></path>
-        <path d='M2 8h20'></path>
-        <path d='M6 4v4'></path>
-      </svg>
-    ),
-  },
-  {
     label: 'Instagram',
     href: 'https://www.instagram.com/aungpyaephyo1412/',
     icon: (
@@ -62,7 +39,7 @@ const ConnectLinks: ConnectLink[] = [
   },
   {
     label: 'Twitter',
-    href: 'https://twitter.com/aungpyaephyo1412',
+    href: 'https://twitter.com/typle_x',
     icon: (
       <svg
         xmlns='http://www.w3.org/2000/svg'
@@ -73,23 +50,6 @@ const ConnectLinks: ConnectLink[] = [
         <path
           fill='currentColor'
           d='M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07l-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z'
-        ></path>
-      </svg>
-    ),
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/aungpyaephyo1412/',
-    icon: (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='1em'
-        height='1em'
-        viewBox='0 0 24 24'
-      >
-        <path
-          fill='currentColor'
-          d='M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z'
         ></path>
       </svg>
     ),

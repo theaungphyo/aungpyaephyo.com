@@ -48,6 +48,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
               variant='secondary'
               key={tag}
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://skillicons.dev/icons?i=${tag}&theme=${theme}`}
                 alt={'icon'}
