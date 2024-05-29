@@ -1,6 +1,6 @@
 import GroupTitle from '@/components/group-title';
-import ProjectCard from '@/components/project-card';
-import { projects } from '@/db/project';
+import ProjectCard from '@/components/project/project-card';
+import projects from '@/db/project-data';
 import groupBy from '@/lib/group-by';
 import { cn } from '@/lib/utils';
 import { Fragment } from 'react';

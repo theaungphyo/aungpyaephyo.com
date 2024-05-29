@@ -1,7 +1,7 @@
-import ActivityBar from '@/components/activity-bar';
-import Blogs from '@/components/blogs';
-import Hero from '@/components/hero';
-import Work from '@/components/work';
+import Blogs from '@/components/blog/blogs';
+import ActivityBar from '@/components/home/activity-bar';
+import Hero from '@/components/home/hero';
+import Work from '@/components/home/work';
 const Page = () => {
   return (
     <div>

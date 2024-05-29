@@ -1,4 +1,4 @@
-import { MdxViewer } from '@/components/mdx-viewer';
+import { MdxViewer } from '@/components/blog/mdx-viewer';
 import { getBlogPosts } from '@/db/blog';
 import { formatDate } from '@/lib/utils';
 import moment from 'moment';

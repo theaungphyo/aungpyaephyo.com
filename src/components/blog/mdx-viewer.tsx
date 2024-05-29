@@ -1,4 +1,4 @@
-import CodeBlock from '@/components/code-block';
+import CodeBlock from '@/components/blog/code-block';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';

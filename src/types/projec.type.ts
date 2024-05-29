@@ -1,14 +1,17 @@
-import { z } from 'zod';
-export const ProjectSchema = z.object({
-  id: z.number().min(1),
-  title: z.string().min(1),
-  description: z.string().min(1),
-  image: z.string().min(1),
-  demo: z.string().nullish(),
-  skills: z.array(z.string()),
-  year: z.number().min(1),
-  made_at: z.string().nullish(),
-  apk: z.string().nullish(),
-  github: z.string().optional(),
-});
-export type ProjectType = z.infer<typeof ProjectSchema>;
+import type { ReactNode } from 'react';
+
+type skill = {
+  name: string;
+  icon: ReactNode;
+};
+export type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  demo?: string;
+  skills: skill[];
+  year: number;
+  made_at?: string;
+  github?: string;
+};

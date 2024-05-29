@@ -9,8 +9,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "eslint:format": "eslint src --fix",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check --ignore-path .gitignore '**/*.ts' '**/*.tsx'",
+    "format:fix": "prettier --write --ignore-path .gitignore '**/*.ts' '**/*.tsx'",
     "prepare": "husky"
   },
   "lint-staged": {

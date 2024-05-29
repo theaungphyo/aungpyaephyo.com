@@ -1,4 +1,4 @@
-import Blogs from '@/components/blogs';
+import Blogs from '@/components/blog/blogs';
 import PageTitle from '@/components/page-title';
 import { getBlogPosts } from '@/db/blog';
 import { Metadata } from 'next';

@@ -1,4 +1,4 @@
-import BlogPost from '@/components/blog-post';
+import BlogPost from '@/components/blog/blog-post';
 import GroupTitle from '@/components/group-title';
 import SectionTitle from '@/components/section-title';
 import { getBlogPosts } from '@/db/blog';

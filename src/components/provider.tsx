@@ -1,4 +1,5 @@
 'use client';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { BaseProps } from '@/types/base';
 import { ThemeProvider } from 'next-themes';
 
@@ -11,7 +12,7 @@ const Provider = ({ children }: BaseProps) => {
       defaultTheme='system'
       enableSystem
     >
-      {children}
+      <TooltipProvider>{children}</TooltipProvider>
     </ThemeProvider>
   );
 };

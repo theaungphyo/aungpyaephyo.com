@@ -5,91 +5,99 @@ publishedAt: '2023-12-20'
 
 ## Step 1: Create a New Next.js Project
 
-```shell
-pnpm create next-app --typescript
-```
+<Code filename='terminal'>
+  {`
+    pnpm create next-app --typescript
+    `}
+</Code>
 
 ## Step 2: Install Prettier
 
-```shell
-pnpm add -D prettier@2.8.8
-```
+<Code filename='terminal'>{`pnpm add -D prettier@2.8.8`}</Code>
 
 ## Step 3: Set up Prettier and ESLint without Conflicts
 
-```shell
-pnpm add -D eslint-config-prettier
-```
+<Code filename='terminal'>{`pnpm add -D eslint-config-prettier`}</Code>
 
-.eslintrc.jsonon or .eslintrc.jsononon
+.eslintrc.json or .eslintrc.json
 
-```json
-{
-  "extends": ["next", "prettier"]
-}
-```
+<Code filename='.eslintrc.json or .eslintrc.json'>
+  {`
+    { "extends": ["next", "prettier"] }
+    `}
+</Code>
 
 ## Step 4: Install and Configure Tailwind CSS
 
-```shell
+<Code filename="terminal">
+    {`
 pnpm add -D tailwindcss postcss autoprefixer
 
 pnpm tailwindcss init -p
-```
+`}
 
-tailwind.config.j
+</Code>
 
-```js
+<Code filename="tailwind.config.ts">
+    {`
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
 
-    // Or if using \`src\` directory:
-    './src/**/*.{js,ts,jsx,tsx}',
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+        // Or if using \`src\` directory:
+        './src/**/*.{js,ts,jsx,tsx}',
+      ],
+      theme: {
+        extend: {},
+      },
+      plugins: [],
+
 };
-```
+`}
+
+</Code>
 
 global.css
 
-```css
-@tailwind base;
+<Code filename='global.css'>
+  {`
+    @tailwind base;
 @tailwind components;
 @tailwind utilities;
-```
+    `}
+</Code>
 
 ## Step 6: Automatically Sort Tailwind Classes with Prettier
 
-```shell
-pnpm add -D prettier-plugin-tailwindcss
+<Code filename="terminal">
+    {`
+    pnpm add -D prettier-plugin-tailwindcss
 
 touch .prettierrc.json
-```
+`}
 
-.prettierrc.json
+</Code>
 
-```json
-{
-  "trailingComma": "es5",
-  "semi": true,
-  "tabWidth": 2,
-  "singleQuote": true,
-  "jsxSingleQuote": true,
-  "plugins": ["prettier-plugin-tailwindcss"]
-}
-```
+<Code filename='.prettierrc.json'>
+  {`
+"trailingComma": "es5",
+"semi": true,
+"tabWidth": 2,
+"singleQuote": true,
+"jsxSingleQuote": true,
+"plugins": ["prettier-plugin-tailwindcss"]
+    `}
+</Code>
 
 ## Step 7: Configure scripts
 
-```json
-"scripts" : {
+<Code filename='package.json'>
+  {`
+    "scripts" : {
      "format": "prettier --check --ignore-path .gitignore .",
      "format:fix": "prettier --write --ignore-path .gitignore ."
 }
-```
+    `}
+</Code>
