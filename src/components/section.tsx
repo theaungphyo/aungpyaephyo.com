@@ -17,7 +17,7 @@ export default function Section({
   invert = false,
 }: SectionProps) {
   return (
-    <section className='col-reverse flex flex-col gap-2 md:flex-row md:gap-9'>
+    <section className='col-reverse flex flex-col gap-5 md:flex-row md:gap-9'>
       <h2
         className={clsx(
           'shrink-0 md:w-32',

@@ -11,7 +11,7 @@ const Skills = () => {
             <li className={'block'} key={skill.name}>
               <span
                 className={cn(
-                  'text-xs font-semibold font-mono bg-[#F9F9F9] dark:bg-[#191919] px-2 py-1 border rounded flex justify-center items-center gap-x-2'
+                  'text-xs font-semibold font-mono bg-[#F9F9F9] dark:bg-[#191919] px-2 py-1 border rounded flex justify-center items-center gap-x-1'
                 )}
               >
                 <div className='size-4 project-card grid items-center'>

@@ -12,7 +12,7 @@ const Page = () => {
       <div className='hidden md:block'>
         <Gallery />
       </div>
-      <div className='w-full space-y-24'>
+      <div className='w-full space-y-12'>
         <Hero />
         <Connect />
         <Skills />
