@@ -51,13 +51,13 @@ const Hero = () => {
         </div>
       </div>
       <Image
-        alt='Carlos Cuesta'
-        src='/02.jpg'
+        alt='Aung Pyae Phyo'
+        src='/HERO.png'
         placeholder='blur'
         blurDataURL={blurDataImage}
-        className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block object-bottom'
-        width={176}
-        height={176}
+        className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block bg-neutral-300 dark:bg-neutral-800'
+        width={180}
+        height={180}
       />
     </div>
   );

@@ -16,7 +16,7 @@ const Projects = () => {
             <GroupTitle name={year} />
             <ul className={cn('group/projects space-y-5 mb-5 ')}>
               {posts
-                .sort((a, b) => a.title.localeCompare(b.title))
+                .sort((a, b) => b.id - a.id)
                 .map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}
