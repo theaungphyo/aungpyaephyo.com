@@ -7,16 +7,19 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistMono } from 'geist/font/mono';
 import { GeistSans } from 'geist/font/sans';
 import { Metadata } from 'next';
+import localFont from 'next/font/local';
+import { ReactNode } from 'react';
 export const metadata: Metadata = generateMetaData();
+const GUGI = localFont({ src: './gugi.ttf', variable: '--font-gugi' });
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html
       lang='en'
       suppressHydrationWarning
-      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      className={cn(GeistSans.variable, GeistMono.variable, GUGI.variable)}
     >
       <body
         suppressHydrationWarning

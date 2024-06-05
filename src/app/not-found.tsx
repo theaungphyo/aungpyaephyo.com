@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 const NotFound = () => {
   return (
-    <div className='flex  w-full flex-1 flex-col items-center justify-center dark:text-white'>
-      <div className='max-w-2xl mx-auto'>
+    <div className='flex  w-full flex-1 flex-col  justify-center dark:text-white'>
+      <div className='max-w-2xl'>
         <h1 className='text-4xl font-bold'>404 - Page Not Found</h1>
         <p>
           Maybe you misspelled the link. Maybe something existed here, or it

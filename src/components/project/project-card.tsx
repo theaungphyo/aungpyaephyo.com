@@ -31,8 +31,8 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
         <div className='flex flex-wrap gap-2'>
           {project.skills.map((tag) => (
             <Badge
-              className='p-1 gap-3 rounded-md shadow'
-              variant='secondary'
+              className='p-1 gap-1 rounded-md shadow'
+              variant='outline'
               key={tag.name}
             >
               <div className={'size-3 grid items-center project-icon'}>
