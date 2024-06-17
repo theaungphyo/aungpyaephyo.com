@@ -1,24 +1,36 @@
 import GroupTitle from '@/components/group-title';
-import ProjectCard from '@/components/project/project-card';
-import projects from '@/db/project-data';
+import ViewLink from '@/components/view-link';
+import { getProjects } from '@/db/blog';
 import groupBy from '@/lib/group-by';
-import { cn } from '@/lib/utils';
+import { cn, sort } from '@/lib/utils';
 import { Fragment } from 'react';
 
 const Projects = () => {
-  const allProjects = groupBy(projects, (project) => project.year);
+  const projects = getProjects().sort((a, b) =>
+    sort(a.metadata.publishedAt, b.metadata.publishedAt)
+  );
+
+  const groupProjects = groupBy(projects, (projects) =>
+    projects.metadata.publishedAt.substring(0, 4)
+  );
   return (
     <div className='pb-5'>
-      {Object.entries(allProjects)
+      {Object.entries(groupProjects)
         .sort(([yearA], [yearB]) => Number(yearB) - Number(yearA))
         .map(([year, posts]) => (
           <Fragment key={year}>
             <GroupTitle name={year} />
             <ul className={cn('group/projects space-y-5 mb-5 ')}>
               {posts
-                .sort((a, b) => b.id - a.id)
+                .sort((a, b) => +b.metadata.id - +a.metadata.id)
                 .map((project) => (
-                  <ProjectCard key={project.id} project={project} />
+                  <ViewLink
+                    key={project.slug}
+                    basePath={'project'}
+                    slug={project.slug}
+                    title={project.metadata.title}
+                    publishedAt={project.metadata.publishedAt}
+                  />
                 ))}
             </ul>
           </Fragment>

@@ -1,8 +1,10 @@
 import fs from 'fs';
 import path from 'path';
 export type Metadata = {
+  id: string;
   title: string;
   publishedAt: string;
+  description: string;
 };
 
 function parseFrontmatter(fileContent: string) {
@@ -45,5 +47,9 @@ function getMDXData(dir: string) {
 }
 
 export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), 'src/content'));
+  return getMDXData(path.join(process.cwd(), 'src/content/blog'));
+}
+
+export function getProjects() {
+  return getMDXData(path.join(process.cwd(), 'src/content/project'));
 }

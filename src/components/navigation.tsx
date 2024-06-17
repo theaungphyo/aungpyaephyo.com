@@ -46,6 +46,9 @@ function NavItem({ path, name }: { path: string; name: string }) {
   if (pathname.includes('/blog/')) {
     pathname = '/blog';
   }
+  if (pathname.includes('/project/')) {
+    pathname = '/project';
+  }
   let isActive = path === pathname;
 
   return (
@@ -53,7 +56,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
       key={path}
       href={path}
       className={cx(
-        'relative flex align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200',
+        'relative flex align-middle  hover:text-neutral-800 dark:hover:text-neutral-200',
         {
           'text-neutral-500': !isActive,
         }

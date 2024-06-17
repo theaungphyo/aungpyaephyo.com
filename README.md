@@ -1,1 +1,1 @@
-<img src="public/demo.png" alt="demo">
+<img src="src/app/opengraph-image.png" alt="demo">

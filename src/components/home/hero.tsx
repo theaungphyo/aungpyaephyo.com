@@ -37,15 +37,13 @@ const Hero = () => {
           <p className='sm:max-w-md'>
             I love working in-between product, engineering and developer
             experience, currently at{' '}
-            <a
-              target={'_blank'}
+            <span
               rel={'noreferrer'}
               aria-label={'link to walmal'}
               className='underline'
-              href='https://walmal.vercel.app'
             >
-              walmal
-            </a>
+              Freelance
+            </span>
             .
           </p>
         </div>

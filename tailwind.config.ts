@@ -83,7 +83,7 @@ const config = {
         wave: 'wave 1.2s ease infinite',
       },
       backgroundImage: {
-        'bg-light': "url('/bg.png')",
+        hero: "url('/bg.png')",
       },
       fontFamily: {
         space: ["var('--font-space')"],

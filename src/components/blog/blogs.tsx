@@ -1,15 +1,11 @@
-import BlogPost from '@/components/blog/blog-post';
 import GroupTitle from '@/components/group-title';
 import SectionTitle from '@/components/section-title';
+import ViewLink from '@/components/view-link';
 import { getBlogPosts } from '@/db/blog';
 import groupBy from '@/lib/group-by';
+import { sort } from '@/lib/utils';
 import { Fragment } from 'react';
-const sort = (a: string, b: string) => {
-  if (new Date(a) > new Date(b)) {
-    return -1;
-  }
-  return 1;
-};
+
 const Blogs = ({ all = false }: { all?: boolean }) => {
   const blogs = getBlogPosts()
     .sort((a, b) => sort(a.metadata.publishedAt, b.metadata.publishedAt))
@@ -24,7 +20,8 @@ const Blogs = ({ all = false }: { all?: boolean }) => {
       {!all && (
         <ul className='space-y-3 sm:space-y-1'>
           {blogs.map((blog) => (
-            <BlogPost
+            <ViewLink
+              basePath={'blog'}
               key={blog.slug}
               slug={blog.slug}
               title={blog.metadata.title}
@@ -41,7 +38,8 @@ const Blogs = ({ all = false }: { all?: boolean }) => {
               <GroupTitle name={year} />
               <ul className='space-y-3 sm:space-y-1 mb-5'>
                 {posts.map((blog) => (
-                  <BlogPost
+                  <ViewLink
+                    basePath={'blog'}
                     key={blog.slug}
                     slug={blog.slug}
                     title={blog.metadata.title}
