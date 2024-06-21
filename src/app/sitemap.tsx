@@ -2,11 +2,11 @@ import { getBlogPosts, getProjects } from '@/db/blog';
 
 export default async function sitemap() {
   const blogs = getBlogPosts().map((post) => ({
-    url: `https://aungpyaephyo.vercel.app//blog/${post.slug}`,
+    url: `https://aungpyaephyo.vercel.app/blog/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }));
   const projects = getProjects().map((post) => ({
-    url: `https://aungpyaephyo.vercel.app//project/${post.slug}`,
+    url: `https://aungpyaephyo.vercel.app/project/${post.slug}`,
     lastModified: post.metadata.publishedAt,
   }));
   const routes = ['', '/work', '/blog', '/project'].map((route) => ({

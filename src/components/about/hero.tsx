@@ -41,7 +41,7 @@ const Hero = () => {
           <p>
             In addition to coding, I create content on my{' '}
             <Link className='underline' href={'/blog'}>
-              Blog
+              blog
             </Link>{' '}
             , covering all things technology, coding vlogs, and personal
             development.
