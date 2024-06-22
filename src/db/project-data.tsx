@@ -366,7 +366,7 @@ const projects = [
   },
   {
     id: 10,
-    title: 'Walmal Ecommerce',
+    title: 'Walmal POS',
     demo: 'https://walmal.vercel.app',
     image: 'https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9',
     skills: [
@@ -385,6 +385,10 @@ const projects = [
       {
         name: 'nextjs',
         icon: <Next />,
+      },
+      {
+        name: 'redux',
+        icon: <Redux />,
       },
       {
         name: 'nodejs',
@@ -411,6 +415,62 @@ const projects = [
     year: 2024,
     description:
       'Walmart.com.mm is a robust e-commerce platform built with TypeScript, Next.js, Redux, Node.js, Express.js, PostgreSQL, and hosted on Vercel, ensuring a fast, scalable, and seamless online shopping experience.',
+  },
+  {
+    id: 11,
+    title: 'Loopfeed Media Platform',
+    demo: 'https://loopfeed.vercel.app',
+    image: 'https://images.unsplash.com/photo-1582719188393-bb71ca45dbb9',
+    skills: [
+      {
+        name: 'tailwind',
+        icon: <Tailwind />,
+      },
+      {
+        name: 'Radix/UI',
+        icon: <RadixUI />,
+      },
+      {
+        name: 'Typescript',
+        icon: <Typescript />,
+      },
+      {
+        name: 'nextjs',
+        icon: <Next />,
+      },
+      {
+        name: 'next-auth',
+        icon: <NextAuth />,
+      },
+      {
+        name: 'nodejs',
+        icon: <Node />,
+      },
+      {
+        name: 'expressjs',
+        icon: <Express />,
+      },
+      {
+        name: 'postgresql',
+        icon: <Postgres />,
+      },
+      {
+        name: 'neon',
+        icon: <Neon />,
+      },
+      {
+        name: 'supabase',
+        icon: <Supabase />,
+      },
+      {
+        name: 'vercel',
+        icon: <Vercel />,
+      },
+    ],
+    made_at: 'Loopfeed',
+    year: 2024,
+    description:
+      'Loopfeed is a social media platform built with TypeScript, Next.js, Redux, Node.js, Express.js, PostgreSQL, and hosted on Vercel and storage for supabase, ensuring a fast, scalable, and seamless online media experience.',
   },
 ];
 export default projects;
