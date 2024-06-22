@@ -185,9 +185,9 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Javascript Questions Player',
+    title: 'Javascript Quiz App',
     description:
-      'This is created with shandui, mdx-remote, nextjs and nodejs.  This page is for javascript developer to practise easy the javascript. This questions got from Mrs.Lydia Hallie github.',
+      'This is created with shadcn-ui, mdx-remote, nextjs and nodejs.  This page is for javascript developer to practise easy the javascript. This questions got from Mrs.Lydia Hallie github.',
     demo: 'https://jsquestionsr.vercel.app',
     image: 'https://plus.unsplash.com/premium_photo-1661414473396-4600573d1f33',
     skills: [
