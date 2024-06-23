@@ -6,6 +6,10 @@
   .project-icon svg {
     @apply size-full;
   }
+  .box{
+    box-shadow: inset 20px 20px 60px #fafafa,
+    inset -20px -20px 60px #ffffff;
+  }
 }
 
 @layer base {
