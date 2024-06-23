@@ -14,9 +14,9 @@ const Work = () => {
             <Image
               width={45}
               height={45}
-              className='rounded object-cover'
+              className='rounded object-cover bg-[#FAFCFA]'
               src={experience.logo}
-              alt='Frontend'
+              alt={experience.company}
             />
             <div className='flex w-full flex-col'>
               <div className='flex items-center justify-between'>
