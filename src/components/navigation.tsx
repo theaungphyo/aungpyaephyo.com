@@ -1,45 +1,49 @@
 'use client';
-import { LayoutGroup, motion } from 'framer-motion';
-import { SunIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { LayoutGroup } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Suspense } from 'react';
 import { navigation_links } from '../../app.config';
 const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
   loading: () => (
-    <button className='flex size-10 items-center justify-center rounded-full opacity-50 outline-none transition-opacity hover:opacity-100'>
-      <SunIcon />
-    </button>
+    <Image
+      src={'/logo.png'}
+      alt={'logo'}
+      width={35}
+      height={35}
+      className='object-contain'
+      priority
+    />
   ),
   ssr: false,
 });
 
 function Navigation() {
   return (
-    <aside className='z-50 w-full py-5 tracking-tight'>
+    <aside className='sticky top-0 z-50 w-full py-5 tracking-tight bg-white backdrop-blur dark:bg-black'>
       <div>
         <LayoutGroup>
           <nav
-            className='fade relative flex scroll-pr-6 flex-row items-start justify-between px-0 pb-0 md:relative md:overflow-auto'
+            className='fade  flex scroll-pr-6 flex-row items-center justify-between px-0 pb-0 md:relative md:overflow-hidden'
             id='nav'
           >
-            <div className='flex flex-row space-x-0 pr-4'>
+            <ThemeToggle />
+            <div className='flex flex-row space-x-0 items-center overflow-hidden'>
               <Suspense fallback={null}>
                 {navigation_links.map(({ title, href }) => {
                   return <NavItem key={title} path={href} name={title} />;
                 })}
               </Suspense>
             </div>
-            <ThemeToggle />
           </nav>
         </LayoutGroup>
       </div>
     </aside>
   );
 }
-
-let cx = (...classes: any[]) => classes.filter(Boolean).join(' ');
 
 function NavItem({ path, name }: { path: string; name: string }) {
   let pathname = usePathname() || '/';
@@ -52,25 +56,12 @@ function NavItem({ path, name }: { path: string; name: string }) {
     <Link
       key={path}
       href={path}
-      className={cx(
-        'relative flex align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200',
-        {
-          'text-neutral-500': !isActive,
-        }
+      className={cn(
+        'flex flex-col tracking-wide justify-center items-end relative  align-middle transition-all px-4 py-1 text-sm after:inline-block after:h-[1px] after:w-[13px] after:bg-black after:translate-y-[7px]  before:inline-block before:h-[1px] before:w-[13px] before:bg-black before:translate-y-[-7px] dark:before:bg-white dark:after:bg-white  before:self-start before:transition-transform after:transition-transform before:duration-500 after:duration-500',
+        isActive && 'after:translate-y-0 before:translate-y-0'
       )}
     >
-      <span className=' px-4 py-1 text-sm capitalize'>{name}</span>
-      {path === pathname && (
-        <motion.div
-          className='absolute inset-0 z-[-1]  rounded-full  bg-neutral-200 bg-gradient-to-r from-transparent to-neutral-100 dark:bg-neutral-600 dark:bg-gradient-to-r dark:to-neutral-900'
-          layoutId='sidebar'
-          transition={{
-            type: 'spring',
-            stiffness: 350,
-            damping: 30,
-          }}
-        />
-      )}
+      {name}
     </Link>
   );
 }

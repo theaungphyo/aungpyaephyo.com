@@ -32,7 +32,7 @@ export default function RootLayout({
         <Provider>
           <main
             className={cn(
-              'mx-auto flex min-h-screen w-full max-w-screen-md flex-col items-center justify-center px-4 pb-9'
+              'mx-auto flex min-h-dvh w-full max-w-screen-md flex-col items-center justify-center px-4 pb-9'
             )}
           >
             <Navigation />
