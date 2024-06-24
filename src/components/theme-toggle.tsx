@@ -1,25 +1,41 @@
 'use client';
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { MoonIcon, SunIcon } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
 
 function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   return (
-    <button
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className='outline-none'
-    >
-      <Image
-        src={'/logo.png'}
-        alt={'logo'}
-        width={35}
-        height={35}
-        className='object-contain'
-        priority
-      />
-      <span className='sr-only'>Toggle theme</span>
-    </button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          className='flex size-10 items-center justify-center rounded-full opacity-50 outline-none transition-opacity hover:opacity-100'
+        >
+          {theme === 'light' ? (
+            <SunIcon className='size-5' />
+          ) : (
+            <MoonIcon className='size-5' />
+          )}
+          <span className='sr-only'>Toggle theme</span>
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className='w-fit' align='end'>
+        {/* eslint-disable-next-line react/jsx-no-undef */}
+        <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
+          <DropdownMenuRadioItem value='system'>System</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value='light'>Light</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value='dark'>Dark</DropdownMenuRadioItem>
+        </DropdownMenuRadioGroup>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
 
