@@ -32,11 +32,11 @@ export default function RootLayout({
         <Provider>
           <main
             className={cn(
-              'mx-auto flex min-h-dvh w-full max-w-screen-md flex-col items-center justify-center px-4 pb-9'
+              'flex min-h-dvh w-full  flex-col items-center justify-center px-4 pb-9'
             )}
           >
             <Navigation />
-            <section className='flex w-full flex-1 flex-col '>
+            <section className='flex w-full flex-1 flex-col max-w-screen-md mx-auto'>
               {children}
             </section>
           </main>

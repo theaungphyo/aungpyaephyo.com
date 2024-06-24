@@ -27,7 +27,7 @@ function Navigation() {
       <div>
         <LayoutGroup>
           <nav
-            className='fade  flex scroll-pr-6 flex-row items-center justify-between px-0 pb-0 md:relative md:overflow-hidden'
+            className='max-w-screen-md mx-auto fade  flex scroll-pr-6 flex-row items-center justify-between px-0 pb-0 md:relative md:overflow-hidden'
             id='nav'
           >
             <ThemeToggle />
