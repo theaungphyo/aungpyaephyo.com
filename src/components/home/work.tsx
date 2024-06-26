@@ -18,18 +18,21 @@ const Work = () => {
               src={experience.logo}
               alt={experience.company}
             />
-            <div className='flex w-full flex-col'>
-              <div className='flex items-center justify-between'>
-                <div>
-                  <p className='text-[16px]'>{experience.title}</p>
+            <div className='flex grow flex-col'>
+              <a
+                href={experience.companyLink ?? '#'}
+                target={experience.companyLink ? '_blank' : '_top'}
+                rel='noopener noreferrer'
+                className='flex items-start   transition-opacity hover:opacity-50'
+              >
+                <div className='grow'>
+                  <p className='font-medium text-[16px]'>{experience.title}</p>
+                  <p className='opacity-50 text-sm'>{experience.company}</p>
                 </div>
-                <span className='text-sm'>
-                  {experience.durationStart} - {experience.durationEnd}
+                <span className='opacity-90 text-sm'>
+                  {experience.durationStart} – {experience.durationEnd}
                 </span>
-              </div>
-              <p className='text-xs text-[#646464] dark:text-[#b4b4b4]'>
-                {experience.company}
-              </p>
+              </a>
             </div>
           </div>
         ))}

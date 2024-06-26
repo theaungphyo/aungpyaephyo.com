@@ -3,8 +3,6 @@ import GitLab from '@/components/icons/gitlab';
 import Facebook from '@/components/icons/social/facebook';
 import Gmail from '@/components/icons/social/gmail';
 import Instagram from '@/components/icons/social/instagram';
-import Skype from '@/components/icons/social/skype';
-import WhatsApp from '@/components/icons/social/whatapp';
 import X from '@/components/icons/social/x';
 
 interface ConnectLink {
@@ -21,7 +19,7 @@ const ConnectLinks: ConnectLink[] = [
   },
   {
     label: 'Twitter',
-    href: 'https://twitter.com/typle_x',
+    href: 'https://x.com/typle_x',
     icon: <X className='fill-black dark:fill-white' />,
   },
   {
@@ -43,16 +41,6 @@ const ConnectLinks: ConnectLink[] = [
     label: 'Facebook',
     href: 'https://www.facebook.com/aungpyaephyo1412/',
     icon: <Facebook />,
-  },
-  {
-    label: 'Skype',
-    href: 'https://join.skype.com/invite/xbP2qjZVjZij',
-    icon: <Skype />,
-  },
-  {
-    label: 'WhatsApp',
-    href: 'https://call.whatsapp.com/voice/bEq8hy0ahzTmUGcx4LhQMc',
-    icon: <WhatsApp />,
   },
 ];
 

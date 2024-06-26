@@ -1,4 +1,5 @@
 'use client';
+import Avatar from '@/app/avatar.png';
 import { blurDataImage } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -52,7 +53,7 @@ const Hero = () => {
       </div>
       <Image
         alt='Aung Pyae Phyo'
-        src='/HERO.png'
+        src={Avatar}
         placeholder='blur'
         blurDataURL={blurDataImage}
         className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block bg-neutral-300 dark:bg-neutral-800'
