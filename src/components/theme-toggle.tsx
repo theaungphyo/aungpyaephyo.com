@@ -17,7 +17,7 @@ function ThemeToggle() {
       <DropdownMenuTrigger asChild>
         <button
           onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-          className='flex size-10 items-center justify-center rounded-full opacity-50 outline-none transition-opacity hover:opacity-100'
+          className='flex size-10 items-center justify-center rounded-full opacity-80 outline-none transition-opacity hover:opacity-100'
         >
           {theme === 'light' ? (
             <SunIcon className='size-5' />
