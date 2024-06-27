@@ -13,7 +13,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Suspense } from 'react';
-import { navigation_links } from '../../app.config';
+import { mob_navigation_links, navigation_links } from '../../app.config';
 const ThemeToggle = dynamic(() => import('@/components/theme-toggle'), {
   loading: () => (
     <button className='flex size-10 items-center justify-center rounded-full opacity-80 outline-none transition-opacity hover:opacity-100'>
@@ -36,7 +36,7 @@ function Navigation() {
       <div>
         <LayoutGroup>
           <nav
-            className='max-w-screen-md mx-auto fade  flex scroll-pr-6 flex-row items-center justify-between px-0 pb-0 md:relative md:overflow-hidden'
+            className='max-w-screen-md mx-auto fade  flex flex-row items-center justify-between md:relative md:overflow-hidden'
             id='nav'
           >
             <Link href={'/'}>
@@ -60,7 +60,7 @@ function Navigation() {
                 </DrawerTrigger>
                 <DrawerContent className='h-[90dvh]  block md:hidden space-y-5'>
                   <Suspense fallback={null}>
-                    {navigation_links.map(({ title, href }) => {
+                    {mob_navigation_links.map(({ title, href }) => {
                       return (
                         <DrawerClose asChild key={href}>
                           <Link

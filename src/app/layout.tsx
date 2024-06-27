@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
 import { cn, generateMetaData } from '@/lib/utils';
@@ -32,13 +33,14 @@ export default function RootLayout({
         <Provider>
           <main
             className={cn(
-              'flex min-h-dvh w-full  flex-col items-center justify-center  pb-9'
+              'flex min-h-dvh w-full  flex-col items-center justify-center '
             )}
           >
             <Navigation />
             <section className='flex w-full flex-1 flex-col max-w-screen-md mx-auto px-4'>
               {children}
             </section>
+            <Footer />
           </main>
         </Provider>
       </body>

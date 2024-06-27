@@ -27,13 +27,7 @@ const Metadata = () => {
       </span>
       <div className='flex gap-1.5'>
         <span>·</span>
-        <a
-          target='_blank'
-          rel='noopener noreferrer nofollow'
-          href='https://maps.apple.com/place?q=Barcelona&ll=41.3826807%2C2.1770239&auid=2262861905204318884&lsp=7618&address=Barcelona%2C%20Spain'
-        >
-          Yangon
-        </a>
+        Yangon
       </div>
     </div>
   );
