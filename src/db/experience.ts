@@ -27,7 +27,7 @@ const experiences = [
     description:
       'I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer.',
     durationStart: 'Nov 2023',
-    durationEnd: 'Mar',
+    durationEnd: 'April 2024',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
     logo: '/mml.jpg',
   },
