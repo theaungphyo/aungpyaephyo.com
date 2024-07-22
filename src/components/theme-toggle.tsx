@@ -30,7 +30,9 @@ function ThemeToggle() {
       <DropdownMenuContent className='w-fit' align='end'>
         {/* eslint-disable-next-line react/jsx-no-undef */}
         <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
-          <DropdownMenuRadioItem value='system'>System</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value='system'>
+            Automatic
+          </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value='light'>Light</DropdownMenuRadioItem>
           <DropdownMenuRadioItem value='dark'>Dark</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
