@@ -27,7 +27,7 @@ const CodeBlock = ({
   }, [copy]);
   return (
     <>
-      <div className='relative flex justify-between items-center bg-neutral-700 rounded-t-lg px-3 py-2 text-white mt-4'>
+      <div className='relative flex justify-between items-center bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 border-b-0 text-black dark:text-white rounded-t-lg px-3 py-2 mt-4'>
         <div>{filename}</div>
         <CopyToClipboard text={children.trim()}>
           <button

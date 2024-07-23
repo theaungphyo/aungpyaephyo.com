@@ -2,6 +2,8 @@ import fs from 'fs';
 import path from 'path';
 export type Metadata = {
   title: string;
+  image: string;
+  description: string;
   publishedAt: string;
 };
 

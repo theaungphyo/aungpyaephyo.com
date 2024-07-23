@@ -1,5 +1,4 @@
 'use client';
-import Avatar from '@/app/avatar.png';
 import { blurDataImage } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -14,7 +13,9 @@ const Hero = () => {
 
         <div className='grid gap-4 opacity-80'>
           <p className='sm:max-w-md '>
-            {"I'm a software engineer based in Mandalay, Myanmar. I"}{' '}
+            {
+              "I'm a experienced frontend engineer based in Mandalay, Myanmar. I"
+            }{' '}
             <a
               target={'_blank'}
               rel={'noreferrer'}
@@ -41,10 +42,10 @@ const Hero = () => {
       </div>
       <Image
         alt='Aung Pyae Phyo'
-        src={Avatar}
+        src={'/memories/about-1.JPG'}
         placeholder='blur'
         blurDataURL={blurDataImage}
-        className='hidden h-44 w-44 transform-gpu rounded object-cover sm:block bg-neutral-300 dark:bg-neutral-800'
+        className='hidden h-44 w-44 transform-gpu rounded object-cover object-top  sm:block bg-neutral-300 dark:bg-neutral-800'
         width={180}
         height={180}
       />

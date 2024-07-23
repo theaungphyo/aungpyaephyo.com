@@ -42,6 +42,7 @@ const Blogs = ({ all = false }: { all?: boolean }) => {
               <ul className='space-y-3 sm:space-y-1 mb-5'>
                 {posts.map((blog) => (
                   <BlogPost
+                    minimum={false}
                     key={blog.slug}
                     slug={blog.slug}
                     title={blog.metadata.title}
