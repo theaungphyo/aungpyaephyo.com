@@ -3,7 +3,7 @@ import { getBlogPosts } from '@/db/blog';
 import { formatDate } from '@/lib/utils';
 import moment from 'moment';
 import { notFound } from 'next/navigation';
-// or Dynamic metadata
+
 interface Props {
   params: { slug: string };
 }

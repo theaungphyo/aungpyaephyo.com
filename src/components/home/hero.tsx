@@ -14,9 +14,7 @@ const Hero = () => {
 
         <div className='grid gap-4 opacity-80'>
           <p className='sm:max-w-md '>
-            {
-              "I'm a Experienced Front-End Developer based in Mandalay, Myanmar. I"
-            }{' '}
+            {"I'm a software engineer based in Mandalay, Myanmar. I"}{' '}
             <a
               target={'_blank'}
               rel={'noreferrer'}
@@ -37,17 +35,7 @@ const Hero = () => {
 
           <p className='sm:max-w-md'>
             I love working in-between product, engineering and developer
-            experience, currently at{' '}
-            <a
-              target={'_blank'}
-              rel={'noreferrer'}
-              aria-label={'link to walmal'}
-              className='underline'
-              href='https://walmal.vercel.app'
-            >
-              walmal
-            </a>
-            .
+            experience.
           </p>
         </div>
       </div>
