@@ -17,7 +17,7 @@ const BlogPost = ({ slug, title, publishedAt, minimum = true }: Props) => {
         title={title}
         className={cn(
           'block h-full w-full rounded-md  text-sm outline-none transition-all focus-within:bg-neutral-100 hover:bg-neutral-100 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500',
-          minimum ? 'p-1.5' : 'p-3'
+          minimum ? 'p-2' : 'p-3'
         )}
       >
         <article className='flex flex-col-reverse sm:flex-row sm:items-baseline sm:gap-5'>

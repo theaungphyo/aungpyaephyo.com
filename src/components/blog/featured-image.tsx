@@ -7,16 +7,17 @@ type Props = {
 };
 
 const FeaturedImage = (props: Props) => (
-  <header className='relative w-full h-[400px] overflow-hidden rounded-lg mb-8 flex justify-center items-center'>
-    <div className='font-extrabold text-blue-500 text-2xl z-10'>
+  <header className='relative w-full mb-5'>
+    <div className='absolute inset-0 flex p-6 justify-center items-center font-extrabold text-blue-500 text-lg lg:text-2xl z-10 text-center font-mono'>
       {props.title}
     </div>
     <Image
       alt={props.title}
       blurDataURL={props.lqpiImage}
-      sizes={'500'}
-      fill
-      className='object-cover object-bottom'
+      sizes={'200'}
+      height={400}
+      width={780}
+      className='object-cover object-bottom rounded-lg'
       placeholder='blur'
       priority
       src={props.image}

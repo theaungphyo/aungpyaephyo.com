@@ -9,12 +9,12 @@ const Work = () => {
         {experiences.map((experience) => (
           <div
             key={experience.id}
-            className='flex items-center gap-3 transition hover:!opacity-100 group-hover:opacity-50'
+            className='flex items-start md:items-center gap-3 transition hover:!opacity-100 group-hover:opacity-50'
           >
             <Image
               width={45}
               height={45}
-              className='rounded object-cover bg-[#FAFCFA]'
+              className='rounded object-contain bg-[#FAFCFA]'
               src={experience.logo}
               alt={experience.company}
             />
@@ -23,7 +23,7 @@ const Work = () => {
                 href={experience.companyLink ?? '#'}
                 target={experience.companyLink ? '_blank' : '_top'}
                 rel='noopener noreferrer'
-                className='flex items-start   transition-opacity hover:opacity-50'
+                className='flex items-start flex-col gap-y-2 md:flex-row'
               >
                 <div className='grow'>
                   <p className='font-medium text-[16px]'>{experience.title}</p>
