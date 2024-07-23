@@ -1,6 +1,6 @@
 'use client';
 
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
 
 type SectionProps = {
@@ -18,8 +18,8 @@ export default function Section({
 }: SectionProps) {
   return (
     <section className='col-reverse flex flex-col gap-5 md:flex-row md:gap-9'>
-      <h2
-        className={clsx(
+      <h1
+        className={cn(
           'shrink-0 md:w-32',
           headingAlignment === 'right' && 'md:text-right',
           invert
@@ -28,7 +28,7 @@ export default function Section({
         )}
       >
         {heading}
-      </h2>
+      </h1>
       {children}
     </section>
   );

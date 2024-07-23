@@ -17,7 +17,7 @@ const experiences = [
       'MongoDB',
       'Postgresql',
     ],
-    logo: '/company/linkedin.png',
+    logo: '/company/freelance.png',
   },
   {
     id: 2,

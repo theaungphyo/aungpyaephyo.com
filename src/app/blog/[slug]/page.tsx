@@ -3,6 +3,7 @@ import { MdxViewer } from '@/components/blog/mdx-viewer';
 import ShareLinks from '@/components/blog/share-link';
 import { getBlogPosts } from '@/db/blog';
 import { blurDataImage, formatDate } from '@/lib/utils';
+import '@/styles/prose.css';
 import moment from 'moment';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -19,10 +20,11 @@ export async function generateMetadata({
   }
 
   let { title, publishedAt: publishedTime, description, image } = post.metadata;
-  let ogImage = image
-    ? `https://aungpyaephyo.vercel.app${image}`
-    : `https://aungpyaephyo.vercel.app/og?title=${title}`;
+  // let ogImage = image
+  //   ? `https://aungpyaephyo.vercel.app${image}`
+  //   : `https://aungpyaephyo.vercel.app/og?title=${title}`;
 
+  let ogImage = `https://aungpyaephyo.vercel.app/og?title=${title}`;
   return {
     title,
     description,
@@ -61,12 +63,14 @@ const Page = ({ params: { slug } }: Props) => {
   return (
     <div>
       <FeaturedImage
-        image={blog.metadata.image ?? '/bg.png'}
+        image={blog.metadata.image ?? '/og-bg.png'}
         lqpiImage={blurDataImage}
         title={blog.metadata.title}
       />
       <header className='mb-6 pb-4'>
-        <h1 className='mb-2 text-4xl font-extrabold'>{blog.metadata.title}</h1>
+        <h1 className='mb-2 text-2xl lg:text-4xl font-extrabold'>
+          {blog.metadata.title}
+        </h1>
         <time className='text-sm opacity-70' dateTime='2021-05-03 22:00'>
           {formatDate(blog.metadata.publishedAt)}
         </time>
@@ -74,7 +78,7 @@ const Page = ({ params: { slug } }: Props) => {
           {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
         </span>
       </header>
-      <article className='tracking-wide prose prose-slate relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-img:rounded-lg prose-sm sm:prose-base lg:prose-lg xl:prose-xl 2xl:prose-2xl '>
+      <article className='tracking-wide prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-img:rounded-lg'>
         <MdxViewer source={blog.content} />
       </article>
       <ShareLinks

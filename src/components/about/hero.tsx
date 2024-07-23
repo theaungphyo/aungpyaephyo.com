@@ -35,7 +35,7 @@ const Hero = () => {
           <p>
             Hi, I&apos;m Aung Pyae Phyo, born in Kyaukse and raised in Kyaukse,
             Mandalay, Myanmar. I have been coding for{' '}
-            {new Date().getFullYear() - 2022} years. As a software engineer, I
+            {new Date().getFullYear() - 2022} years. As a web developer, I
             specialize in full-stack web development.
           </p>
           <p>
