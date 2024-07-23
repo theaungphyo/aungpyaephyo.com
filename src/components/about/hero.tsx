@@ -10,7 +10,7 @@ const Hero = () => {
         <div className='animate-in '>
           <Image
             blurDataURL={blurDataImage}
-            src={'/about-4.jpg'}
+            src={'/memories/about-4.jpg'}
             alt={'me and lily'}
             width={324}
             height={139}
@@ -21,7 +21,7 @@ const Hero = () => {
         <div className='animate-in mt-5'>
           <Image
             blurDataURL={blurDataImage}
-            src={'/about-1.JPG'}
+            src={'/memories/about-1.JPG'}
             alt={'me and lily'}
             width={220}
             height={240}

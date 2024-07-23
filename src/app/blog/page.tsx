@@ -1,10 +1,12 @@
 import Blogs from '@/components/blog/blogs';
 import PageTitle from '@/components/page-title';
 import { getBlogPosts } from '@/db/blog';
-import { Metadata } from 'next';
-export const metadata: Metadata = {
+
+export const metadata = {
   title: 'Blog',
+  description: 'Read my thoughts on software development, design, and more.',
 };
+
 const Page = () => {
   const blogs = getBlogPosts();
   return (

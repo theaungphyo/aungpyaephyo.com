@@ -17,7 +17,7 @@ const experiences = [
       'MongoDB',
       'Postgresql',
     ],
-    logo: '/linkedin.png',
+    logo: '/company/linkedin.png',
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const experiences = [
     durationStart: 'Nov 2023',
     durationEnd: 'April 2024',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
-    logo: '/mml.jpg',
+    logo: '/company/mml.jpg',
   },
 ];
 export default experiences;

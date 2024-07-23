@@ -1,0 +1,108 @@
+---
+title: 'How to use conventional commit lint in nextjs'
+image: '/bg.png'
+publishedAt: '2024-06-02'
+---
+
+#### ဘာကြောင့် `conventional git commit` ကိုသုံးသင့်တာလည်း?
+
+ကျွန်တော့်တို့အနေနဲ့ enterprise project တွေရေးတဲ့အခါမှာ git commit တွေကို ပေါက်ကရရေးလို့မရပါဘူး။
+ကျွန်တော်တို့အနေနဲ့ git commit တွေကို စနစ်တကျရေးသားဖို့လိုပါမယ်။
+ဒါမှသာ ဘယ် commit မှာတော့ ဘာတွေလုပ်ခဲ့လည်းဆိုတာကိုသိရမာဖြစ်ပါတယ်။
+
+ကျွန်တော်တို့အနေနဲ့ ကိုယ့် project မှာ commit lint cli နဲ့ conventional commit message ကို အသုံးပြုဖို့
+setup လုပ်ပါမယ်။ ကျွန်တော်ကတော့ Next.js project မာ setup လုပ်ပြမာဖြစ်ပါတယ်။
+
+#### ပထမဆုံးအနေနဲ့ `husky` ကို `install` လုပ်ပါမယ်။
+
+<a href='https://typicode.github.io/husky/'>Husky က ဘာလည်းဆိုတာသိဖို့
+    သူ့ရဲ့ official documentation မာ သွားဖတ်ကြည့်လိုက်ပါ။</a>။
+
+Husky ဆိုတာက project တခုရဲ့ commit message တွေ, code တွေ,  testing တွေကို commit  လုပ်တာတွေ, pushing လုပ်တာတွေပေါ်မာမူတည်ပီး အလုပ်လုပ်ပေးတဲ့ကောင်ဖြစ်ပါတယ်။.
+
+<Code filename="shell">
+    {`npm install --save-dev husky`}
+</Code>
+
+#### `husky` ကို `project` မာ `initialize` လုပ်ပါမယ်
+
+<Code filename="shell">
+    {`npm install --save-dev husky`}
+</Code>
+
+Initialize လုပ်ပီးရင် package.json က script မာ
+`"prepare": "husky"`
+ဆိုတာထည့်ပါမယ်။ ပီးတဲ့အခါမှာ git initialize ကို တဆင့်ချင်းလုပ်သွား ပါမယ်....
+
+<Code filename="shell">
+    {`
+git init
+
+git branch -M main
+
+git remote add origin https://your-host-url
+`}
+</Code>
+
+git configure လုပ်ပီးရင် `npm run prepare` ဆိုတဲ့ script ကို run ပါမယ်။
+
+ပိးရင်တော့ commit-lint cli နဲ့ conventional commit package ကို install လုပ်ပါမယ်။
+
+
+<Code filename="shell">
+    {`
+npm install --save-dev @commitlint/config-conventional @commitlint/cli
+`}
+</Code>
+
+Install လုပ်ပီးရင်တော့ conventional configuration file တည်ဆောက်ပါမယ််။ ကိုယ်ဘာသာ ကြိုက်ရာနည်းနဲ့ဆောက်လို့ရပါတယ်။
+ကျတော်ကတော့ command line ကနေ ဆောက်ပါမယ်။
+
+<Code filename="shell">
+    {`
+echo "export default {extends: ['@commitlint/config-conventional']};" > .commitlintrc.ts
+`}
+</Code>
+
+Script run ပီးရင် commitlint.config.js ဆိုတဲ့ file တစ်ခု project ထဲမာ ရောက်နေပါလိမ့်မယ်။
+ထိုဖိုင်ထဲ မာ rule တွေသက်မှတ်ထားလို့ရပါတယ်။ ဒီပို့စ်မာတော့ rule  တွေ ကို အသုံးပြုပြမှာမဟုတ်ပါဘူး။
+
+
+<a href='https://commitlint.js.org/reference/rules'>Rule တွေအကြောင်းကို ဒီလင့်ကနေ သွားကြည့်လို့ရပါတယ်။</a>
+<br/>
+<a href='https://www.conventionalcommits.org/en/v1.0.0/'>Commit message တွေအကြောင်းကိုလည်း ဒီလင့်ကနေ
+    သွားကြည့်လို့ရပါတယ်။</a>
+
+ပီးရင်တော့ husky နဲ့ချိတ်ပါမယ်  commitlint-cli ကို
+
+<Code filename="shell">
+    {`
+    echo "npx --no -- commitlint --edit $1" > .husky/commit-msg
+    `}
+</Code>
+
+Husky မှာ configure လုပ်ပီးပီးဆိုတော့ စမ်းကြည့်လိုက်ရအောင်
+
+<Code filename="shell">
+    {`
+git add .
+
+git commit -m 'feat: commitlint add with husky'
+
+git push origin -u main
+`}
+</Code>
+
+တကယ်လို့ `commit message` က ပေါက်ကရဖြစ်ခဲ့မယ်ဆို အောက်က error တက်ပါလိမ့်မယ်။
+
+```shell
+⧗   input: ffff
+✖   subject may not be empty [subject-empty]
+✖   type may not be empty [type-empty]
+
+✖   found 2 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+husky - commit-msg script failed (code 1)
+
+```
