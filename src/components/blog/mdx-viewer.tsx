@@ -1,4 +1,5 @@
 import CodeBlock from '@/components/blog/code-block';
+import { TweetComponent } from '@/components/blog/tweet';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
@@ -206,6 +207,7 @@ const components: Record<string, React.ComponentType<any>> = {
   code: Code,
   Table,
   Code: CodeBlock,
+  StaticTweet: TweetComponent,
 };
 
 export function MdxViewer(props: CustomMDXProps) {

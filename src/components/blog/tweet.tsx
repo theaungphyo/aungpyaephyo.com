@@ -14,7 +14,6 @@ const TweetContent = async ({ id, components, onError }: TweetProps) => {
         }
       })
     : undefined;
-
   if (!tweet) {
     const NotFound = components?.TweetNotFound || TweetNotFound;
     return <NotFound error={error} />;

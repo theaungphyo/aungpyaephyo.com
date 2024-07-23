@@ -60,13 +60,11 @@ const Page = ({ params: { slug } }: Props) => {
   if (!blog) notFound();
   return (
     <div>
-      {blog.metadata.image && (
-        <FeaturedImage
-          image={blog.metadata.image}
-          lqpiImage={blurDataImage}
-          title={blog.metadata.title}
-        />
-      )}
+      <FeaturedImage
+        image={blog.metadata.image ?? '/bg.png'}
+        lqpiImage={blurDataImage}
+        title={blog.metadata.title}
+      />
       <header className='mb-6 pb-4'>
         <h1 className='mb-2 text-4xl font-extrabold'>{blog.metadata.title}</h1>
         <time className='text-sm opacity-70' dateTime='2021-05-03 22:00'>

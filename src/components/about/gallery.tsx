@@ -119,7 +119,7 @@ export default function Gallery() {
     <>
       <section className='flex gap-4 h-[268px] relative'>
         <Photo
-          src={'/about-2.jpg'}
+          src={'/memories/about-2.jpg'}
           meta='2024-04-13'
           alt='Brian and Lily'
           width={324}
@@ -129,7 +129,7 @@ export default function Gallery() {
           index={1}
         />
         <Photo
-          src={'/about-3.jpg'}
+          src={'/memories/about-3.jpg'}
           meta='2023-12-10'
           alt='my e-bike'
           width={230}
@@ -140,7 +140,7 @@ export default function Gallery() {
           flipDirection='left'
         />
         <Photo
-          src={'/about-4.jpg'}
+          src={'/memories/about-4.jpg'}
           meta='2024-02-26'
           alt='Texas'
           width={280}
@@ -150,7 +150,7 @@ export default function Gallery() {
           index={3}
         />
         <Photo
-          src={'/about-1.JPG'}
+          src={'/memories/about-1.JPG'}
           meta='2023-10-31'
           alt={'Snowboarding in Colorado'}
           width={220}

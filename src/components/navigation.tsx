@@ -1,10 +1,10 @@
 'use client';
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerTrigger,
-} from '@/components/ui/drawer';
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogTrigger,
+} from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
 import { LayoutGroup } from 'framer-motion';
 import { Menu, SunIcon } from 'lucide-react';
@@ -52,17 +52,17 @@ function Navigation() {
             <div className='flex flex-row space-x-0 items-center overflow-hidden'>
               <NavList className='md:flex hidden' />
               <ThemeToggle />
-              <Drawer>
-                <DrawerTrigger asChild>
+              <Dialog>
+                <DialogTrigger asChild>
                   <button className='flex size-10 items-center justify-center rounded-full opacity-80 outline-none transition-opacity hover:opacity-100 md:hidden'>
                     <Menu />
                   </button>
-                </DrawerTrigger>
-                <DrawerContent className='h-[90dvh]  block md:hidden space-y-5'>
+                </DialogTrigger>
+                <DialogContent className='max-w-[95%] rounded-lg'>
                   <Suspense fallback={null}>
                     {mob_navigation_links.map(({ title, href }) => {
                       return (
-                        <DrawerClose asChild key={href}>
+                        <DialogClose asChild key={href}>
                           <Link
                             href={href}
                             className={cn(
@@ -71,12 +71,12 @@ function Navigation() {
                           >
                             {title}
                           </Link>
-                        </DrawerClose>
+                        </DialogClose>
                       );
                     })}
                   </Suspense>
-                </DrawerContent>
-              </Drawer>
+                </DialogContent>
+              </Dialog>
             </div>
           </nav>
         </LayoutGroup>
