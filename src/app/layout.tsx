@@ -19,11 +19,7 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(
-        GeistSans.variable,
-        GeistMono.variable,
-        'font-mono font-medium'
-      )}
+      className={cn(GeistSans.variable, GeistMono.variable)}
     >
       <body
         suppressHydrationWarning
