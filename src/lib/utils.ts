@@ -9,19 +9,55 @@ export function cn(...inputs: ClassValue[]) {
 
 export const generateMetaData = () => {
   return {
+    authors: [
+      { name: 'Aung Pyae Phyo', url: 'https://aungpyaephyo.vercel.app' },
+    ],
+    category: 'developer',
+    creator: 'Aung Pyae Phyo',
+    description: 'Developer, writer, and creator.',
+    icons: {
+      apple: '/apple-touch-icon.png',
+      icon: '/android-chrome.png',
+      shortcut: '/favicon.ico',
+    },
+    keywords: [
+      'Next.js',
+      'React',
+      'JavaScript',
+      'TypeScript',
+      'TailwindCSS',
+      'Design',
+      'Engineering',
+      'Frontend',
+      'Developer',
+      'Software',
+      'Aung Pyae Phyo',
+      'Aung Pyae Phyo',
+      'aungpyaephyo.vercel.app',
+      'kyaukse',
+    ],
+    manifest: '/favicons/site.webmanifest',
+    openGraph: {
+      description: 'Developer, writer, and creator.',
+      images: [
+        {
+          alt: 'Aung Pyae Phyo',
+          height: 1080,
+          url: 'https://aungpyaephyo.vercel.app/og-bg.png',
+          width: 1920,
+        },
+      ],
+      locale: 'en-US',
+      siteName: 'Aung Pyae Phyo',
+      title: 'Aung Pyae Phyo',
+      type: 'website',
+      url: 'https://aungpyaephyo.vercel.app',
+    },
+    publisher: 'Aung Pyae Phyo',
     metadataBase: new URL('https://aungpyaephyo.vercel.app'),
     title: {
       default: 'Aung Pyae Phyo',
       template: '%s | Aung Pyae Phyo',
-    },
-    description: 'Developer, writer, and creator.',
-    openGraph: {
-      title: 'Aung Pyae Phyo',
-      description: 'Developer, writer, and creator.',
-      url: 'https://aungpyaephyo.vercel.app',
-      siteName: 'Aung Pyae Phyo',
-      locale: 'en_US',
-      type: 'website',
     },
     robots: {
       index: true,
@@ -37,11 +73,12 @@ export const generateMetaData = () => {
     twitter: {
       title: 'Aung Pyae Phyo',
       card: 'summary_large_image',
+      site: '@typle_x',
     },
-    // verification: {
-    //   google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
-    //   yandex: '14d2e73487fa6c71',
-    // },
+    verification: {
+      google: 'qXICIAI1UR-M3LFz7pz2bDybUrI7BYoxsrQGLDVp2wM',
+      // yandex: '14d2e73487fa6c71',
+    },
   } as Metadata;
 };
 export const formatDate = (date: string) => moment(date).format('ll');

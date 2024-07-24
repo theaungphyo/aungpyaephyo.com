@@ -53,7 +53,7 @@
     h2,
     h3,
     h4 {
-        @apply font-semibold tracking-tighter my-9 scroll-mt-[65px] text-slate-900 dark:text-slate-50 !important;
+        @apply font-semibold tracking-tighter scroll-mt-[65px] text-slate-900 dark:text-slate-50 !important;
     }
 
     .prose strong {

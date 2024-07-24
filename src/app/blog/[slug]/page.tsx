@@ -67,7 +67,7 @@ const Page = ({ params: { slug } }: Props) => {
         lqpiImage={blurDataImage}
         title={blog.metadata.title}
       />
-      <header className='mb-6 pb-4'>
+      <header className='mb-6 pb-4 font-mono'>
         <h1 className='mb-2 text-2xl lg:text-4xl font-extrabold'>
           {blog.metadata.title}
         </h1>
@@ -78,7 +78,7 @@ const Page = ({ params: { slug } }: Props) => {
           {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
         </span>
       </header>
-      <article className='tracking-wide prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-img:rounded-lg'>
+      <article className='tracking-wide prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-headings:my-9 prose-img:rounded-lg'>
         <MdxViewer source={blog.content} />
       </article>
       <ShareLinks
