@@ -23,7 +23,7 @@ setup လုပ်ပါမယ်။ ကျွန်တော်ကတော့ 
 ### `husky` ကို `project` မာ `initialize` လုပ်ပါမယ်
 
 <Code filename="shell">
-    {`npm install --save-dev husky`}
+    {`npx husky init`}
 </Code>
 
 Initialize လုပ်ပီးရင် package.json က script မာ
@@ -40,7 +40,7 @@ git remote add origin https://your-host-url
 `}
 </Code>
 
-git configure လုပ်ပီးရင် `npm run prepare` ဆိုတဲ့ script ကို run ပါမယ်။
+[//]: # (git configure လုပ်ပီးရင် `npm run prepare` ဆိုတဲ့ script ကို run ပါမယ်။)
 
 ပိးရင်တော့ commit-lint cli နဲ့ conventional commit package ကို install လုပ်ပါမယ်။
 
@@ -60,14 +60,10 @@ echo "export default {extends: ['@commitlint/config-conventional']};" > .commitl
 `}
 </Code>
 
-Script run ပီးရင် commitlint.config.js ဆိုတဲ့ file တစ်ခု project ထဲမာ ရောက်နေပါလိမ့်မယ်။
+Script run ပီးရင် .commitlintrc.ts ဆိုတဲ့ file တစ်ခု project ထဲမာ ရောက်နေပါလိမ့်မယ်။
 ထိုဖိုင်ထဲ မာ rule တွေသက်မှတ်ထားလို့ရပါတယ်။ ဒီပို့စ်မာတော့ rule  တွေ ကို အသုံးပြုပြမှာမဟုတ်ပါဘူး။
 
-
-<a href='https://commitlint.js.org/reference/rules'>Rule တွေအကြောင်းကို ဒီလင့်ကနေ သွားကြည့်လို့ရပါတယ်။</a>
-<br/>
-<a href='https://www.conventionalcommits.org/en/v1.0.0/'>Commit message တွေအကြောင်းကိုလည်း ဒီလင့်ကနေ
-    သွားကြည့်လို့ရပါတယ်။</a>
+[Rule](https://commitlint.js.org/reference/rules) တွေအကြောင်းကို ဒီလင့်ကနေ သွားကြည့်လို့ရပါတယ်။ [Commit message](https://www.conventionalcommits.org/en/v1.0.0/) တွေအကြောင်းကိုလည်း ဒီလင့်ကနေသွားကြည့်လို့ရပါတယ်
 
 ပီးရင်တော့ husky နဲ့ချိတ်ပါမယ်  commitlint-cli ကို
 
@@ -100,5 +96,4 @@ git push origin -u main
 ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
 
 husky - commit-msg script failed (code 1)
-
 ```
