@@ -45,7 +45,7 @@ function Navigation() {
                 alt={'logo'}
                 width={35}
                 height={35}
-                className='object-contain grayscale hover:filter-none'
+                className='object-contain'
                 priority
               />
             </Link>

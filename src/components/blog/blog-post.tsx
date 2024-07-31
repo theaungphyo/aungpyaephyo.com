@@ -1,6 +1,8 @@
-'use client';
+import { getViewsCount } from '@/app/blog/_action';
+import ViewCounter from '@/components/blog/views-counter';
 import { cn, formatDate } from '@/lib/utils';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 type Props = {
   slug: string;
@@ -8,8 +10,17 @@ type Props = {
   publishedAt: string;
   minimum?: boolean;
 };
+const Views = async ({ slug }: { slug: string }) => {
+  let views = await getViewsCount();
+  return <ViewCounter allViews={views} slug={slug} />;
+};
 
-const BlogPost = ({ slug, title, publishedAt, minimum = true }: Props) => {
+const BlogPost = async ({
+  slug,
+  title,
+  publishedAt,
+  minimum = true,
+}: Props) => {
   return (
     <li className='relative -mx-1.5'>
       <Link
@@ -29,8 +40,11 @@ const BlogPost = ({ slug, title, publishedAt, minimum = true }: Props) => {
             {formatDate(publishedAt)}
           </time>
 
-          <div>
+          <div className='flex-1 w-full justify-between items-center flex'>
             <header className='text-sm font-medium'>{title}</header>
+            <Suspense>
+              <Views slug={slug} />
+            </Suspense>
           </div>
         </article>
       </Link>
