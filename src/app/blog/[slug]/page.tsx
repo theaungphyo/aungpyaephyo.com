@@ -9,7 +9,7 @@ import '@/styles/prose.css';
 import moment from 'moment';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { Suspense, cache } from 'react';
+import { Suspense } from 'react';
 interface Props {
   params: { slug: string };
 }
@@ -58,9 +58,9 @@ export async function generateStaticParams() {
   }));
 }
 
-const incrementViews = cache(increment);
+// const incrementViews = cache(increment);
 const Views = async ({ slug }: { slug: string }) => {
-  await incrementViews(slug);
+  await increment(slug);
   let views = await getViewsCount();
   return <ViewCounter allViews={views} slug={slug} />;
 };
