@@ -60,8 +60,8 @@ export async function generateStaticParams() {
 
 const incrementViews = cache(increment);
 const Views = async ({ slug }: { slug: string }) => {
-  let views = await getViewsCount();
   await incrementViews(slug);
+  let views = await getViewsCount();
   return <ViewCounter allViews={views} slug={slug} />;
 };
 
@@ -93,7 +93,7 @@ const Page = ({ params: { slug } }: Props) => {
           </span>
         </nav>
       </header>
-      <article className='tracking-wide prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-headings:my-9 prose-img:rounded-lg'>
+      <article className='tracking-wider prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-headings:my-9 prose-img:rounded-lg'>
         <MdxViewer source={blog.content} />
       </article>
       <ShareLinks

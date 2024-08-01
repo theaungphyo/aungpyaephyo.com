@@ -33,7 +33,6 @@ export async function getViewsCount(): Promise<
   if (!process.env.POSTGRES_URL) {
     return [];
   }
-
   noStore();
   return sql`
     SELECT slug, count
