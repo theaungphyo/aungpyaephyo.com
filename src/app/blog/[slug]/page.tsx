@@ -9,7 +9,7 @@ import '@/styles/prose.css';
 import moment from 'moment';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { cache } from 'react';
+import { Suspense, cache } from 'react';
 interface Props {
   params: { slug: string };
 }
@@ -89,7 +89,9 @@ const Page = ({ params: { slug } }: Props) => {
             {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
           </span>
           <span className='text-sm opacity-70 before:px-1 before:content-["•"] flex items-center'>
-            <Views slug={slug} />
+            <Suspense fallback={<p className='px-2' />}>
+              <Views slug={slug} />
+            </Suspense>
           </span>
         </nav>
       </header>
