@@ -51,13 +51,6 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const posts = getBlogPosts();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-}
-
 const Page = ({ params: { slug } }: Props) => {
   const blog = getBlogPosts().find((b) => b.slug === slug);
   const canonicalUrl = `https://aungpyaephyo.vercel.app/blog/${slug}`;
