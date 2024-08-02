@@ -40,10 +40,12 @@ const BlogPost = async ({
             {formatDate(publishedAt)}
           </time>
 
-          <div className='flex-1 w-full justify-between items-center flex'>
+          <div className='flex-1 w-full justify-between items-center flex gap-4'>
             <header className='text-sm font-medium'>{title}</header>
-            <Suspense>
-              <Views slug={slug} />
+            <Suspense fallback={<span>..</span>}>
+              <p className='px-3'>
+                <Views slug={slug} />
+              </p>
             </Suspense>
           </div>
         </article>

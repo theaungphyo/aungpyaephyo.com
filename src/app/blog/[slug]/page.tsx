@@ -50,6 +50,13 @@ export async function generateMetadata({
     },
   };
 }
+export async function generateStaticParams() {
+  let posts = getBlogPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 const Page = ({ params: { slug } }: Props) => {
   const blog = getBlogPosts().find((b) => b.slug === slug);
@@ -95,7 +102,7 @@ const Page = ({ params: { slug } }: Props) => {
 let incrementViews = cache(increment);
 
 async function Views({ slug }: { slug: string }) {
-  incrementViews(slug);
+  await incrementViews(slug);
   let views = await getViewsCount();
   return <ViewCounter allViews={views} slug={slug} />;
 }

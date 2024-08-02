@@ -31,5 +31,29 @@ const experiences = [
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
     logo: '/company/mml.jpg',
   },
+  {
+    id: 3,
+    title: 'Frontend Instructor',
+    company: 'Sithu Computer',
+    companyLink: 'https://sithucenter.com/',
+    description:
+      'I work at Sithu Computer Training Center  in August 1, 2024 as Frontend Instructor.',
+    durationStart: 'Aug 2024',
+    durationEnd: 'Present',
+    skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
+    logo: '/company/sithu.png',
+  },
+  {
+    id: 4,
+    title: 'Web Developer',
+    company: 'Sithu Computer',
+    companyLink: 'https://sithucenter.com/',
+    description:
+      'I work at Sithu Computer Training Center  in August 1, 2024 as Web developer.',
+    durationStart: 'Aug 2024',
+    durationEnd: 'Present',
+    skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
+    logo: '/company/sithu.png',
+  },
 ];
 export default experiences;
