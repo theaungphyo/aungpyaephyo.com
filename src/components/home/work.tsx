@@ -14,7 +14,7 @@ const Work = () => {
             <Image
               width={45}
               height={45}
-              className='rounded object-contain bg-[#FAFCFA] shadow-md'
+              className='rounded object-contain bg-[#FAFCFA]'
               src={experience.logo}
               alt={experience.company}
             />

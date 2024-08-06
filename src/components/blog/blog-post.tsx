@@ -40,7 +40,7 @@ const BlogPost = async ({
             {formatDate(publishedAt)}
           </time>
 
-          <div className='flex-1 w-full justify-between items-center flex gap-4'>
+          <div className='flex-1 w-full justify-between items-start flex gap-4'>
             <header className='text-sm font-medium'>{title}</header>
             <Suspense fallback={<span>..</span>}>
               <p className='px-3'>
