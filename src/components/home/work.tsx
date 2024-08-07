@@ -1,5 +1,6 @@
 import SectionTitle from '@/components/section-title';
 import experiences from '@/db/experience';
+import { blurDataImage } from '@/lib/utils';
 import Image from 'next/image';
 const Work = () => {
   return (
@@ -11,13 +12,17 @@ const Work = () => {
             key={experience.id}
             className='flex items-start md:items-center gap-3 transition hover:!opacity-100 group-hover:opacity-50'
           >
-            <Image
-              width={45}
-              height={45}
-              className='rounded object-contain bg-[#FAFCFA]'
-              src={experience.logo}
-              alt={experience.company}
-            />
+            <div className='relative overflow-hidden rounded bg-black dark:bg-neutral-200 size-[45px]'>
+              <Image
+                sizes={'45'}
+                className='rounded object-contain bg-[#FAFCFA]'
+                src={experience.logo}
+                alt={experience.company}
+                fill
+                priority
+                blurDataURL={blurDataImage}
+              />
+            </div>
             <div className='flex grow flex-col'>
               <a
                 href={experience.companyLink ?? '#'}
