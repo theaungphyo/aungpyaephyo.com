@@ -40,10 +40,10 @@ const Hero = () => {
       </div>
       <Image
         alt='Aung Pyae Phyo'
-        src={'/memories/about-1.JPG'}
+        src={'/avatar.png'}
         placeholder='blur'
         blurDataURL={blurDataImage}
-        className='hidden h-44 w-44 transform-gpu rounded object-cover object-top  sm:block bg-neutral-300 dark:bg-neutral-800'
+        className='hidden h-44 w-44 transform-gpu rounded object-cover object-top  sm:block bg-neutral-300 dark:bg-neutral-800 scale-x-[-1]'
         width={180}
         height={180}
       />
