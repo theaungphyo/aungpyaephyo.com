@@ -13,7 +13,7 @@ const Hero = () => {
 
         <div className='grid gap-4 opacity-80'>
           <p className='sm:max-w-md '>
-            {"I'm a experienced web developer based in Mandalay, Myanmar. I"}{' '}
+            {"I'm a web developer based in Mandalay, Myanmar. I"}{' '}
             <a
               target={'_blank'}
               rel={'noreferrer'}

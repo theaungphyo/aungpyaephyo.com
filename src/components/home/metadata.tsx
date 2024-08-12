@@ -23,7 +23,7 @@ const Metadata = () => {
   return (
     <div className='w-full flex text-sm lowercase opacity-60'>
       <span className='block w-[62px] whitespace-nowrap'>
-        {date ?? 'loading...'}
+        {date ?? '.......'}
       </span>
       <div className='flex gap-1.5'>
         <span>·</span>

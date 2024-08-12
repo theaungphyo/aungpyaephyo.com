@@ -13,7 +13,7 @@ function ViewCounter({
   const number = Number(viewsForSlug?.count || 0);
   // const formatter = Intl.NumberFormat('en', { notation: 'compact' });
   return (
-    <span className='font-mono text-neutral-600 dark:text-neutral-400 text-nowrap'>
+    <span className='text-sm font-mono text-neutral-600 dark:text-neutral-400 text-nowrap'>
       {`${number} views`}
     </span>
   );
