@@ -31,23 +31,23 @@ const BlogPost = async ({
           minimum ? 'p-2' : 'p-3'
         )}
       >
-        <article className='flex flex-col-reverse sm:flex-row sm:items-baseline sm:gap-5'>
+        <article className='w-full flex flex-wrap-reverse lg:flex-nowrap sm:items-baseline sm:gap-5'>
           <time
-            className='text-nowrap opacity-60 sm:w-24'
+            className='text-nowrap opacity-60 sm:w-24 lg:order-1'
             dateTime={formatDate(publishedAt)}
             aria-label={`Written ${publishedAt}`}
           >
             {formatDate(publishedAt)}
           </time>
-
-          <div className='flex-1 w-full justify-between items-start flex gap-4'>
-            <header className='text-sm font-medium'>{title}</header>
-            <Suspense fallback={<span>..</span>}>
-              <p className='px-3'>
-                <Views slug={slug} />
-              </p>
-            </Suspense>
-          </div>
+          <Suspense fallback={<span>..</span>}>
+            <p className='lg:order-3'>
+              <span className='lg:hidden px-2'>,</span>
+              <Views slug={slug} />
+            </p>
+          </Suspense>
+          <header className='w-full lg:w-auto text-sm font-medium lg:order-2 lg:flex-1'>
+            {title}
+          </header>
         </article>
       </Link>
     </li>
