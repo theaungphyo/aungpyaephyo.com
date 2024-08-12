@@ -10,13 +10,13 @@ export const metadata = {
 const Page = () => {
   const blogs = getBlogPosts();
   return (
-    <div>
+    <section>
       <PageTitle
         title={'Read my blog'}
         description={`${blogs.length} posts so far. Stay tuned for more!`}
       />
       <Blogs all />
-    </div>
+    </section>
   );
 };
 

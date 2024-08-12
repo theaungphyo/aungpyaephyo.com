@@ -6,10 +6,10 @@ const Hero = () => {
   return (
     <div className='flex justify-between gap-8 pb-5'>
       <div>
-        <h1 className='flex gap-2 pb-4 text-2xl'>
+        <header className='flex gap-2 pb-4 text-2xl'>
           <span className='font-bold'>{'Mingalarpar'}</span>
           <span className='inline-block origin-[70%_70%] animate-wave'>👋🏼</span>
-        </h1>
+        </header>
 
         <div className='grid gap-4 opacity-80'>
           <p className='sm:max-w-md '>
