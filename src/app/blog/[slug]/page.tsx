@@ -23,10 +23,10 @@ export async function generateMetadata({
 
   let { title, publishedAt: publishedTime, description, image } = post.metadata;
   // let ogImage = image
-  //   ? `https://aungpyaephyo.vercel.app${image}`
-  //   : `https://aungpyaephyo.vercel.app/og?title=${title}`;
+  //   ? `https://www.aungpyaephyo.com${image}`
+  //   : `https://www.aungpyaephyo.com/og?title=${title}`;
 
-  let ogImage = `https://aungpyaephyo.vercel.app/og?title=${title}`;
+  let ogImage = `https://www.aungpyaephyo.com/og?title=${title}`;
   return {
     title,
     description,
@@ -35,7 +35,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://aungpyaephyo.vercel.app/blog/${post.slug}`,
+      url: `https://www.aungpyaephyo.com/blog/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -60,7 +60,7 @@ export async function generateStaticParams() {
 
 const Page = ({ params: { slug } }: Props) => {
   const blog = getBlogPosts().find((b) => b.slug === slug);
-  const canonicalUrl = `https://aungpyaephyo.vercel.app/blog/${slug}`;
+  const canonicalUrl = `https://www.aungpyaephyo.com/blog/${slug}`;
 
   if (!blog) notFound();
   return (
