@@ -83,7 +83,7 @@ const Page = ({ params: { slug } }: Props) => {
           </span>
           <span className='text-sm opacity-70 before:px-1 before:content-["•"] flex items-center'>
             <Suspense fallback={<p className='px-2' />}>
-              <Views slug={slug} />
+              {/*<Views slug={slug} />*/}
             </Suspense>
           </span>
         </nav>

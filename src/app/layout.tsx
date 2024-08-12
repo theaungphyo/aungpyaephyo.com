@@ -5,12 +5,18 @@ import { cn, generateMetaData } from '@/lib/utils';
 import '@/styles/app.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
 import { Metadata } from 'next';
+import { Roboto_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = generateMetaData();
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'auto',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-roboto-mono',
+});
 
 export default function RootLayout({
   children,
@@ -19,12 +25,12 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(GeistSans.variable, GeistMono.variable)}
+      className={cn(roboto_mono.className)}
     >
       <body
         suppressHydrationWarning
         className={cn(
-          'bg-white/50 text-neutral-800 antialiased dark:bg-[rgb(5,5,5)] dark:text-neutral-200'
+          'bg-white/50 text-neutral-800 antialiased dark:bg-[rgb(5,5,5)] dark:text-neutral-200 tracking-tight'
         )}
       >
         <SpeedInsights />
