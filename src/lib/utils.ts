@@ -9,9 +9,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const generateMetaData = () => {
   return {
-    authors: [
-      { name: 'Aung Pyae Phyo', url: 'https://aungpyaephyo.vercel.app' },
-    ],
+    authors: [{ name: 'Aung Pyae Phyo', url: 'https://aungpyaephyo.com' }],
     category: 'developer',
     creator: 'Aung Pyae Phyo',
     description: 'Developer, writer, and creator.',
@@ -33,7 +31,7 @@ export const generateMetaData = () => {
       'Software',
       'Aung Pyae Phyo',
       'Aung Pyae Phyo',
-      'aungpyaephyo.vercel.app',
+      'aungpyaephyo.com',
       'kyaukse',
     ],
     manifest: '/favicons/site.webmanifest',
@@ -43,7 +41,7 @@ export const generateMetaData = () => {
         {
           alt: 'Aung Pyae Phyo',
           height: 1080,
-          url: 'https://aungpyaephyo.vercel.app/og-bg.png',
+          url: 'https://aungpyaephyo.com/og-bg.png',
           width: 1920,
         },
       ],
@@ -51,10 +49,10 @@ export const generateMetaData = () => {
       siteName: 'Aung Pyae Phyo',
       title: 'Aung Pyae Phyo',
       type: 'website',
-      url: 'https://aungpyaephyo.vercel.app',
+      url: 'https://aungpyaephyo.com',
     },
     publisher: 'Aung Pyae Phyo',
-    metadataBase: new URL('https://aungpyaephyo.vercel.app'),
+    metadataBase: new URL('https://aungpyaephyo.com'),
     title: {
       default: 'Aung Pyae Phyo',
       template: '%s | Aung Pyae Phyo',
@@ -76,7 +74,7 @@ export const generateMetaData = () => {
       site: '@typle_x',
     },
     verification: {
-      google: 'qXICIAI1UR-M3LFz7pz2bDybUrI7BYoxsrQGLDVp2wM',
+      google: '2V6fAI1xHZSNoMAr4vucaI7TjftUZGhAlcGWu0MHMDw',
       // yandex: '14d2e73487fa6c71',
     },
   } as Metadata;
