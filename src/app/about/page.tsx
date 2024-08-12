@@ -5,7 +5,7 @@ import PageTitle from '@/components/page-title';
 
 const Page = () => {
   return (
-    <div>
+    <section>
       <PageTitle title={'About'} description={'A glimpse into me.'} />
       <div className='hidden md:block'>
         <Gallery />
@@ -14,7 +14,7 @@ const Page = () => {
         <Hero />
         <Connect />
       </div>
-    </div>
+    </section>
   );
 };
 

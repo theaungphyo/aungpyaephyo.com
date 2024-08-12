@@ -6,13 +6,13 @@ export const metadata: Metadata = {
 };
 const Page = () => {
   return (
-    <div>
+    <section>
       <PageTitle
         title={'Show my project'}
         description={'Open source and private contribution projects'}
       />
       <Projects />
-    </div>
+    </section>
   );
 };
 

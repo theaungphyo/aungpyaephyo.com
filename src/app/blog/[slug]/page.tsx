@@ -64,7 +64,7 @@ const Page = ({ params: { slug } }: Props) => {
 
   if (!blog) notFound();
   return (
-    <div>
+    <section>
       <FeaturedImage
         image={blog.metadata.image ?? '/og-bg.png'}
         lqpiImage={blurDataImage}
@@ -96,7 +96,7 @@ const Page = ({ params: { slug } }: Props) => {
         slug={slug}
         title={blog.metadata.title}
       />
-    </div>
+    </section>
   );
 };
 let incrementViews = cache(increment);
