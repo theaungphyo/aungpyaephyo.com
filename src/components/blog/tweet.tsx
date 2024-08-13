@@ -1,8 +1,16 @@
-import { EmbeddedTweet, TweetNotFound, type TweetProps } from 'react-tweet';
+import { unstable_noStore } from 'next/cache';
+import { Suspense } from 'react';
+import {
+  EmbeddedTweet,
+  TweetNotFound,
+  TweetSkeleton,
+  type TweetProps,
+} from 'react-tweet';
 import { getTweet } from 'react-tweet/api';
 import './tweet.css';
 
 const TweetContent = async ({ id, components, onError }: TweetProps) => {
+  unstable_noStore();
   let error;
   const tweet = id
     ? await getTweet(id).catch((err) => {
@@ -28,9 +36,9 @@ export async function TweetComponent({ id }: { id: string }) {
   return (
     <div className='tweet my-6'>
       <div className={`flex justify-center`}>
-        {/* <Suspense fallback={<TweetSkeleton />}> */}
-        <ReactTweet id={id} />
-        {/* </Suspense> */}
+        <Suspense fallback={<TweetSkeleton />}>
+          <ReactTweet id={id} />
+        </Suspense>
       </div>
     </div>
   );
