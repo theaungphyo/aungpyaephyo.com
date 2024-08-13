@@ -6,15 +6,15 @@ import '@/styles/app.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
-import { Roboto_Mono } from 'next/font/google';
+import { Martian_Mono } from 'next/font/google';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = generateMetaData();
 
-const roboto_mono = Roboto_Mono({
+const roboto_mono = Martian_Mono({
   subsets: ['latin'],
   display: 'auto',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '800'],
   variable: '--font-roboto-mono',
 });
 

@@ -3,6 +3,10 @@ import Gallery from '@/components/about/gallery';
 import Hero from '@/components/about/hero';
 import PageTitle from '@/components/page-title';
 
+export const metadata = {
+  title: 'About',
+  description: 'Read my about on real life.',
+};
 const Page = () => {
   return (
     <section>

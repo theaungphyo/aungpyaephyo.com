@@ -8,8 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export const generateMetaData = () => {
+  const siteUrl = 'https://aungpyaephyo.com';
   return {
-    authors: [{ name: 'Aung Pyae Phyo', url: 'https://aungpyaephyo.com' }],
+    authors: [{ name: 'Aung Pyae Phyo', url: siteUrl }],
     category: 'developer',
     creator: 'Aung Pyae Phyo',
     description: 'Developer, writer, and creator.',
@@ -41,7 +42,7 @@ export const generateMetaData = () => {
         {
           alt: 'Aung Pyae Phyo',
           height: 1080,
-          url: 'https://aungpyaephyo.com/og-bg.png',
+          url: `${siteUrl}/og-bg.png`,
           width: 1920,
         },
       ],
@@ -49,10 +50,10 @@ export const generateMetaData = () => {
       siteName: 'Aung Pyae Phyo',
       title: 'Aung Pyae Phyo',
       type: 'website',
-      url: 'https://aungpyaephyo.com',
+      url: `${siteUrl}`,
     },
     publisher: 'Aung Pyae Phyo',
-    metadataBase: new URL('https://aungpyaephyo.com'),
+    metadataBase: new URL(`${siteUrl}`),
     title: {
       default: 'Aung Pyae Phyo',
       template: '%s | Aung Pyae Phyo',

@@ -31,8 +31,10 @@ const Work = () => {
                 className='flex items-start flex-col gap-y-2 md:flex-row'
               >
                 <div className='grow'>
-                  <p className='font-medium text-[16px]'>{experience.title}</p>
-                  <p className='opacity-50 text-sm'>{experience.company}</p>
+                  <p className='font-medium text-[16px]'>
+                    {experience.company}
+                  </p>
+                  <p className='opacity-50 text-sm'>{experience.title}</p>
                 </div>
                 <span className='opacity-90 text-sm'>
                   {experience.durationStart} – {experience.durationEnd}

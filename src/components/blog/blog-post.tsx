@@ -42,7 +42,7 @@ const BlogPost = async ({
           <header className='w-full lg:w-auto text-sm font-medium lg:flex-1'>
             {title}
           </header>
-          <Suspense fallback={<span>..</span>}>
+          <Suspense fallback={<span></span>}>
             <p>
               <Views slug={slug} />
             </p>
