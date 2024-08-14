@@ -6,7 +6,7 @@ const NotFound = () => {
       </h1>
       <p>
         If you expected to see something here, let me know
-        (aungpyaephyo1412@gmail.com).
+        (hi@aungpyaephyo.com).
       </p>
     </div>
   );
