@@ -4,9 +4,7 @@ export const generateMetaData = () => {
   const siteUrl = 'https://aungpyaephyo.com';
   const name = 'Aung Pyae Phyo';
   return {
-    authors: [{ name: name, url: siteUrl }],
-    category: 'developer',
-    creator: name,
+    metadataBase: new URL(siteUrl),
     description: 'Developer, writer, and creator.',
     icons: {
       apple: '/favicons/apple-touch-icon.png',
@@ -30,6 +28,10 @@ export const generateMetaData = () => {
       'kyaukse',
     ],
     manifest: '/favicons/site.webmanifest',
+    title: {
+      default: name,
+      template: `%s | ${name}`,
+    },
     openGraph: {
       description: 'Developer, writer, and creator.',
       images: [
@@ -45,12 +47,6 @@ export const generateMetaData = () => {
       title: name,
       type: 'website',
       url: siteUrl,
-    },
-    publisher: name,
-    metadataBase: new URL(siteUrl),
-    title: {
-      default: name,
-      template: `%s | ${name}`,
     },
     robots: {
       index: true,
