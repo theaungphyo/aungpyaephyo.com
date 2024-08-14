@@ -1,21 +1,20 @@
 import Footer from '@/components/footer';
 import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
-import { cn, generateMetaData } from '@/lib/utils';
+import { generateMetaData } from '@/lib/metadata';
+import { cn } from '@/lib/utils';
 import '@/styles/app.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
-import { Martian_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import { ReactNode } from 'react';
 
 export const metadata: Metadata = generateMetaData();
 
-const roboto_mono = Martian_Mono({
-  subsets: ['latin'],
-  display: 'auto',
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-roboto-mono',
+const roboto_mono = localFont({
+  src: './mono.woff2',
+  display: 'swap',
 });
 
 export default function RootLayout({

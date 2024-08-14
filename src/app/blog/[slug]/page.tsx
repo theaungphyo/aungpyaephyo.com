@@ -21,10 +21,7 @@ export async function generateMetadata({
     return;
   }
 
-  let { title, publishedAt: publishedTime, description, image } = post.metadata;
-  // let ogImage = image
-  //   ? `https://www.aungpyaephyo.com${image}`
-  //   : `https://www.aungpyaephyo.com/og?title=${title}`;
+  let { title, publishedAt: publishedTime, description } = post.metadata;
 
   let ogImage = `https://www.aungpyaephyo.com/og?title=${title}`;
   return {

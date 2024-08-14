@@ -7,8 +7,7 @@ import GitHubCalendar from 'react-github-calendar';
 
 const ActivityBar = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
-
+  const { theme } = useTheme();
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
@@ -23,11 +22,11 @@ const ActivityBar = () => {
       <ScrollArea className='pb-3'>
         <GitHubCalendar
           username='aungpyaephyo1412'
-          blockSize={10}
+          blockSize={9.9}
           colorScheme={theme === 'light' ? 'light' : 'dark'}
           theme={{
-            dark: ['#57606a', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
-            light: ['#EBEDF0', '#9BE9A8', '#40C463', '#30A14E', '#216E39'],
+            dark: ['#333333', '#4CAF50', '#81C784', '#A5D6A7', '#C8E6C9'],
+            light: ['#EBEDF0', '#C6E48B', '#7BC96F', '#239A3B', '#196127'],
           }}
         />
         <ScrollBar orientation={'horizontal'} />
