@@ -19,12 +19,15 @@ export async function getBlogViews() {
   }
 
   noStore();
-  let views = await sql`
-    SELECT count
+  const views = await sql`
+    SELECT *
     FROM views
   `;
 
-  return views.reduce((acc, curr) => acc + Number(curr.count), 0);
+  return views.map((view) => ({
+    slug: view.slug,
+    count: view.count,
+  }));
 }
 
 export async function getViewsCount(): Promise<
