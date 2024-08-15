@@ -1,16 +1,18 @@
 import Image from 'next/image';
 
 type Props = {
-  image: string;
+  image: string | undefined;
   lqpiImage: string;
   title: string;
 };
 
 const FeaturedImage = (props: Props) => (
   <header className='relative w-full mb-5'>
-    <div className='absolute inset-0 flex p-6 justify-center items-center font-extrabold text-blue-500 text-lg lg:text-2xl z-10 text-center font-mono'>
-      {props.title}
-    </div>
+    {!props.image && (
+      <div className='absolute inset-0 flex p-6 justify-center items-center font-extrabold text-blue-500 text-lg lg:text-2xl z-10 text-center font-mono'>
+        {props.title}
+      </div>
+    )}
     <Image
       alt={props.title}
       blurDataURL={props.lqpiImage}
@@ -20,7 +22,7 @@ const FeaturedImage = (props: Props) => (
       className='object-cover object-bottom rounded-lg'
       placeholder='blur'
       priority
-      src={props.image}
+      src={props.image ?? '/og-bg.png'}
     />
   </header>
 );

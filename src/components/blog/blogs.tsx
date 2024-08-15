@@ -11,11 +11,11 @@ const sort = (a: string, b: string) => {
   return 1;
 };
 const Blogs = ({ all = false }: { all?: boolean }) => {
-  const blogs = getBlogPosts()
-    .sort((a, b) => sort(a.metadata.publishedAt, b.metadata.publishedAt))
-    .filter((b, i) => i < 8);
-
-  const groupBlogs = groupBy(blogs, (blog) =>
+  const data = getBlogPosts().sort((a, b) =>
+    sort(a.metadata.publishedAt, b.metadata.publishedAt)
+  );
+  const blogs = data.filter((b, i) => i < 8);
+  const groupBlogs = groupBy(data, (blog) =>
     blog.metadata.publishedAt.substring(0, 4)
   );
   return (

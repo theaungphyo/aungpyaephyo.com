@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-export type Metadata = {
+export type MdxMetadata = {
   title: string;
   image: string;
   description: string;
@@ -13,16 +13,16 @@ function parseFrontmatter(fileContent: string) {
   let frontMatterBlock = match![1];
   let content = fileContent.replace(frontmatterRegex, '').trim();
   let frontMatterLines = frontMatterBlock.trim().split('\n');
-  let metadata: Partial<Metadata> = {};
+  let metadata: Partial<MdxMetadata> = {};
 
   frontMatterLines.forEach((line) => {
     let [key, ...valueArr] = line.split(': ');
     let value = valueArr.join(': ').trim();
     value = value.replace(/^['"](.*)['"]$/, '$1'); // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value;
+    metadata[key.trim() as keyof MdxMetadata] = value;
   });
 
-  return { metadata: metadata as Metadata, content };
+  return { metadata: metadata as MdxMetadata, content };
 }
 
 function getMDXFiles(dir: string) {
