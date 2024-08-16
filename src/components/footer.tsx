@@ -7,7 +7,7 @@ const Footer = () => {
           <span>Aung Pyae Phyo © {new Date().getFullYear()}</span>
           <div className='flex items-center'>
             <a
-              href='https://twitter.com/typle_x'
+              href='https://twitter.com/aungpyaephyo_'
               aria-label='Visit my Twitter'
               className='p-3 text-neutral-500 transition-colors hover:text-neutral-800 dark:hover:text-neutral-300'
             >

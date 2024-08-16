@@ -14,12 +14,12 @@ interface ConnectLink {
 const ConnectLinks: ConnectLink[] = [
   {
     label: 'Partnerships',
-    href: 'mailto:aungpyaephyo1412@gmail.com',
+    href: 'mailto:hi@aungpyaephyo.com',
     icon: <Gmail className='size-5' />,
   },
   {
     label: 'Twitter',
-    href: 'https://x.com/typle_x',
+    href: 'https://x.com/aungpyaephyo_',
     icon: <X className='fill-black dark:fill-white' />,
   },
   {
