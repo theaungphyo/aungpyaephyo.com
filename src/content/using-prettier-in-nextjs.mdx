@@ -19,12 +19,10 @@ publishedAt: '2023-12-20'
 
 <Code filename='terminal'>{`pnpm add -D eslint-config-prettier`}</Code>
 
-.eslintrc.json or .eslintrc.json
+.eslintrc.json
 
 <Code filename='.eslintrc.json or .eslintrc.json'>
-  {`
-    { "extends": ["next", "prettier"] }
-    `}
+  {`{ "extends": ["next", "prettier"] }`}
 </Code>
 
 ## Step 4: Install and Configure Tailwind CSS
@@ -63,7 +61,7 @@ global.css
 
 <Code filename='global.css'>
   {`
-    @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
     `}
@@ -73,7 +71,7 @@ global.css
 
 <Code filename="terminal">
     {`
-    pnpm add -D prettier-plugin-tailwindcss
+pnpm add -D prettier-plugin-tailwindcss
 
 touch .prettierrc.json
 `}
@@ -95,9 +93,8 @@ touch .prettierrc.json
 
 <Code filename='package.json'>
   {`
-    "scripts" : {
-     "format": "prettier --check --ignore-path .gitignore .",
-     "format:fix": "prettier --write --ignore-path .gitignore ."
-}
-    `}
+"scripts" : {
+ "format": "prettier --check --ignore-path .gitignore .",
+ "format:fix": "prettier --write --ignore-path .gitignore ." }
+`}
 </Code>
