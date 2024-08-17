@@ -13,6 +13,7 @@ import { Suspense, cache } from 'react';
 interface Props {
   params: { slug: string };
 }
+
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata | undefined> {
@@ -70,24 +71,26 @@ const Page = ({ params: { slug } }: Props) => {
         title={blog.metadata.title}
       />
       <header className='mb-6 pb-4 font-mono'>
-        <h1 className='mb-2 text-2xl lg:text-4xl font-extrabold'>
+        <h1 className='mb-2 text-2xl tracking-tighter font-extrabold'>
           {blog.metadata.title}
         </h1>
-        <nav className='w-full flex items-center'>
-          <time className='text-sm opacity-70' dateTime='2021-05-03 22:00'>
-            {formatDate(blog.metadata.publishedAt)}
-          </time>
-          <span className='text-sm opacity-70 before:px-1 before:content-["•"]'>
-            {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
-          </span>
-          <span className='text-sm opacity-70 before:px-1 before:content-["•"] flex items-center'>
+        <nav className='w-full flex items-center justify-between'>
+          <div>
+            <time className='text-sm opacity-70' dateTime='2021-05-03 22:00'>
+              {formatDate(blog.metadata.publishedAt)}
+            </time>
+            <span className='text-sm opacity-70 before:px-1 before:content-["•"]'>
+              {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
+            </span>
+          </div>
+          <span className='text-sm opacity-70 flex items-center'>
             <Suspense fallback={<p className='px-2' />}>
               <Views slug={slug} />
             </Suspense>
           </span>
         </nav>
       </header>
-      <article className='tracking-wider prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-headings:my-9 prose-img:rounded-lg'>
+      <article className='tracking-wider prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-headings:my-9 prose-img:rounded-lg  prose-quoteless prose-neutral'>
         <MdxViewer source={blog.content} />
       </article>
       <ShareLinks
