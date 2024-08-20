@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <div className='flex justify-between gap-8 pb-5'>
       <div>
-        <header className='flex gap-2 pb-4 text-2xl'>
-          <span className='font-bold'>{'Mingalarpar'}</span>
+        <header className='flex gap-2 pb-2 text-2xl'>
+          <span className='font-bold'>{"Hello, I'm Aung Pyae Phyo"}</span>
           <span className='inline-block origin-[70%_70%] animate-wave'>👋🏼</span>
         </header>
 

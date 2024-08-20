@@ -9,7 +9,7 @@ type Props = {
 const FeaturedImage = (props: Props) => (
   <header className='relative w-full mb-5'>
     {!props.image && (
-      <div className='absolute inset-0 flex p-6 justify-center items-center font-extrabold text-blue-500 text-lg lg:text-2xl z-10 text-center font-mono'>
+      <div className='absolute inset-0 flex p-6 justify-center items-center font-extrabold text-cyan-800 text-lg lg:text-2xl z-10 text-center'>
         {props.title}
       </div>
     )}
