@@ -4,8 +4,8 @@ import { ImageResponse } from 'next/og';
 // Image metadata
 export const alt = "Aung Pyae Phyo's Opengraph Image";
 export const size = {
-  width: 1200,
-  height: 630,
+  width: 800,
+  height: 400,
 };
 
 export const contentType = 'image/png';
@@ -15,24 +15,28 @@ export default async function Image() {
     (
       <div
         style={{
-          fontSize: 128,
-          background: 'whitesmoke',
-          width: '100%',
-          height: '100%',
           display: 'flex',
-          alignItems: 'center',
           justifyContent: 'center',
+          alignItems: 'center',
+          fontSize: 24,
+          fontWeight: 600,
+          textAlign: 'left',
+          padding: 70,
+          color: 'red',
+          backgroundImage: 'linear-gradient(to right, #334d50, #cbcaa5)',
+          height: '100%',
+          width: '100%',
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src='https://www.aungpyaephyo.com/avatar.png'
-          alt={alt}
-          height={'100%'}
-          width={'100%'}
+          src='https://www.aungpyaephyo.com/og-logo.png'
+          alt='opengraph logo'
           style={{
-            objectFit: 'contain',
-            objectPosition: 'center',
+            width: '400px',
+            height: '400px',
+            borderRadius: '50%',
+            objectFit: 'cover',
           }}
         />
       </div>
