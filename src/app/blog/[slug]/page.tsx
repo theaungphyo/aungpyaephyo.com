@@ -101,10 +101,10 @@ const Page = ({ params: { slug } }: Props) => {
     </section>
   );
 };
-let incrementViews = cache(increment);
+const incrementViews = cache(increment);
 
 async function Views({ slug }: { slug: string }) {
-  await incrementViews(slug);
+  incrementViews(slug).then();
   let views = await getViewsCount();
   return <ViewCounter allViews={views} slug={slug} />;
 }
