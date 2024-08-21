@@ -60,7 +60,7 @@ export default function RootLayout({
       <body
         suppressHydrationWarning
         className={cn(
-          'bg-white/50 text-neutral-800 antialiased dark:bg-[#0D0D0D] dark:text-neutral-200 tracking-tight'
+          'bg-white/50 text-neutral-800 antialiased dark:bg-[rgb(5,5,5)]  dark:text-neutral-100 tracking-tight'
         )}
       >
         <SpeedInsights />

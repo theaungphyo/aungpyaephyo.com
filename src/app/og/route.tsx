@@ -19,18 +19,18 @@ export async function GET(req: NextRequest) {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'flex-start',
-          justifyContent: 'center',
-          backgroundImage: 'url(https://aungpyaephyo.vercel.app/og-bg.png)',
+          padding: '100',
+          justifyContent: 'flex-start',
+          backgroundImage: 'url(http://localhost:3000/og-bg.png)',
         }}
       >
-        <div
+        <p
           style={{
-            marginLeft: 150,
-            marginRight: 150,
             display: 'flex',
-            fontSize: 130,
+            fontSize: 100,
             fontFamily: 'Jetbrains Mono',
             letterSpacing: '-0.05em',
+            fontWeight: '7000',
             fontStyle: 'normal',
             color: 'black',
             lineHeight: '120px',
@@ -39,7 +39,7 @@ export async function GET(req: NextRequest) {
           }}
         >
           {postTitle}
-        </div>
+        </p>
       </div>
     ),
     {
