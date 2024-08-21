@@ -27,17 +27,17 @@ const experiences = [
     description:
       'I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer.',
     durationStart: 'Nov 2023',
-    durationEnd: 'April 2024',
+    durationEnd: 'March 2024',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
     logo: '/company/mml.jpg',
   },
   {
     id: 3,
-    title: 'Frontend Instructor',
-    company: 'Sithu Computer',
+    title: 'Web development Instructor',
+    company: 'SiThu Computer',
     companyLink: 'https://sithucenter.com/',
     description:
-      'I work at Sithu Computer Training Center  in August 1, 2024 as Frontend Instructor.',
+      'I work at SiThu Computer Training Center  in August 1, 2024 as Web development Instructor.',
     durationStart: 'Aug 2024',
     durationEnd: 'Present',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
@@ -46,10 +46,10 @@ const experiences = [
   {
     id: 4,
     title: 'Web Developer',
-    company: 'Sithu Computer',
+    company: 'SiThu Computer',
     companyLink: 'https://sithucenter.com/',
     description:
-      'I work at Sithu Computer Training Center  in August 1, 2024 as Web developer.',
+      'I work at SiThu Computer Training Center  in August 1, 2024 as Web developer.',
     durationStart: 'Aug 2024',
     durationEnd: 'Present',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],

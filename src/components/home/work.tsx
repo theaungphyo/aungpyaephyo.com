@@ -28,13 +28,13 @@ const Work = () => {
                 href={experience.companyLink ?? '#'}
                 target={experience.companyLink ? '_blank' : '_top'}
                 rel='noopener noreferrer'
-                className='flex items-start flex-col gap-y-2 md:flex-row'
+                className='flex items-start flex-col gap-y-1 md:flex-row'
               >
-                <div className='grow'>
+                <div className='flex flex-col items-start grow'>
                   <p className='font-medium text-[16px]'>
                     {experience.company}
                   </p>
-                  <p className='opacity-50 text-sm'>{experience.title}</p>
+                  <p className='opacity-50 text-smn'>{experience.title}</p>
                 </div>
                 <span className='opacity-90 text-sm'>
                   {experience.durationStart} – {experience.durationEnd}

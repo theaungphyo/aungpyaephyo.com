@@ -3,25 +3,18 @@ import Image from 'next/image';
 type Props = {
   image: string | undefined;
   lqpiImage: string;
-  title: string;
 };
 
 const FeaturedImage = (props: Props) => (
-  <header className='relative w-full mb-5'>
-    {!props.image && (
-      <div className='absolute inset-0 flex p-6 justify-center items-center font-extrabold text-cyan-800 text-lg lg:text-2xl z-10 text-center'>
-        {props.title}
-      </div>
-    )}
+  <header className='relative w-full mb-5 h-96 mx-auto'>
     <Image
-      alt={props.title}
+      alt={'blog image'}
       blurDataURL={props.lqpiImage}
-      sizes={'200'}
-      height={400}
-      width={780}
-      className='object-cover object-bottom rounded-lg'
+      sizes={'50'}
+      className='object-cover rounded-md'
       placeholder='blur'
       priority
+      fill
       src={props.image ?? '/og-bg.png'}
     />
   </header>

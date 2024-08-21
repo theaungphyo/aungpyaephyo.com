@@ -26,7 +26,7 @@
 }
 
 .prose pre {
-    @apply bg-neutral-200 rounded-none overflow-x-auto dark:bg-black m-0 rounded-b-lg mb-5 border-0;
+    @apply bg-neutral-200 dark:bg-neutral-900 rounded-none overflow-x-auto m-0 rounded-b-lg border-0;
 }
 
 .prose code {

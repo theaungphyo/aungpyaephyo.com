@@ -29,7 +29,7 @@ function Navigation() {
   return (
     <aside
       className={cn(
-        'px-4 sticky top-0 z-50 w-full py-5 tracking-tight dark:bg-[#0D0D0D]/70 border-b-[1px] border-solid border-neutral-100 bg-white/75  dark:border-neutral-900 sm:py-3 backdrop-blur-xl',
+        'px-4 sticky top-0 z-50 w-full py-5 tracking-tight dark:bg-[rgb(5,5,5)]/50 border-b-[1px] border-solid border-neutral-100 bg-white/75  dark:border-neutral-900 sm:py-3 backdrop-blur-xl',
         path ? ' mb-9' : 'mb-6'
       )}
     >

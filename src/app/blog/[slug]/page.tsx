@@ -6,7 +6,6 @@ import ViewCounter from '@/components/blog/views-counter';
 import { getBlogPosts } from '@/db/blog';
 import { blurDataImage, formatDate } from '@/lib/utils';
 import '@/styles/prose.css';
-import moment from 'moment';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense, cache } from 'react';
@@ -65,25 +64,18 @@ const Page = ({ params: { slug } }: Props) => {
   if (!blog) notFound();
   return (
     <section>
-      <FeaturedImage
-        image={blog.metadata.image}
-        lqpiImage={blurDataImage}
-        title={blog.metadata.title}
-      />
+      {blog.metadata.image && (
+        <FeaturedImage image={blog.metadata.image} lqpiImage={blurDataImage} />
+      )}
       <header className='mb-6 pb-4 font-mono'>
         <h1 className='mb-2 text-2xl tracking-tighter font-extrabold'>
           {blog.metadata.title}
         </h1>
-        <nav className='w-full flex items-center justify-between'>
-          <div>
-            <time className='text-sm opacity-70' dateTime='2021-05-03 22:00'>
-              {formatDate(blog.metadata.publishedAt)}
-            </time>
-            <span className='text-sm opacity-70 before:px-1 before:content-["•"]'>
-              {moment(blog.metadata.publishedAt, 'YYYYMMDD').fromNow()}
-            </span>
-          </div>
-          <span className='text-sm opacity-70 flex items-center'>
+        <nav>
+          <time className='text-sm opacity-70' dateTime='2021-05-03 22:00'>
+            {formatDate(blog.metadata.publishedAt)}
+          </time>
+          <span className='text-sm opacity-70 before:px-1 before:content-["•"]'>
             <Suspense fallback={<p className='px-2' />}>
               <Views slug={slug} />
             </Suspense>
