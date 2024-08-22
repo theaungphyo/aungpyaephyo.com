@@ -66,7 +66,7 @@ function Navigation() {
                           <Link
                             href={href}
                             className={cn(
-                              'capitalize  font-medium flex flex-col tracking-wide justify-center relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100'
+                              'lowercase  font-medium flex flex-col tracking-wide justify-center relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100'
                             )}
                           >
                             {title}
@@ -108,7 +108,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
       key={path}
       href={path}
       className={cn(
-        'capitalize  font-medium flex flex-col tracking-wide justify-center items-end relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100',
+        'lowercase  font-medium flex flex-col tracking-wide justify-center items-end relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100',
         isActive && 'text-blue-500 opacity-100'
       )}
     >

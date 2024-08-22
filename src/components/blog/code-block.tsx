@@ -1,4 +1,3 @@
-'use client';
 import { highlight } from 'sugar-high';
 
 const CodeBlock = ({

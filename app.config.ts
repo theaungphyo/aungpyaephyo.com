@@ -11,6 +11,10 @@ export const navigation_links = [
   //   title: 'project',
   //   href: '/project',
   // },
+  {
+    title: 'guestbook',
+    href: '/guestbook',
+  },
 ];
 
 export const mob_navigation_links = [
