@@ -3,6 +3,7 @@
 import { auth, signOut } from '@/auth';
 import { sql } from '@/db/postgres';
 import { revalidatePath, unstable_noStore } from 'next/cache';
+import { Resend } from 'resend';
 
 export const logout = async () => {
   await signOut({ redirectTo: '/guestbook' });
@@ -21,6 +22,19 @@ export async function getGuestbookEntries() {
     LIMIT 100
   `;
 }
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+export async function sendMail(email: string, body: string) {
+  const { data } = await resend.emails.send({
+    from: `${email} <onboarding@resend.dev>`,
+    to: ['aungpyaephyo1412@proton.me'],
+    subject: 'Guestbook',
+    text: `Email : ${email}\n\nBody : ${body}`,
+  });
+  return data;
+}
+
 export async function saveGuestbookEntry(formData: FormData) {
   let session = await auth();
   let email = session?.user?.email as string;
@@ -40,20 +54,6 @@ export async function saveGuestbookEntry(formData: FormData) {
 
   revalidatePath('/guestbook');
 
-  // let data = await fetch('https://api.resend.com/emails', {
-  //   method: 'POST',
-  //   headers: {
-  //     Authorization: `Bearer ${process.env.RESEND_SECRET}`,
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify({
-  //     from: 'guestbook@leerob.io',
-  //     to: 'me@leerob.io',
-  //     subject: 'New Guestbook Entry',
-  //     html: `<p>Email: ${email}</p><p>Message: ${body}</p>`,
-  //   }),
-  // });
-
-  // let response = await data.json();
+  await sendMail(email, body);
   console.log('Email sent');
 }
