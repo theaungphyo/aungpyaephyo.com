@@ -1,6 +1,8 @@
-export const runtime = 'edge';
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+import { appConfig } from '../../../app.config';
+
+export const runtime = 'edge';
 
 export async function GET(req: NextRequest) {
   const { searchParams } = req.nextUrl;
@@ -21,7 +23,7 @@ export async function GET(req: NextRequest) {
           alignItems: 'flex-start',
           padding: '100',
           justifyContent: 'flex-start',
-          backgroundImage: 'url(http://localhost:3000/og-bg.png)',
+          backgroundImage: `url(${appConfig.url}/og-bg.png)`,
         }}
       >
         <p
