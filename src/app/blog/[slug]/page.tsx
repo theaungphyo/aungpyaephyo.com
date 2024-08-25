@@ -9,6 +9,7 @@ import '@/styles/prose.css';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { Suspense, cache } from 'react';
+import { appConfig } from '../../../../app.config';
 interface Props {
   params: { slug: string };
 }
@@ -24,8 +25,8 @@ export async function generateMetadata({
   let { title, publishedAt: publishedTime, description, image } = post.metadata;
 
   let ogImage = image
-    ? `https://www.aungpyaephyo.com/${image}`
-    : `https://www.aungpyaephyo.com/og?title=${title}`;
+    ? `${appConfig.url}/${image}`
+    : `${appConfig.url}/og?title=${title}`;
   return {
     title,
     description,
@@ -34,7 +35,7 @@ export async function generateMetadata({
       description,
       type: 'article',
       publishedTime,
-      url: `https://www.aungpyaephyo.com/blog/${post.slug}`,
+      url: `${appConfig.url}/blog/${post.slug}`,
       images: [
         {
           url: ogImage,
@@ -59,7 +60,7 @@ export async function generateStaticParams() {
 
 const Page = ({ params: { slug } }: Props) => {
   const blog = getBlogPosts().find((b) => b.slug === slug);
-  const canonicalUrl = `https://www.aungpyaephyo.com/blog/${slug}`;
+  const canonicalUrl = `${appConfig.url}/blog/${slug}`;
 
   if (!blog) notFound();
   return (

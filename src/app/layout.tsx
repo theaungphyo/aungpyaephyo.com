@@ -7,19 +7,20 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from 'next';
 import localFont from 'next/font/local';
+import { appConfig } from '../../app.config';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.aungpyaephyo.com'),
+  metadataBase: new URL(appConfig.url),
   title: {
-    default: 'Aung Pyae Phyo',
-    template: '%s | Aung Pyae Phyo',
+    default: appConfig.name,
+    template: `%s | ${appConfig.name}`,
   },
   description: 'Developer, writer, and creator.',
   openGraph: {
-    title: 'Aung Pyae Phyo',
+    title: appConfig.name,
     description: 'Developer, writer, and creator.',
-    url: 'https://www.aungpyaephyo.com',
-    siteName: 'Aung Pyae Phyo',
+    url: appConfig.url,
+    siteName: appConfig.name,
     locale: 'en_US',
     type: 'website',
   },
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: 'Aung Pyae Phyo',
+    title: appConfig.name,
     card: 'summary_large_image',
   },
   verification: {

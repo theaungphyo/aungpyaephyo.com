@@ -1,8 +1,10 @@
-export const runtime = 'edge';
 import { ImageResponse } from 'next/og';
+import { appConfig } from '../../app.config';
+
+export const runtime = 'edge';
 
 // Image metadata
-export const alt = "Aung Pyae Phyo's Opengraph Image";
+export const alt = `${appConfig.name}'s Opengraph Image`;
 export const size = {
   width: 800,
   height: 400,
@@ -30,7 +32,7 @@ export default async function Image() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src='https://www.aungpyaephyo.com/og-logo.png'
+          src={`${appConfig.url}/og-logo.png`}
           alt='opengraph logo'
           style={{
             width: '400px',

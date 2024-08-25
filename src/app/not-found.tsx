@@ -1,3 +1,5 @@
+import { appConfig } from '../../app.config';
+
 const NotFound = () => {
   return (
     <div className='flex  w-full flex-1 flex-col  justify-center dark:text-white pt-9'>
@@ -5,8 +7,7 @@ const NotFound = () => {
         {"Oh no! This page doesn't exist."}
       </h1>
       <p>
-        If you expected to see something here, let me know
-        (hi@aungpyaephyo.com).
+        If you expected to see something here, let me know ({appConfig.mail}).
       </p>
     </div>
   );
