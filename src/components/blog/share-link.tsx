@@ -26,12 +26,12 @@ const ShareLinks = (props: SProps) => (
     <div className='grid grid-cols-1 gap-3 sm:grid-flow-col sm:grid-cols-[repeat(3,max-content)]'>
       <Button
         label='Share on Twitter'
-        href={`https://twitter.com/intent/tweet?text=${props.title}&url=${props.canonicalUrl}&via=typle_x`}
+        href={`https://x.com/intent/tweet?text=${props.title}&url=${props.canonicalUrl}&via=aungpyaephyo_`}
       />
 
       <Button
         label='Discuss on Twitter'
-        href={`https://twitter.com/search?q=${props.canonicalUrl}`}
+        href={`https://x.com/search?q=${props.canonicalUrl}`}
       />
     </div>
   </section>
