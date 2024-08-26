@@ -65,6 +65,28 @@ const Page = ({ params: { slug } }: Props) => {
   if (!blog) notFound();
   return (
     <section>
+      <script
+        type='application/ld+json'
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: blog.metadata.title,
+            datePublished: blog.metadata.publishedAt,
+            dateModified: blog.metadata.publishedAt,
+            description: blog.metadata.description,
+            image: blog.metadata.image
+              ? `${appConfig.url}${blog.metadata.image}`
+              : `${appConfig.url}/og?title=${blog.metadata.title}`,
+            url: `${appConfig.url}/blog/${blog.slug}`,
+            author: {
+              '@type': 'Person',
+              name: appConfig.name,
+            },
+          }),
+        }}
+      />
       {blog.metadata.image && (
         <FeaturedImage image={blog.metadata.image} lqpiImage={blurDataImage} />
       )}
@@ -101,4 +123,5 @@ async function Views({ slug }: { slug: string }) {
   let views = await getViewsCount();
   return <ViewCounter allViews={views} slug={slug} />;
 }
+
 export default Page;

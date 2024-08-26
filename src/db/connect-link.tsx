@@ -29,8 +29,8 @@ const ConnectLinks: ConnectLink[] = [
     icon: <Github />,
   },
   {
-    label: appConfig.socials.gitlab,
-    href: 'https://gitlab.com/aungpyaephyo1412',
+    label: 'Gitlab',
+    href: appConfig.socials.gitlab,
     icon: <GitLab />,
   },
   {

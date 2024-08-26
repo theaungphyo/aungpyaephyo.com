@@ -34,7 +34,7 @@ const Hero = () => {
       <Section heading='About' headingAlignment='left'>
         <div className='flex flex-col gap-6'>
           <p>
-            Hi, I&apos;m ${appConfig.name}, born in Kyaukse and raised in
+            Hi, I&apos;m {appConfig.name}, born in Kyaukse and raised in
             Kyaukse, Mandalay, Myanmar. I have been coding for{' '}
             {new Date().getFullYear() - 2022} years. As a web developer, I
             specialize in full-stack web development.
