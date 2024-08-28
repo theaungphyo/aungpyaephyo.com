@@ -1,4 +1,5 @@
 import Footer from '@/components/footer';
+import GoogleAna from '@/components/google-ana';
 import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
 import { cn } from '@/lib/utils';
@@ -16,6 +17,34 @@ export const metadata: Metadata = {
     template: `%s | ${appConfig.name}`,
   },
   description: 'Developer, writer, and creator.',
+  keywords: [
+    'aungpyaephyo',
+    'aungpyaephyo.com',
+    'aung pyae phyo',
+    'aung phyo',
+    'aung pyae phyo blog',
+    'aung pyae phyo tech',
+    'aung pyae phyo kyaukse',
+    'aung pyae phyo kyaukse blog',
+    'aung pyae phyo kyaukse tech',
+    'software development',
+    'web development',
+    'design',
+    'blog',
+    'tech',
+    'kyaukse',
+    'nextjs',
+    'react',
+    'nestjs',
+    'software engineering',
+    'software architecture',
+    'javascript',
+    'typescript',
+    'nodejs',
+    'mongodb',
+    'graphql',
+    'aws',
+  ],
   openGraph: {
     title: appConfig.name,
     description: 'Developer, writer, and creator.',
@@ -64,8 +93,6 @@ export default function RootLayout({
           'bg-white/50 text-neutral-800 antialiased dark:bg-[rgb(5,5,5)]  dark:text-neutral-100 tracking-tight'
         )}
       >
-        <SpeedInsights />
-        <Analytics mode={'production'} />
         <Provider>
           <main
             className={cn(
@@ -79,6 +106,9 @@ export default function RootLayout({
             <Footer />
           </main>
         </Provider>
+        <GoogleAna />
+        <SpeedInsights />
+        <Analytics mode={'production'} />
       </body>
     </html>
   );
