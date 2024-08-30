@@ -6,7 +6,7 @@ type Props = {
 };
 
 const FeaturedImage = (props: Props) => (
-  <header className='relative w-full mb-5 h-96 mx-auto'>
+  <header className='relative w-full mb-5 h-64 lg:h-96 mx-auto'>
     <Image
       alt={'blog image'}
       blurDataURL={props.lqpiImage}

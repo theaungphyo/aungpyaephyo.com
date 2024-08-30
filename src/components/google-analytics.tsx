@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-const GoogleAna = () => {
+const GoogleAnalytics = () => {
   return (
     <>
       <Script
@@ -22,4 +22,4 @@ const GoogleAna = () => {
   );
 };
 
-export default GoogleAna;
+export default GoogleAnalytics;

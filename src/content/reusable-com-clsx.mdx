@@ -5,17 +5,14 @@ publishedAt: '2023-12-21'
 
 ### Tailwind **Installation**
 
-<Code filename='terminal'>
-  {`
+```shell
 npm install -D tailwindcss
 npx tailwindcss init
-    `}
-</Code>
+```
 
 ### Tailwind config
 
-<Code filename='tailwind.config.ts'>
-  {`
+```typescript
     \*\* @type {import('tailwindcss').Config} \*/
 module.exports = {
    content: [
@@ -26,44 +23,36 @@ module.exports = {
  },
  plugins: [],
 }
-    `}
-</Code>
+```
 
-<Code filename='global.css'>
-  {`
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-    `}
-</Code>
+```
 
 ### Install Tailwind Combo
 
-<Code filename='terminal'>
-  {`
+```shell
 $ npm install --save clsx
 $ npm i tailwind-merge
 $ npm i class-variance-authority
-    `}
-</Code>
+```
 
 ### Create Cn Function
 
-<Code filename="lib.ts">
-    {`
-    import { clsx, ClassValue } from 'clsx';
+```tsx
+import { clsx, ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-    `}
-</Code>
+```
 
 ### Create Reusable Button
 
-<Code filename="button.tsx">
-    {`
+```tsx
 import { VariantProps, cva } from 'class-variance-authority';
 import React, { ButtonHTMLAttributes, FC, forwardRef } from 'react';
 import { cn } from '../lib/util';
@@ -107,5 +96,4 @@ return (
 )});
 
 export default Button;
-`}
-</Code>
+```

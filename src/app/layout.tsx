@@ -1,13 +1,15 @@
 import Footer from '@/components/footer';
-import GoogleAna from '@/components/google-ana';
+import GoogleAnalytics from '@/components/google-analytics';
 import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
 import { cn } from '@/lib/utils';
 import '@/styles/app.css';
-import { Analytics } from '@vercel/analytics/react';
+import '@/styles/prose.css';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
 import { Metadata } from 'next';
-import localFont from 'next/font/local';
 import { appConfig } from '../../app.config';
 
 export const metadata: Metadata = {
@@ -73,11 +75,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jetbrains_mono = localFont({
-  src: './mono.woff2',
-  display: 'swap',
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -85,7 +82,7 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(jetbrains_mono.className)}
+      className={cn(GeistMono.className, GeistSans.className)}
     >
       <body
         suppressHydrationWarning
@@ -106,9 +103,9 @@ export default function RootLayout({
             <Footer />
           </main>
         </Provider>
-        <GoogleAna />
+        <GoogleAnalytics />
+        <VercelAnalytics mode={'production'} />
         <SpeedInsights />
-        <Analytics mode={'production'} />
       </body>
     </html>
   );
