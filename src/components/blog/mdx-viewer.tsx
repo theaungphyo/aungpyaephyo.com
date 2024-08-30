@@ -1,9 +1,9 @@
-import CodeBlock from '@/components/blog/code-block';
-import { TweetComponent } from '@/components/blog/tweet';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import rehypePrettyCode from 'rehype-pretty-code';
+import remarkGfm from 'remark-gfm';
 import { highlight } from 'sugar-high';
 interface TableProps {
   data: {
@@ -204,16 +204,21 @@ const components: Record<string, React.ComponentType<any>> = {
   Callout,
   ProsCard,
   ConsCard,
-  code: Code,
   Table,
-  Code: CodeBlock,
-  StaticTweet: TweetComponent,
 };
 
 export function MdxViewer(props: CustomMDXProps) {
   return (
     <MDXRemote
       {...props}
+      options={{
+        mdxOptions: {
+          remarkPlugins: [remarkGfm],
+          rehypePlugins: [
+            [rehypePrettyCode, { keepBackground: true, theme: 'poimandres' }],
+          ],
+        },
+      }}
       components={{ ...components, ...(props.components || {}) }}
     />
   );

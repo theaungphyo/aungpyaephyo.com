@@ -3,6 +3,8 @@ import {
   Dialog,
   DialogClose,
   DialogContent,
+  DialogDescription,
+  DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { cn } from '@/lib/utils';
@@ -59,6 +61,8 @@ function Navigation() {
                   </button>
                 </DialogTrigger>
                 <DialogContent className='max-w-[95%] rounded-lg'>
+                  <DialogTitle>Menu</DialogTitle>
+                  <DialogDescription></DialogDescription>
                   <Suspense fallback={null}>
                     {mob_navigation_links.map(({ title, href }) => {
                       return (

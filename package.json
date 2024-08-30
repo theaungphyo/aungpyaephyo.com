@@ -9,16 +9,15 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "eslint:format": "eslint src --fix",
-    "format": "prettier --check --ignore-path .gitignore '**/*.ts' '**/*.tsx'",
-    "format:fix": "prettier --write --ignore-path .gitignore '**/*.ts' '**/*.tsx'",
+    "format": "prettier --write --ignore-path .gitignore .",
     "prepare": "husky"
   },
   "lint-staged": {
     "src/**/*.ts": [
-      "npm run format:fix"
+      "npm run format"
     ],
     "src/**/*.tsx": [
-      "npm run format:fix"
+      "npm run format"
     ]
   },
   "dependencies": {
@@ -61,6 +60,8 @@
     "react-dom": "^18",
     "react-github-calendar": "^4.2.2",
     "react-tweet": "^3.2.1",
+    "rehype-pretty-code": "^0.14.0",
+    "remark-gfm": "^4.0.0",
     "resend": "^4.0.0",
     "sharp": "^0.33.5",
     "sugar-high": "^0.7.0",
