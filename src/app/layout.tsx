@@ -4,11 +4,9 @@ import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
 import { cn } from '@/lib/utils';
 import '@/styles/app.css';
-import '@/styles/prose.css';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
 import { Metadata } from 'next';
 import { appConfig } from '../../app.config';
 
@@ -82,7 +80,7 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(GeistMono.className, GeistSans.className)}
+      className={cn(GeistMono.className)}
     >
       <body
         suppressHydrationWarning
