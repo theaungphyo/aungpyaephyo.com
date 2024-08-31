@@ -1,0 +1,201 @@
+---
+title: 'How to install git in ubuntu 24.04 (LTS) version'
+publishedAt: '2024-08-31'
+---
+
+### What is git?
+
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+### What is GitHub?
+
+GitHub is a cloud-based platform that allows users to store, share, and collaborate on code. It's a web-based interface that uses Git, an open source version control software.
+
+##### Key concepts
+
+1. Repositories
+   - A repository contains all of your code, your files, and each file's revision history. You can discuss and manage your work within the repository.
+2. Commit
+   - A commit in GitHub is a snapshot of a project's state at a specific point in time, and is a fundamental building block of a Git project's timeline.
+3. Branch
+   - A branch in GitHub is a pointer to a snapshot of changes in a repository.
+
+### Prerequisites
+
+- Pre-Install Ubuntu 24.04
+- Sudo User with Admin rights
+- GitHub Account
+
+### Update your system with this following command
+
+```
+sudo apt update
+```
+
+![update your system](/blog/git-ubuntu/update.png)
+
+### Upgrade your system with this following command
+
+```
+sudo apt upgrade -y
+```
+
+![upgrade your system](/blog/git-ubuntu/upgrade.png)
+
+### Install git on Ubuntu 24.04 (LTS)
+
+Now, you can install git on ubuntu 24.04 with this following command
+
+```
+sudo apt install git
+```
+
+Press ‘Y’ when prompted to confirm the installation, and the system will automatically download and install Git on your system.
+
+Git and its dependencies are installed then confirm git version by running this following command
+
+```
+git --version
+```
+
+If git installation is success, Git version displayed on your terminal.
+
+```
+╭── ~
+╰────▶ git --version
+git version 2.43.0
+```
+
+### Configure git
+
+In order to use git, it is recommended to configure your identity first. Replace the “Name” and “email address” in below git commands as per your setup.
+
+```shell
+git config --global user.name "Aung Pyae Phyo"
+git config --global user.email "hi@aungpyaephyo.com"
+```
+
+Log your git config in your terminal by running this following command
+
+```
+cat .gitconfig
+```
+
+Git config displayed on your terminal.
+
+### Create a Folder and Initialize a Git Repository
+
+Now, let’s create a new folder for your project and initialize a Git repository. Navigate to the directory where you want to create your project folder and run the following commands:
+
+```shell
+mkdir "project_name"
+cd "project_name"
+git init
+```
+
+Git default branch will be `master` and I move to `main` branch by running following command
+
+```
+git branch -M main
+```
+
+### Make changes and Commit
+
+```
+git status
+```
+
+Once you’ve made your changes, it’s time to commit them to the Git repository:
+
+```shell
+git add .
+git commit -m 'first commit'
+```
+
+This command stages all changes (using `git add .`) and commits them with a message describing the changes.
+
+### Create a GitHub repository
+
+- Login to your GitHub account
+- Create a new repository
+
+![create repo](/blog/git-ubuntu/create-repo-1.png)
+
+- Enter your repository name
+- chose your access modifier
+
+![create repo](/blog/git-ubuntu/create-repo-2.png)
+
+- Click `Create Repository`
+
+we will get following set of instruction for the repository.
+
+![instruction repo](/blog/git-ubuntu/instruction.png)
+
+### Generate `ssh` key from Ubuntu 24.04(LTS)
+
+Run ssh-keygen command from the terminal.
+
+```
+ssh-keygen -t rsa
+```
+
+```
+╭── ~
+╰────▶ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/typle/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/typle/.ssh/id_ed25519
+Your public key has been saved in /home/typle/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:xtO3i6SViPi+AuJv6Ie/M03lFUx8iKVcERFWUDeGspM typle@lenovo
+The key's randomart image is:
++--[ED25519 256]--+
+|        *@Xo.+   |
+|      ..+* oo .  |
+|       o  *      |
+|       o E       |
+|      o S o .    |
+|. .  o + o o .   |
+|..o.+ . . + .    |
+| + =.o   + . .   |
+|..=++o+.. . .    |
++----[SHA256]-----+
+```
+
+Now copy the content of your public key, run below cat command.
+
+```
+cat ~/.ssh/id_rsa.pub
+```
+
+Paste it on your GitHub account for authentication as shown below:
+
+- Go to GitHub settings
+- Go to SSH keys and GPG keys
+- Click `new ssh key`
+
+![ssh key github](/blog/git-ubuntu/ssh.png)
+
+- Add your title
+- Select key type as `authentication key`
+- Add your ssh key
+
+After creating the GitHub repository and ssh keys, follow the instructions provided on the repository page to connect your local repository to the remote GitHub repository. This typically involves adding a remote URL:
+
+```shell
+git remote add origin git@github.com:aungpyaephyo1412/project_name.git
+git remote -v
+```
+
+### Push Changes to GitHub Repository
+
+Finally, push your local changes to the GitHub repository, run “git push” command.
+
+```
+git push -u origin main
+```
+
+Finally, go to your GitHub repository and view your code
