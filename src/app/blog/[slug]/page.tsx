@@ -105,7 +105,7 @@ const Page = ({ params: { slug } }: Props) => {
           </span>
         </nav>
       </header>
-      <article className='tracking-wider prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-semibold prose-headings:my-9 prose-img:rounded-lg  prose-quoteless prose-neutral'>
+      <article className='prose relative max-w-full dark:prose-invert prose-headings:scroll-mt-16 prose-headings:font-extrabold prose-headings:my-9 prose-img:rounded-lg  prose-quoteless prose-stone'>
         <MdxViewer source={blog.content} />
       </article>
       <ShareLinks

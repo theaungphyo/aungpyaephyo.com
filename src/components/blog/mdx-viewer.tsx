@@ -215,7 +215,10 @@ export function MdxViewer(props: CustomMDXProps) {
         mdxOptions: {
           remarkPlugins: [remarkGfm],
           rehypePlugins: [
-            [rehypePrettyCode, { keepBackground: true, theme: 'poimandres' }],
+            [
+              rehypePrettyCode,
+              { keepBackground: false, theme: 'dracula-soft' },
+            ],
           ],
         },
       }}
@@ -223,3 +226,5 @@ export function MdxViewer(props: CustomMDXProps) {
     />
   );
 }
+
+export default MdxViewer;
