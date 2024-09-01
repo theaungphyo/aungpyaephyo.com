@@ -6,8 +6,8 @@ import { cn } from '@/lib/utils';
 import '@/styles/app.css';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GeistMono } from 'geist/font/mono';
 import { Metadata } from 'next';
+import localFont from 'next/font/local';
 import { appConfig } from '../../app.config';
 
 export const metadata: Metadata = {
@@ -73,6 +73,11 @@ export const metadata: Metadata = {
   },
 };
 
+const Jetbrains_mono = localFont({
+  src: './mono.woff2',
+  display: 'swap',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -80,12 +85,12 @@ export default function RootLayout({
     <html
       lang='en'
       suppressHydrationWarning
-      className={cn(GeistMono.className)}
+      className={cn(Jetbrains_mono.className)}
     >
       <body
         suppressHydrationWarning
         className={cn(
-          'bg-white/50 text-neutral-800 antialiased dark:bg-[rgb(5,5,5)]  dark:text-neutral-100 tracking-tight'
+          'bg-white/50 text-black antialiased dark:bg-[#111010]  dark:text-white'
         )}
       >
         <Provider>

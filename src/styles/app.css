@@ -104,3 +104,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-link {
+  transition:
+    color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  margin: 0 -0.25rem;
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  padding: 0 0.25rem;
+}
+.bg-link:hover {
+  box-shadow: inset 200px 0 0 0 #54b3d6;
+  color: #fff;
+}

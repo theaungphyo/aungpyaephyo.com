@@ -55,6 +55,9 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.0.7
         version: 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@rehype-pretty/transformers':
+        specifier: ^0.13.2
+        version: 0.13.2
       '@total-typescript/ts-reset':
         specifier: ^0.6.0
         version: 0.6.0
@@ -126,7 +129,7 @@ importers:
         version: 3.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       rehype-pretty-code:
         specifier: ^0.14.0
-        version: 0.14.0(shiki@1.14.1)
+        version: 0.14.0(shiki@1.15.2)
       remark-gfm:
         specifier: ^4.0.0
         version: 4.0.0
@@ -136,6 +139,9 @@ importers:
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
+      shiki:
+        specifier: ^1.15.2
+        version: 1.15.2
       sugar-high:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1385,6 +1391,13 @@ packages:
       react: ^18.2.0
       react-dom: ^18.2.0
 
+  '@rehype-pretty/transformers@0.13.2':
+    resolution:
+      {
+        integrity: sha512-p2ciQSwqy5Ip8aNUa9q6rdS/hJZXrxHYYfDVOHvKOsBu3t9HDmQ65YX6r9Qbl19vi160OAxmGF7MIoCRDJrRhg==,
+      }
+    engines: { node: '>=18' }
+
   '@rushstack/eslint-patch@1.10.4':
     resolution:
       {
@@ -1397,10 +1410,10 @@ packages:
         integrity: sha512-P33hHGdldxGabLFjPPpaTxVolMrzrcegejx+0GxjrIb9Zv48D8yAIA/QTDR2dFl7Uz7urX8aX6+5bCZslr+gWQ==,
       }
 
-  '@shikijs/core@1.14.1':
+  '@shikijs/core@1.15.2':
     resolution:
       {
-        integrity: sha512-KyHIIpKNaT20FtFPFjCQB5WVSTpLR/n+jQXhWHWVUMm9MaOaG9BGOG0MSyt7yA4+Lm+4c9rTc03tt3nYzeYSfw==,
+        integrity: sha512-hi6XZuwHYn6bU4wtXZxST8ynM55aiU2+rVU9aPIrSxqKmEKl4d65puwGsggwcZWTET+7zGXKe7AUj46iQ8Aq8w==,
       }
 
   '@swc/counter@0.1.3':
@@ -5394,10 +5407,10 @@ packages:
       }
     engines: { node: '>=8' }
 
-  shiki@1.14.1:
+  shiki@1.15.2:
     resolution:
       {
-        integrity: sha512-FujAN40NEejeXdzPt+3sZ3F2dx1U24BY2XTY01+MG8mbxCiA2XukXdcbyMyLAHJ/1AUUnQd1tZlvIjefWWEJeA==,
+        integrity: sha512-M+7QZQZiZw/cZeizrC/yryG3eeG8pTUhu7ZaHxVyzPNFIRIlN46YBciquoNPCiXiwLnx6JB62f3lSuSYQrus1w==,
       }
 
   side-channel@1.0.6:
@@ -6961,6 +6974,8 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-promise-suspense: 0.3.4
 
+  '@rehype-pretty/transformers@0.13.2': {}
+
   '@rushstack/eslint-patch@1.10.4': {}
 
   '@selderee/plugin-htmlparser2@0.11.0':
@@ -6968,7 +6983,7 @@ snapshots:
       domhandler: 5.0.3
       selderee: 0.11.0
 
-  '@shikijs/core@1.14.1':
+  '@shikijs/core@1.15.2':
     dependencies:
       '@types/hast': 3.0.4
 
@@ -9571,13 +9586,13 @@ snapshots:
       hast-util-from-html: 2.0.2
       unified: 11.0.5
 
-  rehype-pretty-code@0.14.0(shiki@1.14.1):
+  rehype-pretty-code@0.14.0(shiki@1.15.2):
     dependencies:
       '@types/hast': 3.0.4
       hast-util-to-string: 3.0.0
       parse-numeric-range: 1.3.0
       rehype-parse: 9.0.0
-      shiki: 1.14.1
+      shiki: 1.15.2
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
@@ -9743,9 +9758,9 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.14.1:
+  shiki@1.15.2:
     dependencies:
-      '@shikijs/core': 1.14.1
+      '@shikijs/core': 1.15.2
       '@types/hast': 3.0.4
 
   side-channel@1.0.6:

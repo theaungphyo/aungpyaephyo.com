@@ -31,7 +31,7 @@ function Navigation() {
   return (
     <aside
       className={cn(
-        'px-4 sticky top-0 z-50 w-full py-5 tracking-tight dark:bg-[rgb(5,5,5)]/50 border-b-[1px] border-solid border-neutral-100 bg-white/75  dark:border-neutral-900 sm:py-3 backdrop-blur-xl',
+        'px-4 sticky top-0 z-50 w-full py-5 tracking-tight dark:bg-[#111010]/50 border-b-[1px] border-solid border-neutral-100 bg-white/75  dark:border-neutral-900 sm:py-3 backdrop-blur-xl',
         path ? ' mb-9' : 'mb-6'
       )}
     >
@@ -70,7 +70,7 @@ function Navigation() {
                           <Link
                             href={href}
                             className={cn(
-                              'lowercase  font-medium flex flex-col tracking-wide justify-center relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100'
+                              'capitalize  font-medium flex flex-col tracking-wide justify-center relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100'
                             )}
                           >
                             {title}
@@ -112,7 +112,7 @@ function NavItem({ path, name }: { path: string; name: string }) {
       key={path}
       href={path}
       className={cn(
-        'lowercase  font-medium flex flex-col tracking-wide justify-center items-end relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100',
+        'capitalize  font-medium flex flex-col tracking-wide justify-center items-end relative  align-middle transition-all px-4 py-1 text-sm opacity-80 hover:opacity-100',
         isActive && 'text-blue-500 opacity-100'
       )}
     >
