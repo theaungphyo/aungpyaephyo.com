@@ -26,7 +26,7 @@ const ShareLinks = (props: SProps) => (
     <div className='grid grid-cols-1 gap-3 sm:grid-flow-col sm:grid-cols-[repeat(3,max-content)]'>
       <Button
         label='Share on Twitter'
-        href={`https://x.com/intent/tweet?text=${props.title}&url=${props.canonicalUrl}&via=aungpyaephyo_`}
+        href={`https://x.com/intent/tweet?text=${props.title}&original_referer=${props.canonicalUrl}&via=aungpyaephyo_`}
       />
 
       <Button
