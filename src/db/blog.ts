@@ -3,6 +3,7 @@ import path from 'path';
 export type MdxMetadata = {
   title: string;
   image: string;
+  mode: string;
   description: string;
   publishedAt: string;
 };

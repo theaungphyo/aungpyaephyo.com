@@ -21,7 +21,7 @@ const ActivityBar = () => {
       <SectionTitle title={'My Github Activity'} />
       <ScrollArea className='pb-3'>
         <GitHubCalendar
-          username='aungpyaephyo1412'
+          username={'aungphyo-dev'}
           blockSize={9.9}
           colorScheme={theme === 'light' ? 'light' : 'dark'}
           theme={{

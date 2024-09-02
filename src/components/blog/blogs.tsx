@@ -11,9 +11,9 @@ const sort = (a: string, b: string) => {
   return 1;
 };
 const Blogs = ({ all = false }: { all?: boolean }) => {
-  const data = getBlogPosts().sort((a, b) =>
-    sort(a.metadata.publishedAt, b.metadata.publishedAt)
-  );
+  const data = getBlogPosts()
+    .sort((a, b) => sort(a.metadata.publishedAt, b.metadata.publishedAt))
+    .filter((b) => b.metadata.mode !== 'draft');
   const blogs = data.filter((b, i) => i < 8);
   const groupBlogs = groupBy(data, (blog) =>
     blog.metadata.publishedAt.substring(0, 4)
@@ -22,7 +22,7 @@ const Blogs = ({ all = false }: { all?: boolean }) => {
     <div className='pb-5'>
       {!all && <SectionTitle title={'Writings'} href={'/blog'} viewAll />}
       {!all && (
-        <ul className='space-y-3 sm:space-y-1'>
+        <ul className='space-y-3 sm:space-y-1 group/card'>
           {blogs.map((blog) => (
             <BlogPost
               key={blog.slug}
@@ -39,7 +39,7 @@ const Blogs = ({ all = false }: { all?: boolean }) => {
           .map(([year, posts]) => (
             <Fragment key={year}>
               <GroupTitle name={year} />
-              <ul className='space-y-3 sm:space-y-1 mb-5'>
+              <ul className='space-y-3 sm:space-y-1 mb-5 group/card'>
                 {posts.map((blog) => (
                   <BlogPost
                     minimum={false}
