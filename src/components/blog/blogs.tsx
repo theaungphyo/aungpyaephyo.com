@@ -16,7 +16,7 @@ const Blogs = ({ all = false }: { all?: boolean }) => {
   return (
     <div className='pb-5'>
       <SectionTitle title={'Writings'} href={'/blog'} viewAll />
-      <ul className='group/card--1123'>
+      <ul className='space-y-1.5 group/card--1123'>
         {blogs.map((blog) => (
           <BlogPost
             key={blog.slug}
