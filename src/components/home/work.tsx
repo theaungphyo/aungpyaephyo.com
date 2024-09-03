@@ -16,7 +16,7 @@ const Work = () => {
               width={50}
               height={50}
               sizes={'50'}
-              className='rounded object-cover shadow-logo'
+              className='rounded object-cover shadow-logo object-center'
               src={experience.logo}
               alt={experience.company}
               priority

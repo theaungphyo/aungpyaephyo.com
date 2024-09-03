@@ -41,7 +41,7 @@ const experiences = [
     durationStart: 'Aug 2024',
     durationEnd: 'Present',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
-    logo: '/company/sithu.png',
+    logo: '/company/sithu.jpg',
   },
 ];
 export default experiences;

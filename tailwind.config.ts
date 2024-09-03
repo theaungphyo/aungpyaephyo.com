@@ -84,6 +84,16 @@ const config = {
           '0%': { transform: 'translateY(-18px)', opacity: '0' },
           '100%': { transform: 'translateY(0px)', opacity: '1' },
         },
+        orbit: {
+          '0%': {
+            transform:
+              'rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)',
+          },
+          '100%': {
+            transform:
+              'rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -91,6 +101,7 @@ const config = {
         wave: 'wave 1.2s ease infinite',
         in: 'in .6s both',
         'in-reverse': 'in-reverse .6s both',
+        orbit: 'orbit calc(var(--duration)*1s) linear infinite',
       },
       backgroundImage: {
         'bg-light': "url('/bg.png')",

@@ -22,12 +22,10 @@ const Hero = () => {
               className='underline'
               href={appConfig.socials.github}
             >
-              {' '}
-              code{' '}
+              code
             </a>
             ,{' '}
             <Link className='underline' href={'/blog'}>
-              {' '}
               write
             </Link>{' '}
             and build stuff on internet.

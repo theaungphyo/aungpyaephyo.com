@@ -22,7 +22,7 @@ const BlogPost = async ({ slug, title, publishedAt }: Props) => {
         href={`/blog/${slug}`}
         className={cn(
           'block h-full w-full rounded-md  text-sm outline-none transition-all focus-within:bg-neutral-100 hover:bg-neutral-200 focus:ring-1 focus:ring-neutral-300 dark:focus-within:bg-neutral-900 dark:hover:bg-neutral-900 dark:focus:ring-neutral-500',
-          'px-3 py-4'
+          'p-3.5'
         )}
       >
         <article className='w-full flex flex-wrap lg:flex-nowrap sm:items-baseline sm:gap-5'>
@@ -36,7 +36,13 @@ const BlogPost = async ({ slug, title, publishedAt }: Props) => {
           <header className='order-1 lg:order-2 w-full lg:w-auto text-sm font-medium lg:flex-1 mb-1 lg:mb-0'>
             {title}
           </header>
-          <Suspense fallback={<span></span>}>
+          <Suspense
+            fallback={
+              <span className='order-2 lg:order-3 before:pr-1 before:content-["•"] flex justify-center items-center lg:before:hidden'>
+                0 view
+              </span>
+            }
+          >
             <p className='order-2 lg:order-3 before:pr-1 before:content-["•"] flex justify-center items-center lg:before:hidden'>
               <Views slug={slug} />
             </p>

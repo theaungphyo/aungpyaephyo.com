@@ -26,7 +26,7 @@ const Page = () => {
         .map(([year, posts]) => (
           <Fragment key={year}>
             <GroupTitle name={year} />
-            <ul className='mb-5'>
+            <ul className='mb-5 space-y-1.5'>
               {posts.map((blog) => (
                 <BlogPost
                   key={blog.slug}

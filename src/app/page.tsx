@@ -9,8 +9,8 @@ const Page = () => {
       <PreloadResources />
       <Metadata />
       <Hero />
-      <Blogs />
       <Work />
+      <Blogs />
     </div>
   );
 };
