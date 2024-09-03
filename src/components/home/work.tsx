@@ -12,17 +12,16 @@ const Work = () => {
             key={experience.id}
             className='flex items-start md:items-center gap-3 transition hover:!opacity-100 group-hover:opacity-50'
           >
-            <div className='relative overflow-hidden rounded bg-black dark:bg-neutral-200 size-[45px]'>
-              <Image
-                sizes={'45'}
-                className='rounded object-contain bg-[#FAFCFA]'
-                src={experience.logo}
-                alt={experience.company}
-                fill
-                priority
-                blurDataURL={blurDataImage}
-              />
-            </div>
+            <Image
+              width={50}
+              height={50}
+              sizes={'50'}
+              className='rounded object-cover shadow-logo'
+              src={experience.logo}
+              alt={experience.company}
+              priority
+              blurDataURL={blurDataImage}
+            />
             <div className='flex grow flex-col'>
               <a
                 href={experience.companyLink ?? '#'}
@@ -34,7 +33,7 @@ const Work = () => {
                   <p className='font-medium text-[16px]'>
                     {experience.company}
                   </p>
-                  <p className='opacity-50 text-smn'>{experience.title}</p>
+                  <p className='opacity-50 text-sm'>{experience.title}</p>
                 </div>
                 <span className='opacity-90 text-sm'>
                   {experience.durationStart} – {experience.durationEnd}
