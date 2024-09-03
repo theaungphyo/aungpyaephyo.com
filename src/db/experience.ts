@@ -32,21 +32,9 @@ const experiences = [
     logo: '/company/mml.jpg',
   },
   {
-    id: 3,
-    title: 'Web development Instructor',
-    company: 'SiThu Computer',
-    companyLink: 'https://sithucenter.com/',
-    description:
-      'I work at SiThu Computer Training Center  in August 1, 2024 as Web development Instructor.',
-    durationStart: 'Aug 2024',
-    durationEnd: 'Present',
-    skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
-    logo: '/company/sithu.png',
-  },
-  {
     id: 4,
     title: 'Web Developer',
-    company: 'SiThu Computer',
+    company: 'SiThuLab',
     companyLink: 'https://sithucenter.com/',
     description:
       'I work at SiThu Computer Training Center  in August 1, 2024 as Web developer.',

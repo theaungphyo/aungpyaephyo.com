@@ -325,46 +325,6 @@ const projects = [
     year: 2024,
   },
   {
-    id: 9,
-    title: 'IT Job MM / Company Dashboard',
-    description:
-      'Job Portal Company Dashboard, built with Next.js, TypeScript, and NextUI, is fast, user-friendly, and secure. Manage job postings, track applicants, and gain hiring insights easily on any device. Simplify recruitment with our sleek, customizable, and regularly updated dashboard.',
-    demo: 'https://itjobmm-company.vercel.app',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
-    skills: [
-      {
-        name: 'tailwind',
-        icon: <Tailwind />,
-      },
-      {
-        name: 'Typescript',
-        icon: <Typescript />,
-      },
-      {
-        name: 'nextjs',
-        icon: <Next />,
-      },
-      {
-        name: 'nodejs',
-        icon: <Node />,
-      },
-      {
-        name: 'expressjs',
-        icon: <Express />,
-      },
-      {
-        name: 'mongodb',
-        icon: <MongoDB />,
-      },
-      {
-        name: 'vercel',
-        icon: <Vercel />,
-      },
-    ],
-    made_at: '',
-    year: 2024,
-  },
-  {
     id: 10,
     title: 'Walmal POS',
     demo: 'https://walmal.vercel.app',
