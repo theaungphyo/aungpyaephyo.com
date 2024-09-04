@@ -1,4 +1,5 @@
 import BlogPost from '@/components/blog/blog-post';
+import { sort } from '@/components/blog/blogs';
 import GroupTitle from '@/components/group-title';
 import PageTitle from '@/components/page-title';
 import { getBlogPosts } from '@/db/blog';
@@ -11,7 +12,9 @@ export const metadata = {
 };
 
 const Page = () => {
-  const blogs = getBlogPosts();
+  const blogs = getBlogPosts().sort((a, b) =>
+    sort(a.metadata.publishedAt, b.metadata.publishedAt)
+  );
   const groupBlogs = groupBy(blogs, (blog) =>
     blog.metadata.publishedAt.substring(0, 4)
   );
