@@ -1,7 +1,7 @@
 import BlogPost from '@/components/blog/blog-post';
 import SectionTitle from '@/components/section-title';
 import { getBlogPosts } from '@/db/blog';
-const sort = (a: string, b: string) => {
+export const sort = (a: string, b: string) => {
   if (new Date(a) > new Date(b)) {
     return -1;
   }
