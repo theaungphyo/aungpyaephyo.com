@@ -1,3 +1,4 @@
+import TweetCard from '@/components/blog/tweet';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image, { ImageProps } from 'next/image';
 import Link from 'next/link';
@@ -205,6 +206,7 @@ const components: Record<string, React.ComponentType<any>> = {
   ProsCard,
   ConsCard,
   Table,
+  Tweet: TweetCard,
 };
 
 export function MdxViewer(props: CustomMDXProps) {
