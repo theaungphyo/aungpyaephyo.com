@@ -70,7 +70,6 @@ To use Git, it is recommended to configure your identity first. Replace "Name" a
 ```bash
 git config --global user.name "Aung Pyae Phyo"
 git config --global user.email "hi@aungpyaephyo.com"
-git config --global init.defaultBranch <defaultBranch>
 ```
 
 Log your Git config in your terminal by running the following command:
@@ -95,6 +94,12 @@ The default Git branch will be `master`. You can rename it to `main` by running 
 
 ```bash
 git branch -M main
+```
+
+You can set the default branch to 'main' to reduce the need for switching branches. Use the following command:
+
+```bash
+git config --global init.defaultBranch <defaultBranch>
 ```
 
 ### Make Changes and Commit
