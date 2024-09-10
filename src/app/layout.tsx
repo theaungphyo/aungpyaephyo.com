@@ -90,7 +90,7 @@ export default function RootLayout({
       <body
         suppressHydrationWarning
         className={cn(
-          'bg-white/50 text-black antialiased dark:bg-[#111010]  dark:text-white'
+          'bg-white/50 text-black antialiased dark:bg-[#111010]  dark:text-white  tracking-tight'
         )}
       >
         <Provider>

@@ -15,7 +15,7 @@ const Hero = () => {
 
         <div className='grid gap-4 opacity-80'>
           <p className='sm:max-w-md '>
-            {"I'm a web developer based in Mandalay, Myanmar. I"}{' '}
+            {"I'm a software engineer based in Mandalay, Myanmar. I"}{' '}
             <a
               target={'_blank'}
               rel={'noreferrer'}
@@ -34,7 +34,17 @@ const Hero = () => {
 
           <p className='sm:max-w-md'>
             I love working in-between product, engineering and developer
-            experience.
+            experience, currently at{' '}
+            <a
+              target={'_blank'}
+              rel={'noreferrer'}
+              aria-label={'link'}
+              className='underline'
+              href='https://sithucenter.com'
+            >
+              SiThuLab
+            </a>
+            .
           </p>
         </div>
       </div>

@@ -25,9 +25,9 @@ const BlogPost = async ({ slug, title, publishedAt }: Props) => {
           'p-3.5'
         )}
       >
-        <article className='w-full flex flex-wrap lg:flex-nowrap sm:items-baseline sm:gap-5'>
+        <article className='w-full flex flex-wrap lg:flex-nowrap lg:items-baseline lg:gap-5'>
           <time
-            className='order-3 lg:order-1 text-nowrap opacity-60 sm:w-24 before:px-1 before:content-["•"] flex justify-center items-center lg:before:hidden'
+            className='order-3 lg:order-1 text-nowrap opacity-60 lg:w-24 before:px-1 before:content-["•"] flex justify-center items-center lg:before:hidden'
             dateTime={formatDate(publishedAt)}
             aria-label={`Written ${publishedAt}`}
           >
