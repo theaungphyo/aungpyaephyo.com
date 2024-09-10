@@ -1,0 +1,52 @@
+---
+title: 'How to change GitHub account in git on window?'
+publishedAt: '2024-09-10'
+image: '/blog/github-git/cover.webp'
+---
+
+ကျွန်တော် က ကျွန်တော်တို့ ရဲ့ `Window` မှာ Git နဲ့ချိတ်ထား ပီးသားဖြစ်တဲ့ GitHub account ကို ဖြုတ်ပီး အသစ်ဘယ်လိုထည့်ရမလည်းဆိုတာပြောပြပေးပါမယ်။
+
+ပထမဆုံး အနေနဲ့ ကျွန်တော်တို့ရဲ့ Git Configuration က email name ကို ပြင်ပေးဖို့ လိုအပ်ပါတယ်။
+
+```shell
+git config --global user.email <Your email name>
+```
+
+Configuration အသစ်ပြန်လုပ်ပီးရင်တော့ ကျွန်တော်တို့ ချိန်းလိုက်တဲ့ email address မှန်မမှန် စစ်ကြည့်ပါမယ်။
+
+```shell
+cat .gitconfig
+```
+
+```
+[user]
+	name = Aung Pyae Phyo
+	email = your email name
+[init]
+	defaultBranch = main
+```
+
+Configuration file ကိုပြန်စစ်ပီးတဲ့အခါမှာ email ဆိုတဲ့ နေရာမှာ ကျွန်တော်တို့ အသစ် ထည့်လိုက်တဲ့ email address ဖြစ်နေရင်ရပါပီ။
+
+#### အရင်ရှိပီးသား အကောင့်ကို ကျွန်တော်တို့ရဲ့ `Window` ဘယ်လိုဖြုတ်ချမလည်းဆိုတာ တစ်ဆင့်ချင်းပြပေးပါမယ်။
+
+- ပထမဆုံးအနေနဲ့ `Window control panel` ထဲကိုသွားပါမယ်။
+
+![Control Panel](/blog/github-git/1.png)
+
+- ပီးရင်တော့ `Control panel` ထဲက `Credentials Manager` ထဲကို ဝင်ပါမယ်။
+
+![Credentials Manager](/blog/github-git/2.jpg)
+
+- ပီးရင်တော့ `Credentials Manager` ထဲမှာ ရှိတဲ့ `Window credentials` ထဲကို ဝင်ပါမယ်။
+  အထဲရောက်တဲ့ အခါမှာ `git:https://github.com` ဆိုတဲဲ့ Git နဲ့ GitHub ကိုချိတ်ထားပေးတဲ့ Credentials လေးကိုတွေ့ရမှာပဲဖြစ်ပါတယ်။
+
+![Window credentials](/blog/github-git/3.jpg)
+
+- ပီးရင်တော့ ကျွန်တော်တို့ က အဲ့ `Git credentials` တွေကို remove ပေးဖို့လိုပါတယ်။
+
+![Window credentials](/blog/github-git/4.jpg)
+
+ဒီလိုဆိုရင်တော့ ကျွန်တော်တို့ ရဲ့ `Window` မှာ Git ကိုပုံမှန်အတိုင်း ပြန်သုံးပီး
+
+`git push -u origin main` ဆိုတဲ့အဆင့်မှာသူက GitHub account ဝင်ဖို့ Option box လေးတစ်ခုချပေးပါလိမ့်မယ်။ ထိုအခါမှာ မိမိ ကြိုက်နှစ်သက်ရာနည်း ကို ရွေးပီး `Authentication` လုပ်လို့ရပါပီ။

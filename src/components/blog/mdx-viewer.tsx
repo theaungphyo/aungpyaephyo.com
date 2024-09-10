@@ -92,7 +92,7 @@ function CustomLink(props: CustomLinkProps) {
 }
 
 function RoundedImage(props: RoundedImageProps) {
-  return <Image className='rounded-lg' {...props} alt={props.alt} />;
+  return <Image className='rounded-lg my-5' {...props} alt={props.alt} />;
 }
 
 function Callout(props: CalloutProps) {
