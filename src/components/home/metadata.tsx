@@ -23,7 +23,14 @@ const Metadata = () => {
   return (
     <div className='w-full flex text-sm lowercase opacity-60 gap-2'>
       <span className='block w-[62px] whitespace-nowrap'>
-        {date ? `${date} Yangon` : 'loading...'}
+        {date ? (
+          <span>
+            {date}
+            <span className="before:px-1 before:content-['•']">yangon</span>
+          </span>
+        ) : (
+          'loading...'
+        )}
       </span>
     </div>
   );
