@@ -33,7 +33,7 @@ const experiences = [
   },
   {
     id: 4,
-    title: 'Web Developer',
+    title: 'Fullstack Developer',
     company: 'SiThuLab',
     companyLink: 'https://sithucenter.com/',
     description:
