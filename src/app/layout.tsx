@@ -2,6 +2,7 @@ import Footer from '@/components/footer';
 import GoogleAnalytics from '@/components/google-analytics';
 import Navigation from '@/components/navigation';
 import Provider from '@/components/provider';
+import UmamiAnalytics from '@/components/umami-analytics';
 import { cn } from '@/lib/utils';
 import '@/styles/app.css';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
@@ -107,6 +108,7 @@ export default function RootLayout({
           </main>
         </Provider>
         <GoogleAnalytics />
+        <UmamiAnalytics />
         <VercelAnalytics mode={'production'} />
         <SpeedInsights />
       </body>
