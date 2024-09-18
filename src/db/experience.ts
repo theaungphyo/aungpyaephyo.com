@@ -4,7 +4,7 @@ const experiences = [
     title: 'Fullstack Developer',
     company: 'Freelance',
     description: 'I work at Freelance in Feb 1, 2023 as Full stack developer.',
-    durationStart: 'Feb 2023',
+    durationStart: 'Feb 2022',
     durationEnd: 'Present',
     skills: [
       'Javascript',
