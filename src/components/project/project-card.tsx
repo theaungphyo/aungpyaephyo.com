@@ -1,88 +1,122 @@
-'use client';
+import Github from '@/components/icons/github';
+import { ReadMore } from '@/components/project/read-more';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
-import '@/styles/language.css';
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { ProjectType } from '@/types/projec.type';
-import { GitHubLogoIcon } from '@radix-ui/react-icons';
-import { ArrowUpRightIcon, LinkIcon } from 'lucide-react';
-const ProjectCard = ({ project }: { project: ProjectType }) => {
+import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const Project = ({ project }: { project: ProjectType }) => {
+  const { skills, github, image, title, demo, made_at, testimonial } = project;
   return (
-    <Card className='flex flex-col border shadow w-full dark:bg-black'>
-      <CardHeader className='flex flex-col space-y-2 p-4'>
-        <CardTitle className='text-xl dark:text-neutral-100 text-neutral-900'>
-          <div className='inline-flex items-center hover:underline group underline-offset-4 gap-2'>
-            <h3>{project.title}</h3>
-            <ArrowUpRightIcon className='size-4 text-neutral-500 dark:group-hover:text-neutral-100 group-hover:text-neutral-900' />
+    <Card className='group rounded-none border-none bg-accent/60 from-neutral-800/10 p-4 dark:bg-neutral-900 dark:hover:bg-gradient-to-bl sm:rounded-lg'>
+      <div className='flex flex-col gap-2'>
+        <div className='flex items-start justify-between'>
+          <div className='flex items-start gap-2'>
+            {image && (
+              <Image
+                src={image}
+                width={70}
+                height={70}
+                alt='fds'
+                quality={99}
+                className='h-14 shrink-0 transition-all rounded object-cover object-center'
+              />
+            )}
+            <div>
+              <h3>{title}</h3>
+              <p className='text-sm text-muted-foreground'>{made_at}</p>
+            </div>
           </div>
-        </CardTitle>
-        <CardDescription className='font-mono dark:text-neutral-400 text-neutral-600'>
-          {project.description}
-        </CardDescription>
-      </CardHeader>
-
-      <CardContent className='flex flex-col space-y-6 p-4 pt-0'>
-        <div className='flex flex-wrap gap-2'>
-          {project.skills.map((tag) => (
-            <Badge
-              className='p-1 gap-1 rounded-md shadow'
-              variant='outline'
-              key={tag.name}
-            >
-              <div className={'size-3 grid items-center project-icon'}>
-                {tag.icon}
-              </div>
-              <p className='text-xs capitalize'>{tag.name}</p>
-            </Badge>
-          ))}
-        </div>
-
-        <div className='flex gap-x-2'>
-          {project.demo && (
-            <Button
-              variant='default'
-              size={null}
-              className='p-2 shadow'
-              asChild
-            >
-              <a
-                href={project.demo}
-                target='_blank'
-                rel='noreferrer'
-                className='flex items-center gap-2'
-              >
-                <LinkIcon className='size-4' />
-                <p>Preview</p>
-              </a>
-            </Button>
-          )}
-          {project.github && (
-            <Button
-              variant='default'
-              size={null}
-              className='p-2 shadow'
-              asChild
-            >
-              <a
-                href={project.github}
-                target='_blank'
-                rel='noreferrer'
-                className='flex items-center gap-2'
-              >
-                <GitHubLogoIcon className='size-4' />
-                <p>GitHub</p>
-              </a>
-            </Button>
+          {demo && (
+            <div className='flex'>
+              {github && (
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      asChild
+                      size={'icon'}
+                      variant={'ghost'}
+                      className='shrink-0'
+                    >
+                      <Link href={github} target='_blank' aria-label='Github'>
+                        <Github className='size-4' />
+                      </Link>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side='bottom'
+                    className='bg-transparent text-xs'
+                  >
+                    Source Code
+                  </TooltipContent>
+                </Tooltip>
+              )}
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    asChild
+                    size={'icon'}
+                    variant={'ghost'}
+                    className='shrink-0'
+                  >
+                    <Link
+                      href={demo}
+                      target='_blank'
+                      aria-label='Visit Website'
+                    >
+                      <ExternalLink className='size-4' />
+                    </Link>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent
+                  side='bottom'
+                  className='bg-transparent text-xs'
+                >
+                  Visit Website
+                </TooltipContent>
+              </Tooltip>
+            </div>
           )}
         </div>
-      </CardContent>
+
+        <div>
+          {skills && (
+            <ul className='mt-2 flex flex-wrap gap-1'>
+              {skills.map((tag, idx) => {
+                return (
+                  <li key={idx}>
+                    <Badge variant={'outline'}>
+                      <div
+                        className={
+                          'size-3 grid items-center project-icon mr-1.5 transition-all'
+                        }
+                      >
+                        {tag.icon}
+                      </div>
+                      {tag.name}
+                    </Badge>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </div>
+        {testimonial && (
+          <blockquote className='border-l-2 pl-6 text-sm italic text-card-foreground'>
+            <ReadMore text={testimonial} id='d' />
+          </blockquote>
+        )}
+      </div>
     </Card>
   );
 };
-export default ProjectCard;
+
+export default Project;

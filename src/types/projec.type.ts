@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
 type skill = {
   name: string;
@@ -7,8 +7,9 @@ type skill = {
 export type ProjectType = {
   id: number;
   title: string;
-  description: string;
-  image: string;
+  description?: string;
+  testimonial: string;
+  image?: string;
   demo?: string;
   skills: skill[];
   year: number;
