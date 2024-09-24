@@ -3,11 +3,6 @@ import { ReadMore } from '@/components/project/read-more';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
 import { ProjectType } from '@/types/projec.type';
 import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
@@ -23,11 +18,10 @@ const Project = ({ project }: { project: ProjectType }) => {
             {image && (
               <Image
                 src={image}
-                width={70}
-                height={70}
+                width={55}
+                height={55}
                 alt='fds'
-                quality={99}
-                className='h-14 shrink-0 transition-all rounded object-cover object-center'
+                className='h-12 shrink-0 transition-all object-cover object-center rounded-[2px]'
               />
             )}
             <div>
@@ -38,51 +32,27 @@ const Project = ({ project }: { project: ProjectType }) => {
           {demo && (
             <div className='flex'>
               {github && (
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      asChild
-                      size={'icon'}
-                      variant={'ghost'}
-                      className='shrink-0'
-                    >
-                      <Link href={github} target='_blank' aria-label='Github'>
-                        <Github className='size-4' />
-                      </Link>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side='bottom'
-                    className='bg-transparent text-xs'
-                  >
-                    Source Code
-                  </TooltipContent>
-                </Tooltip>
-              )}
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Button
-                    asChild
-                    size={'icon'}
-                    variant={'ghost'}
-                    className='shrink-0'
-                  >
-                    <Link
-                      href={demo}
-                      target='_blank'
-                      aria-label='Visit Website'
-                    >
-                      <ExternalLink className='size-4' />
-                    </Link>
-                  </Button>
-                </TooltipTrigger>
-                <TooltipContent
-                  side='bottom'
-                  className='bg-transparent text-xs'
+                <Button
+                  asChild
+                  size={'icon'}
+                  variant={'ghost'}
+                  className='shrink-0'
                 >
-                  Visit Website
-                </TooltipContent>
-              </Tooltip>
+                  <Link href={github} target='_blank' aria-label='Github'>
+                    <Github className='size-4' />
+                  </Link>
+                </Button>
+              )}
+              <Button
+                asChild
+                size={'icon'}
+                variant={'ghost'}
+                className='shrink-0'
+              >
+                <Link href={demo} target='_blank' aria-label='Visit Website'>
+                  <ExternalLink className='size-4' />
+                </Link>
+              </Button>
             </div>
           )}
         </div>
@@ -92,7 +62,7 @@ const Project = ({ project }: { project: ProjectType }) => {
             <ul className='mt-2 flex flex-wrap gap-1'>
               {skills.map((tag, idx) => {
                 return (
-                  <li key={idx}>
+                  <li key={idx} className='lowercase'>
                     <Badge variant={'outline'}>
                       <div
                         className={
