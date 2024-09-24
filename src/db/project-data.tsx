@@ -133,6 +133,10 @@ const projects = [
     image: '/projects/7.png',
     skills: [
       {
+        name: 'typescript',
+        icon: <Typescript />,
+      },
+      {
         name: 'Radix/UI',
         icon: <RadixUI />,
       },
@@ -186,6 +190,10 @@ const projects = [
     image: '/projects/5.png',
     skills: [
       {
+        name: 'typescript',
+        icon: <Typescript />,
+      },
+      {
         name: 'Radix/UI',
         icon: <RadixUI />,
       },
@@ -209,6 +217,10 @@ const projects = [
     demo: 'https://thihan.vercel.app',
     image: '/projects/4.png',
     skills: [
+      {
+        name: 'typescript',
+        icon: <Typescript />,
+      },
       {
         name: 'nextjs',
         icon: <Next />,
@@ -272,10 +284,6 @@ const projects = [
     image: '/projects/2.png',
     skills: [
       {
-        name: 'Radix/UI',
-        icon: <RadixUI />,
-      },
-      {
         name: 'Typescript',
         icon: <Typescript />,
       },
@@ -319,10 +327,6 @@ const projects = [
     demo: 'https://loopfeed.vercel.app',
     image: '/projects/1.png',
     skills: [
-      {
-        name: 'Radix/UI',
-        icon: <RadixUI />,
-      },
       {
         name: 'Typescript',
         icon: <Typescript />,
