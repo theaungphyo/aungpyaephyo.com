@@ -5,25 +5,24 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ProjectType } from '@/types/projec.type';
 import { ExternalLink } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Project = ({ project }: { project: ProjectType }) => {
-  const { skills, github, image, title, demo, made_at, testimonial } = project;
+  const { skills, github, title, demo, made_at, testimonial } = project;
   return (
     <Card className='group rounded-none border-none bg-accent/60 from-neutral-800/10 p-4 dark:bg-neutral-900 dark:hover:bg-gradient-to-bl sm:rounded-lg'>
       <div className='flex flex-col gap-2'>
         <div className='flex items-start justify-between'>
           <div className='flex items-start gap-2'>
-            {image && (
-              <Image
-                src={image}
-                width={55}
-                height={55}
-                alt='fds'
-                className='h-12 shrink-0 transition-all object-cover object-center rounded-[2px]'
-              />
-            )}
+            {/*{image && (*/}
+            {/*  <Image*/}
+            {/*    src={image}*/}
+            {/*    width={55}*/}
+            {/*    height={55}*/}
+            {/*    alt='fds'*/}
+            {/*    className='h-12 shrink-0 transition-all object-cover object-center rounded-[2px]'*/}
+            {/*  />*/}
+            {/*)}*/}
             <div>
               <h3>{title}</h3>
               <p className='text-sm text-muted-foreground'>{made_at}</p>
