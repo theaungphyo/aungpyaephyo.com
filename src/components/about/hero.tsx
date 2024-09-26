@@ -1,36 +1,34 @@
 import Section from '@/components/section';
-import { blurDataImage } from '@/lib/utils';
-import Image from 'next/image';
 import Link from 'next/link';
 import { appConfig } from '../../../app.config';
 
 const Hero = () => {
   return (
     <>
-      <div className='relative flex md:hidden'>
-        <div className='animate-in '>
-          <Image
-            blurDataURL={blurDataImage}
-            src={'/memories/about-4.jpg'}
-            alt={'me and lily'}
-            width={324}
-            height={139}
-            className='pointer-events-none h-60 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md'
-            priority
-          />
-        </div>
-        <div className='animate-in mt-5'>
-          <Image
-            blurDataURL={blurDataImage}
-            src={'/memories/about-1.JPG'}
-            alt={'me and lily'}
-            width={220}
-            height={240}
-            className='pointer-events-none  rotate-6 rounded-xl bg-gray-400 object-cover shadow-md w-56'
-            priority
-          />
-        </div>
-      </div>
+      {/*<div className='relative flex md:hidden'>*/}
+      {/*  <div className='animate-in '>*/}
+      {/*    <Image*/}
+      {/*      blurDataURL={blurDataImage}*/}
+      {/*      src={'/memories/about-4.jpg'}*/}
+      {/*      alt={'me and lily'}*/}
+      {/*      width={324}*/}
+      {/*      height={139}*/}
+      {/*      className='pointer-events-none h-60 -rotate-6 rounded-xl bg-gray-400 object-cover shadow-md'*/}
+      {/*      priority*/}
+      {/*    />*/}
+      {/*  </div>*/}
+      {/*  <div className='animate-in mt-5'>*/}
+      {/*    <Image*/}
+      {/*      blurDataURL={blurDataImage}*/}
+      {/*      src={'/memories/about-1.JPG'}*/}
+      {/*      alt={'me and lily'}*/}
+      {/*      width={220}*/}
+      {/*      height={240}*/}
+      {/*      className='pointer-events-none  rotate-6 rounded-xl bg-gray-400 object-cover shadow-md w-56'*/}
+      {/*      priority*/}
+      {/*    />*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       <Section heading='About' headingAlignment='left'>
         <div className='flex flex-col gap-6'>
           <p>
