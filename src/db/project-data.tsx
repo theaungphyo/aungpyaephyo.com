@@ -9,7 +9,6 @@ import NextAuth from '@/components/icons/next-auth';
 import Node from '@/components/icons/node';
 import Php from '@/components/icons/php';
 import Postgres from '@/components/icons/postgres';
-import RadixUI from '@/components/icons/radix-ui';
 import ReactIcon from '@/components/icons/react';
 import Redux from '@/components/icons/redux';
 import Supabase from '@/components/icons/supabase';
@@ -124,34 +123,34 @@ const projects = [
     year: 2023,
     github: 'https://github.com/aungpyaephyo1412/jk_mobile',
   },
-  {
-    id: 4,
-    title: 'Kawi Admin Dashboard',
-    testimonial:
-      'Developed the Kawi Admin Dashboard at Myanmar Media Linkage Company Limited in 2023. The project, built with Tailwind CSS, ShadcnUI, Next.js, Zod, and NextAuth, significantly improved internal management processes.',
-    demo: '',
-    image: '/projects/7.png',
-    skills: [
-      {
-        name: 'typescript',
-        icon: <Typescript />,
-      },
-      {
-        name: 'Radix/UI',
-        icon: <RadixUI />,
-      },
-      {
-        name: 'nextjs',
-        icon: <Next />,
-      },
-      {
-        name: 'next-auth',
-        icon: <NextAuth />,
-      },
-    ],
-    made_at: 'Myanmar Media Linkage',
-    year: 2023,
-  },
+  // {
+  //   id: 4,
+  //   title: 'Kawi Admin Dashboard',
+  //   testimonial:
+  //     'Developed the Kawi Admin Dashboard at Myanmar Media Linkage Company Limited in 2023. The project, built with Tailwind CSS, ShadcnUI, Next.js, Zod, and NextAuth, significantly improved internal management processes.',
+  //   demo: '',
+  //   image: '/projects/7.png',
+  //   skills: [
+  //     {
+  //       name: 'typescript',
+  //       icon: <Typescript />,
+  //     },
+  //     {
+  //       name: 'Radix/UI',
+  //       icon: <RadixUI />,
+  //     },
+  //     {
+  //       name: 'nextjs',
+  //       icon: <Next />,
+  //     },
+  //     {
+  //       name: 'next-auth',
+  //       icon: <NextAuth />,
+  //     },
+  //   ],
+  //   made_at: 'Myanmar Media Linkage',
+  //   year: 2023,
+  // },
   {
     id: 5,
     title: 'Javascript Quiz App',
@@ -181,34 +180,34 @@ const projects = [
     year: 2024,
     github: 'https://github.com/aungpyaephyo1412/javascript-questions',
   },
-  {
-    id: 6,
-    title: 'MM Pad',
-    testimonial:
-      'Developed the MMPad at Myanmar Media Linkage Company Limited in 2023. The project, built with Tailwindcss, RadixUI, NextJS, Zod, React-Hook-Form, Zustand, NextAuth, Inspired by Wattpad.',
-    demo: '',
-    image: '/projects/5.png',
-    skills: [
-      {
-        name: 'typescript',
-        icon: <Typescript />,
-      },
-      {
-        name: 'Radix/UI',
-        icon: <RadixUI />,
-      },
-      {
-        name: 'nextjs',
-        icon: <Next />,
-      },
-      {
-        name: 'next-auth',
-        icon: <NextAuth />,
-      },
-    ],
-    made_at: 'Myanmar Media Linkage',
-    year: 2023,
-  },
+  // {
+  //   id: 6,
+  //   title: 'MM Pad',
+  //   testimonial:
+  //     'Developed the MMPad at Myanmar Media Linkage Company Limited in 2023. The project, built with Tailwindcss, RadixUI, NextJS, Zod, React-Hook-Form, Zustand, NextAuth, Inspired by Wattpad.',
+  //   demo: '',
+  //   image: '/projects/5.png',
+  //   skills: [
+  //     {
+  //       name: 'typescript',
+  //       icon: <Typescript />,
+  //     },
+  //     {
+  //       name: 'Radix/UI',
+  //       icon: <RadixUI />,
+  //     },
+  //     {
+  //       name: 'nextjs',
+  //       icon: <Next />,
+  //     },
+  //     {
+  //       name: 'next-auth',
+  //       icon: <NextAuth />,
+  //     },
+  //   ],
+  //   made_at: 'Myanmar Media Linkage',
+  //   year: 2023,
+  // },
   {
     id: 7,
     title: "Thihan's Portfolio",
