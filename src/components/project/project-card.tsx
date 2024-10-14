@@ -1,5 +1,4 @@
 import Github from '@/components/icons/github';
-import { ReadMore } from '@/components/project/read-more';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -80,7 +79,7 @@ const Project = ({ project }: { project: ProjectType }) => {
         </div>
         {testimonial && (
           <blockquote className='border-l-2 pl-6 text-sm italic text-card-foreground'>
-            <ReadMore text={testimonial} id='d' />
+            {testimonial}
           </blockquote>
         )}
       </div>

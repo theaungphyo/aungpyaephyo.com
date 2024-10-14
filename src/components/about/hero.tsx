@@ -1,7 +1,6 @@
 import Section from '@/components/section';
 import Link from 'next/link';
 import { appConfig } from '../../../app.config';
-
 const Hero = () => {
   return (
     <>
@@ -9,7 +8,7 @@ const Hero = () => {
       {/*  <div className='animate-in '>*/}
       {/*    <Image*/}
       {/*      blurDataURL={blurDataImage}*/}
-      {/*      src={'/memories/about-4.jpg'}*/}
+      {/*      src={'/memories/1.jpg'}*/}
       {/*      alt={'me and lily'}*/}
       {/*      width={324}*/}
       {/*      height={139}*/}
@@ -20,7 +19,7 @@ const Hero = () => {
       {/*  <div className='animate-in mt-5'>*/}
       {/*    <Image*/}
       {/*      blurDataURL={blurDataImage}*/}
-      {/*      src={'/memories/about-1.JPG'}*/}
+      {/*      src={'/memories/4.jpg'}*/}
       {/*      alt={'me and lily'}*/}
       {/*      width={220}*/}
       {/*      height={240}*/}
