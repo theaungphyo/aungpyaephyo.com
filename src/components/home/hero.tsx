@@ -50,7 +50,7 @@ const Hero = () => {
       </div>
       <Image
         alt={appConfig.name}
-        src={'/avatar.png'}
+        src={'/avatar.jpg'}
         placeholder='blur'
         blurDataURL={blurDataImage}
         className='hidden h-44 w-44 transform-gpu rounded object-cover object-top  sm:block bg-neutral-300 dark:bg-neutral-800 scale-x-[-1]'

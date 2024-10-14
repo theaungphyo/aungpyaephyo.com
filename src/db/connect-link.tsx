@@ -1,8 +1,6 @@
 import Github from '@/components/icons/github';
 import GitLab from '@/components/icons/gitlab';
-import Facebook from '@/components/icons/social/facebook';
 import Gmail from '@/components/icons/social/gmail';
-import Instagram from '@/components/icons/social/instagram';
 import X from '@/components/icons/social/x';
 import { appConfig } from '../../app.config';
 
@@ -32,16 +30,6 @@ const ConnectLinks: ConnectLink[] = [
     label: 'Gitlab',
     href: appConfig.socials.gitlab,
     icon: <GitLab />,
-  },
-  {
-    label: 'Instagram',
-    href: appConfig.socials.instagram,
-    icon: <Instagram className='size-5' />,
-  },
-  {
-    label: 'Facebook',
-    href: appConfig.socials.fb,
-    icon: <Facebook />,
   },
 ];
 
