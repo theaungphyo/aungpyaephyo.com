@@ -34,17 +34,17 @@ const Hero = () => {
 
           <p className='sm:max-w-md'>
             I love working in-between product, engineering and developer
-            experience, currently at{' '}
-            <a
-              target={'_blank'}
-              rel={'noreferrer'}
-              aria-label={'link'}
-              className='underline'
-              href='https://sithucenter.com'
-            >
-              SiThuLab
-            </a>
-            .
+            experience
+            {/*, currently at{' '}*/}
+            {/*<a*/}
+            {/*  target={'_blank'}*/}
+            {/*  rel={'noreferrer'}*/}
+            {/*  aria-label={'link'}*/}
+            {/*  className='underline'*/}
+            {/*  href='https://sithucenter.com'*/}
+            {/*>*/}
+            {/*  SiThuLab*/}
+            {/*</a>*/}.
           </p>
         </div>
       </div>

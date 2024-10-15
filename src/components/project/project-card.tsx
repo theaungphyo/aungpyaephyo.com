@@ -78,7 +78,7 @@ const Project = ({ project }: { project: ProjectType }) => {
           )}
         </div>
         {testimonial && (
-          <blockquote className='border-l-2 pl-6 text-sm italic text-card-foreground'>
+          <blockquote className='border-l-[3px] pl-4 text-sm text-card-foreground'>
             {testimonial}
           </blockquote>
         )}
