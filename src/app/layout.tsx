@@ -19,11 +19,12 @@ export const metadata: Metadata = {
   },
   description: 'Developer, writer, and creator.',
   keywords: [
+    'aung pyae phyo',
     'aungpyaephyo',
     'aungpyaephyo.com',
-    'aung pyae phyo',
     'aung phyo',
     'aung pyae phyo blog',
+    'aung pyae phyo engineer',
     'aung pyae phyo tech',
     'aung pyae phyo kyaukse',
     'aung pyae phyo kyaukse blog',
