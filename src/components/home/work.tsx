@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Work = () => {
   return (
     <div className='pb-5'>
-      <SectionTitle title={'Work'} />
+      <SectionTitle title={'Experience'} />
       <div className='space-y-6'>
         {experiences.map((experience) => (
           <div

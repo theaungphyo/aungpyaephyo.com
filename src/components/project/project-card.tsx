@@ -1,9 +1,8 @@
-import Github from '@/components/icons/github';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ProjectType } from '@/types/projec.type';
-import { ExternalLink } from 'lucide-react';
+import { Folder, GalleryVertical } from 'lucide-react';
 import Link from 'next/link';
 
 const Project = ({ project }: { project: ProjectType }) => {
@@ -37,7 +36,7 @@ const Project = ({ project }: { project: ProjectType }) => {
                   className='shrink-0'
                 >
                   <Link href={github} target='_blank' aria-label='Github'>
-                    <Github className='size-4' />
+                    <Folder className='size-4' />
                   </Link>
                 </Button>
               )}
@@ -48,7 +47,7 @@ const Project = ({ project }: { project: ProjectType }) => {
                 className='shrink-0'
               >
                 <Link href={demo} target='_blank' aria-label='Visit Website'>
-                  <ExternalLink className='size-4' />
+                  <GalleryVertical className='size-4' />
                 </Link>
               </Button>
             </div>

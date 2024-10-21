@@ -3,11 +3,12 @@ export const appConfig = {
   url: 'https://www.aungpyaephyo.com',
   mail: 'hi@aungpyaephyo.com',
   socials: {
-    fb: 'https://www.facebook.com/aungphyo.dev',
+    fb: 'https://www.facebook.com/devaungphyo',
     github: 'https://github.com/aungphyo-dev',
-    twitter: 'https://x.com/aungpyaephyo_',
-    instagram: 'https://www.instagram.com/aungphyo.dev',
-    gitlab: 'https://gitlab.com/aungphyo.dev',
+    twitter: 'https://x.com/devaungphyo',
+    instagram: 'https://www.instagram.com/devaungphyo',
+    gitlab: 'https://gitlab.com/devaungphyo',
+    linkedin: 'https://www.linkedin.com/in/devaungphyo',
   },
 };
 export const navigation_links = [
