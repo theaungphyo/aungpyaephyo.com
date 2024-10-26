@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 import { LayoutGroup } from 'framer-motion';
 import { Menu, SunIcon } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Suspense } from 'react';
@@ -37,20 +38,20 @@ function Navigation() {
       <div>
         <LayoutGroup>
           <nav
-            className='max-w-screen-md mx-auto fade  flex flex-row items-center justify-between md:relative md:overflow-hidden'
+            className='max-w-screen-md mx-auto fade w-full flex flex-row items-center justify-between md:relative md:overflow-hidden'
             id='nav'
           >
-            {/*<Link href={'/'}>*/}
-            {/*  <Image*/}
-            {/*    src={'/logo.png'}*/}
-            {/*    alt={'logo'}*/}
-            {/*    width={35}*/}
-            {/*    height={35}*/}
-            {/*    className='object-contain'*/}
-            {/*    priority*/}
-            {/*  />*/}
-            {/*</Link>*/}
-            <div className='w-full flex flex-row justify-between space-x-0 items-center overflow-hidden'>
+            <Link href={'/'}>
+              <Image
+                src={'/logo.png'}
+                alt={'logo'}
+                width={35}
+                height={35}
+                className='object-contain'
+                priority
+              />
+            </Link>
+            <div className='flex flex-row space-x-0 items-center overflow-hidden'>
               <NavList className='md:flex hidden' />
               <ThemeToggle />
               <Dialog>

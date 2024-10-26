@@ -11,12 +11,13 @@ import { notFound } from 'next/navigation';
 import { Suspense, cache } from 'react';
 import { appConfig } from '../../../../app.config';
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: Props): Promise<Metadata | undefined> {
+export async function generateMetadata(
+  props: Props
+): Promise<Metadata | undefined> {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
@@ -58,7 +59,11 @@ export async function generateStaticParams() {
   }));
 }
 
-const Page = ({ params: { slug } }: Props) => {
+const Page = async (props: Props) => {
+  const params = await props.params;
+
+  const { slug } = params;
+
   const blog = getBlogPosts().find((b) => b.slug === slug);
   const canonicalUrl = `${appConfig.url}/blog/${slug}`;
 
