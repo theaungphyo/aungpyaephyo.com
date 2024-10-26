@@ -106,10 +106,7 @@ const config = {
       backgroundImage: {
         'bg-light': "url('/bg.png')",
       },
-      fontFamily: {
-        space: ["var('--font-space')"],
-        gugi: ['var(--font-gugi)'],
-      },
+      fontFamily: {},
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],

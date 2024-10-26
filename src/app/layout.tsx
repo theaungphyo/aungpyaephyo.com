@@ -78,6 +78,7 @@ export const metadata: Metadata = {
 const Jetbrains_mono = localFont({
   src: './mono.woff2',
   display: 'swap',
+  variable: '--font-jetbrains-mono',
 });
 
 export default function RootLayout({
