@@ -1,6 +1,6 @@
 'use client';
 
-import { blurDataImage } from '@/lib/utils';
+import { blurDataImage, cn } from '@/lib/utils';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
@@ -35,7 +35,9 @@ function Photo({
   const shared = 'absolute h-full w-full rounded-xl overflow-hidden';
   return (
     <motion.div
-      className={`absolute mx-auto cursor-grab hover:before:block hover:before:w-[calc(100%+55px)] hover:before:h-[300px] hover:before:absolute hover:before:-top-8 hover:before:-left-7`}
+      className={
+        'absolute mx-auto cursor-grab hover:before:block hover:before:w-[calc(100%+55px)] hover:before:h-[300px] hover:before:absolute hover:before:-top-8 hover:before:-left-7'
+      }
       style={{ rotate: `${rotate}deg`, left, width, height, perspective: 1000 }}
       initial={{
         width,
@@ -91,7 +93,7 @@ function Photo({
           {children}
         </div>
         <div
-          className={clsx(
+          className={cn(
             shared,
             'bg-[#FFFAF2] flex items-center rounded-xl overflow-hidden'
           )}
