@@ -1,3 +1,5 @@
+const dynamic = 'force-dynamic';
+
 import { getGuestbookEntries } from '@/app/guestbook/_action';
 import { auth } from '@/auth';
 import GuestbookForm from '@/components/guestbook/guestbook-form';
