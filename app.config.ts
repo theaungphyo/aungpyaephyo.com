@@ -4,7 +4,7 @@ export const appConfig = {
   mail: 'hi@aungpyaephyo.com',
   socials: {
     fb: 'https://www.facebook.com/devaungphyo',
-    github: 'https://github.com/aungphyo-dev',
+    github: 'https://github.com/devaungphyo',
     twitter: 'https://x.com/devaungphyo',
     instagram: 'https://www.instagram.com/devaungphyo',
     gitlab: 'https://gitlab.com/devaungphyo',
