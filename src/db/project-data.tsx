@@ -1,20 +1,19 @@
 import Express from '@/components/icons/express';
+import JavaScript from '@/components/icons/javascript';
 import Laravel from '@/components/icons/laravel';
 import MongoDB from '@/components/icons/mongo';
-import Mui from '@/components/icons/mui';
 import Mysql from '@/components/icons/mysql';
 import Neon from '@/components/icons/neon';
+import NestJS from '@/components/icons/nest';
 import Next from '@/components/icons/next';
-import NextAuth from '@/components/icons/next-auth';
 import Node from '@/components/icons/node';
 import Php from '@/components/icons/php';
 import Postgres from '@/components/icons/postgres';
 import ReactIcon from '@/components/icons/react';
 import Redux from '@/components/icons/redux';
 import Supabase from '@/components/icons/supabase';
+import TurboRepo from '@/components/icons/turbo-repo';
 import Typescript from '@/components/icons/typescript';
-import Vercel from '@/components/icons/vercel';
-import Vite from '@/components/icons/vite';
 
 const projects = [
   {
@@ -26,8 +25,8 @@ const projects = [
     image: '/projects/10.png',
     skills: [
       {
-        name: 'vite',
-        icon: <Vite />,
+        name: 'javascript',
+        icon: <JavaScript />,
       },
       {
         name: 'react',
@@ -62,8 +61,8 @@ const projects = [
     image: '/projects/9.png',
     skills: [
       {
-        name: 'vite',
-        icon: <Vite />,
+        name: 'javascript',
+        icon: <JavaScript />,
       },
       {
         name: 'react',
@@ -76,10 +75,6 @@ const projects = [
       {
         name: 'supabase',
         icon: <Supabase />,
-      },
-      {
-        name: 'Vercel',
-        icon: <Vercel />,
       },
     ],
     made_at: 'Freelance',
@@ -95,12 +90,8 @@ const projects = [
     image: '/projects/8.png',
     skills: [
       {
-        name: 'materialUI',
-        icon: <Mui />,
-      },
-      {
-        name: 'vite',
-        icon: <Vite />,
+        name: 'javascript',
+        icon: <JavaScript />,
       },
       {
         name: 'react',
@@ -113,10 +104,6 @@ const projects = [
       {
         name: 'supabase',
         icon: <Supabase />,
-      },
-      {
-        name: 'Vercel',
-        icon: <Vercel />,
       },
     ],
     made_at: 'Freelance',
@@ -171,10 +158,6 @@ const projects = [
         name: 'nodejs',
         icon: <Node />,
       },
-      {
-        name: 'vercel',
-        icon: <Vercel />,
-      },
     ],
     made_at: 'Freelance',
     year: 2024,
@@ -225,16 +208,8 @@ const projects = [
         icon: <Next />,
       },
       {
-        name: 'next-auth',
-        icon: <NextAuth />,
-      },
-      {
         name: 'supabase',
         icon: <Supabase />,
-      },
-      {
-        name: 'vercel',
-        icon: <Vercel />,
       },
     ],
     made_at: 'Freelance',
@@ -257,20 +232,16 @@ const projects = [
         icon: <Next />,
       },
       {
-        name: 'nodejs',
-        icon: <Node />,
-      },
-      {
         name: 'expressjs',
         icon: <Express />,
       },
       {
-        name: 'mongodb',
-        icon: <MongoDB />,
+        name: 'nodejs',
+        icon: <Node />,
       },
       {
-        name: 'vercel',
-        icon: <Vercel />,
+        name: 'mongodb',
+        icon: <MongoDB />,
       },
     ],
     made_at: 'Freelance',
@@ -310,10 +281,6 @@ const projects = [
         name: 'neon',
         icon: <Neon />,
       },
-      {
-        name: 'vercel',
-        icon: <Vercel />,
-      },
     ],
     made_at: 'Walmal Shopping',
     year: 2024,
@@ -335,8 +302,43 @@ const projects = [
         icon: <Next />,
       },
       {
-        name: 'next-auth',
-        icon: <NextAuth />,
+        name: 'nodejs',
+        icon: <Node />,
+      },
+      {
+        name: 'expressjs',
+        icon: <Express />,
+      },
+      {
+        name: 'postgresql',
+        icon: <Postgres />,
+      },
+      {
+        name: 'supabase',
+        icon: <Supabase />,
+      },
+    ],
+    made_at: 'Loopfeed',
+    year: 2024,
+    testimonial:
+      'Loopfeed is a social media platform built with TypeScript, Next.js, Redux, Node.js, Express.js, PostgreSQL, and hosted on Vercel and storage for supabase, ensuring a fast, scalable, and seamless online media experience.',
+  },
+  {
+    id: 12,
+    year: 2024,
+    date: '01-august-2024',
+    title: 'SiThuLab POS System',
+    made_at: 'SiThuLab',
+    testimonial:
+      'Developed an ATK POS system using NextJS and ExpressJS with PostgresSQL, allowing employees to manage inventory, sales, purchase, daily income and customer information, daily sales, and reports.',
+    skills: [
+      {
+        name: 'Typescript',
+        icon: <Typescript />,
+      },
+      {
+        name: 'nextjs',
+        icon: <Next />,
       },
       {
         name: 'nodejs',
@@ -350,23 +352,38 @@ const projects = [
         name: 'postgresql',
         icon: <Postgres />,
       },
+    ],
+  },
+  {
+    id: 13,
+    year: 2024,
+    date: '01-september-2024',
+    title: 'ATK POS System',
+    made_at: 'Aung Thu Kha (Asia) Motorcycle Showroom',
+    testimonial:
+      'Developed an ATK POS system using NextJS and NestJS with PostgresSQL, allowing employees to manage inventory, sales, received and customer information, daily sales, and reports.',
+    skills: [
       {
-        name: 'neon',
-        icon: <Neon />,
+        name: 'Typescript',
+        icon: <Typescript />,
       },
       {
-        name: 'supabase',
-        icon: <Supabase />,
+        name: 'nextjs',
+        icon: <Next />,
       },
       {
-        name: 'vercel',
-        icon: <Vercel />,
+        name: 'nestjs',
+        icon: <NestJS />,
+      },
+      {
+        name: 'postgresql',
+        icon: <Postgres />,
+      },
+      {
+        name: 'Turborepo',
+        icon: <TurboRepo />,
       },
     ],
-    made_at: 'Loopfeed',
-    year: 2024,
-    testimonial:
-      'Loopfeed is a social media platform built with TypeScript, Next.js, Redux, Node.js, Express.js, PostgreSQL, and hosted on Vercel and storage for supabase, ensuring a fast, scalable, and seamless online media experience.',
   },
 ];
 export default projects;
