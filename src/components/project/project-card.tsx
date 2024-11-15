@@ -2,7 +2,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ProjectType } from '@/types/projec.type';
-import { Folder, GalleryVertical } from 'lucide-react';
+import { Fullscreen, SquareCode } from 'lucide-react';
 import Link from 'next/link';
 
 const Project = ({ project }: { project: ProjectType }) => {
@@ -36,7 +36,7 @@ const Project = ({ project }: { project: ProjectType }) => {
                   className='shrink-0'
                 >
                   <Link href={github} target='_blank' aria-label='Github'>
-                    <Folder className='size-4' />
+                    <SquareCode className='size-4' />
                   </Link>
                 </Button>
               )}
@@ -47,7 +47,7 @@ const Project = ({ project }: { project: ProjectType }) => {
                 className='shrink-0'
               >
                 <Link href={demo} target='_blank' aria-label='Visit Website'>
-                  <GalleryVertical className='size-4' />
+                  <Fullscreen className='size-4' />
                 </Link>
               </Button>
             </div>
