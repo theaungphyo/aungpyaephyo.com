@@ -53,7 +53,7 @@ function Navigation() {
             </Link>
             <div className='flex flex-row space-x-0 items-center overflow-hidden'>
               <NavList className='md:flex hidden' />
-              <ThemeToggle />
+              {/*<ThemeToggle />*/}
               <Dialog>
                 <DialogTrigger asChild>
                   <button className='flex size-10 items-center justify-center rounded-full opacity-80 outline-none transition-opacity hover:opacity-100 md:hidden'>

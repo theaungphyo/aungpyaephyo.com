@@ -21,10 +21,6 @@ export const navigation_links = [
     href: '/blog',
   },
   {
-    title: 'project',
-    href: '/project',
-  },
-  {
     title: 'guestbook',
     href: '/guestbook',
   },
@@ -42,10 +38,6 @@ export const mob_navigation_links = [
   {
     title: 'blog',
     href: '/blog',
-  },
-  {
-    title: 'project',
-    href: '/project',
   },
   {
     title: 'guestbook',
