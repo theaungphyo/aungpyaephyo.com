@@ -8,6 +8,7 @@ module.exports = {
     'prettier-plugin-tailwindcss',
     'prettier-plugin-css-order',
     'prettier-plugin-organize-imports',
+    'prettier-plugin-packagejson',
   ],
   tailwindFunctions: ['clsx', 'cn', 'twMerge'],
 };
