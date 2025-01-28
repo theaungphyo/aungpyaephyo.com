@@ -15,45 +15,72 @@ export const metadata: Metadata = {
   metadataBase: new URL(appConfig.url),
   title: {
     default: appConfig.name,
-    template: `%s | ${appConfig.name}`,
+    template: `%s | ${appConfig.name}`, // Allows flexible page-specific titles
   },
-  description: 'Developer, writer, and creator.',
+  description:
+    'Aung Pyae Phyo - Developer, engineer, writer, and creator specializing in modern web development, software architecture, and cutting-edge technologies.',
   keywords: [
-    'aung pyae phyo',
+    'Aung Pyae Phyo',
     'aungpyaephyo',
     'aungpyaephyo.com',
-    'aung phyo',
-    'aung pyae phyo blog',
-    'aung pyae phyo engineer',
-    'aung pyae phyo tech',
-    'aung pyae phyo kyaukse',
-    'aung pyae phyo kyaukse blog',
-    'aung pyae phyo kyaukse tech',
-    'software development',
-    'web development',
-    'design',
-    'blog',
-    'tech',
-    'kyaukse',
-    'nextjs',
-    'react',
-    'nestjs',
+    'Aung Phyo',
+    'developer portfolio',
+    'engineer blog',
+    'Kyaukse developer',
     'software engineering',
+    'web development',
+    'tech enthusiast',
+    'full-stack developer',
+    'Next.js',
+    'React.js',
+    'TypeScript',
+    'Node.js',
+    'MongoDB',
+    'GraphQL',
+    'AWS',
     'software architecture',
-    'javascript',
-    'typescript',
-    'nodejs',
-    'mongodb',
-    'graphql',
-    'aws',
+    'modern technologies',
+    'Kyaukse tech',
+    'Aung Pyae Phyo blog',
+    'Kyaukse engineer',
+    'frontend developer',
+    'backend developer',
+    'cloud computing',
+    'web performance optimization',
+    'web design',
+    'UI/UX design',
+    'developer blog',
+    'programming tutorials',
+    'JavaScript frameworks',
+    'TypeScript best practices',
+    'serverless architecture',
+    'responsive web design',
+    'progressive web apps',
+    'developer resources',
+    'Kyaukse software engineer',
+    'SEO for developers',
+    'technology trends',
+    'coding tutorials',
+    'personal branding for developers',
+    'open source contributions',
+    'technical writing',
   ],
   openGraph: {
     title: appConfig.name,
-    description: 'Developer, writer, and creator.',
+    description:
+      'Discover Aung Pyae Phyo - a passionate developer, software engineer, and creator from Kyaukse, specializing in web development, design, and software architecture.',
     url: appConfig.url,
     siteName: appConfig.name,
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: `${appConfig.url}/og-image.png`, // Replace with the actual OG image URL
+        width: 1200,
+        height: 630,
+        alt: 'Aung Pyae Phyo - Developer & Engineer',
+      },
+    ],
   },
   robots: {
     index: true,
@@ -67,11 +94,22 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: appConfig.name,
     card: 'summary_large_image',
+    title: appConfig.name,
+    description:
+      'Developer, engineer, and creator specializing in modern web technologies.',
+    images: [`${appConfig.url}/twitter-card.png`], // Replace with actual Twitter card image URL
   },
   verification: {
-    google: '2V6fAI1xHZSNoMAr4vucaI7TjftUZGhAlcGWu0MHMDw',
+    google: '2V6fAI1xHZSNoMAr4vucaI7TjftUZGhAlcGWu0MHMDw', // Google verification meta tag value
+    yandex: 'YOUR_YANDAX_VERIFICATION_CODE', // Add Yandax verification if required
+  },
+  alternates: {
+    canonical: appConfig.url, // Canonical URL for SEO consistency
+    languages: {
+      'en-US': appConfig.url,
+      'my-MM': `${appConfig.url}/mm`, // Example for additional language (Myanmar)
+    },
   },
 };
 
