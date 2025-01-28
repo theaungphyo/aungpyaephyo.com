@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: `%s | ${appConfig.name}`, // Allows flexible page-specific titles
   },
   description:
-    'Aung Pyae Phyo - Developer, engineer, writer, and creator specializing in modern web development, software architecture, and cutting-edge technologies.',
+    'Aung Pyae Phyo - Developer, engineer, and creator specializing in modern web technologies.',
   keywords: [
     'Aung Pyae Phyo',
     'aungpyaephyo',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: appConfig.name,
     description:
-      'Discover Aung Pyae Phyo - a passionate developer, software engineer, and creator from Kyaukse, specializing in web development, design, and software architecture.',
+      'Developer, engineer, and creator specializing in modern web technologies.',
     url: appConfig.url,
     siteName: appConfig.name,
     locale: 'en_US',
