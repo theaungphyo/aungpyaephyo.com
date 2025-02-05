@@ -96,14 +96,6 @@ export const metadata: Metadata = {
     siteName: appConfig.name,
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: `${appConfig.url}/og-image.png`, // Replace with the actual OG image URL
-        width: 1200,
-        height: 630,
-        alt: 'Aung Pyae Phyo - Developer & Engineer',
-      },
-    ],
   },
   robots: {
     index: true,
