@@ -21,7 +21,6 @@
     ]
   },
   "dependencies": {
-    "@aptabase/react": "^0.3.5",
     "@commitlint/cli": "^19.4.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",

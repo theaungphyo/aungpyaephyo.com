@@ -1,14 +1,14 @@
 export const appConfig = {
   name: 'Aung Pyae Phyo',
   url: 'https://www.aungpyaephyo.com',
-  mail: 'hi@aungpyaephyo.com',
+  mail: 'mail@aungpyaephyo.com',
   socials: {
-    fb: 'https://www.facebook.com/devaungphyo',
-    github: 'https://github.com/devaungphyo',
-    twitter: 'https://x.com/devaungphyo',
-    instagram: 'https://www.instagram.com/devaungphyo',
-    gitlab: 'https://gitlab.com/devaungphyo',
-    linkedin: 'https://www.linkedin.com/in/devaungphyo',
+    fb: 'https://www.facebook.com/aungphyoex',
+    github: 'https://github.com/aungphyoex',
+    twitter: 'https://x.com/aungphyoex',
+    instagram: 'https://www.instagram.com/aungphyoex',
+    gitlab: 'https://gitlab.com/aungphyoex',
+    linkedin: 'https://www.linkedin.com/in/aungphyoex',
   },
 };
 export const navigation_links = [
