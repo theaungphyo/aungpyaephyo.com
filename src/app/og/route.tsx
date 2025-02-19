@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
     (
       <div
         tw='flex h-full w-full bg-black text-white'
-        style={{ fontFamily: 'Jetbrains Mono' }}
+        style={{ fontFamily: 'Geist Sans' }}
       >
         <div tw='flex border absolute border-stone-700 border-dashed inset-y-0 left-16 w-[1px]' />
         <div tw='flex border absolute border-stone-700 border-dashed inset-y-0 right-16 w-[1px]' />
@@ -42,7 +42,7 @@ export async function GET(req: NextRequest) {
               textWrap: 'balance',
             }}
           >
-            {description}
+            {`${description?.slice(0, 100)}`}
           </div>
         </div>
       </div>

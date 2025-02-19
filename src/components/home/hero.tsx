@@ -15,7 +15,7 @@ const Hero = () => {
 
         <div className='grid gap-4 opacity-80'>
           <p className='sm:max-w-md '>
-            {"I'm a software engineer based in Mandalay, Myanmar. I"}{' '}
+            {"I'm a software engineer. I"}{' '}
             <a
               target={'_blank'}
               rel={'noreferrer'}
@@ -34,29 +34,21 @@ const Hero = () => {
 
           <p className='sm:max-w-md'>
             I love working in-between product, engineering and developer
-            experience
-            {/*, currently at{' '}*/}
-            {/*<a*/}
-            {/*  target={'_blank'}*/}
-            {/*  rel={'noreferrer'}*/}
-            {/*  aria-label={'link'}*/}
-            {/*  className='underline'*/}
-            {/*  href='https://sithucenter.com'*/}
-            {/*>*/}
-            {/*  SiThuLab*/}
-            {/*</a>*/}.
+            experience, currently at <span className='underline'>Binary</span>.
           </p>
         </div>
       </div>
-      <Image
-        alt={appConfig.name}
-        src={'/avatar.jpg'}
-        placeholder='blur'
-        blurDataURL={blurDataImage}
-        className='hidden h-44 w-44 transform-gpu rounded object-cover object-top  sm:block bg-neutral-300 dark:bg-neutral-800 scale-x-[-1]'
-        width={180}
-        height={180}
-      />
+      <div>
+        <Image
+          alt={appConfig.name}
+          src={'/avatar.jpg'}
+          placeholder='blur'
+          blurDataURL={blurDataImage}
+          className='hidden h-44 w-44 transform-gpu rounded object-cover object-top  sm:block bg-neutral-300 dark:bg-neutral-800 scale-x-[-1]'
+          width={180}
+          height={180}
+        />
+      </div>
     </div>
   );
 };

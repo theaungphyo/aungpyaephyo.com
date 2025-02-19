@@ -27,7 +27,7 @@ export async function generateMetadata(
 
   let ogImage = image
     ? `${appConfig.url}/${image}`
-    : `${appConfig.url}/og?title=${title}`;
+    : `${appConfig.url}/og?title=${title}&description=${description}`;
   return {
     title,
     description,
@@ -47,7 +47,11 @@ export async function generateMetadata(
       card: 'summary_large_image',
       title,
       description,
-      images: [ogImage],
+      images: [
+        {
+          url: ogImage,
+        },
+      ],
     },
   };
 }
@@ -92,9 +96,15 @@ const Page = async (props: Props) => {
           }),
         }}
       />
-      {blog.metadata.image && (
-        <FeaturedImage image={blog.metadata.image} lqpiImage={blurDataImage} />
-      )}
+
+      <FeaturedImage
+        image={
+          blog.metadata.image ??
+          `${appConfig.url}/og?title=${blog.metadata.title}`
+        }
+        lqpiImage={blurDataImage}
+      />
+
       <header className='mb-6 pb-4 font-mono'>
         <h1 className='mb-2 text-2xl tracking-tighter font-extrabold'>
           {blog.metadata.title}

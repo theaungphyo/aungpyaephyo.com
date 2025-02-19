@@ -18,14 +18,14 @@ const ActivityBar = () => {
   }
   return (
     <div className='py-8'>
-      <SectionTitle title={'My Github Activity'} />
+      <SectionTitle title={'Github'} />
       <ScrollArea className='pb-3'>
         <GitHubCalendar
-          username={'aungphyo-dev'}
+          username={'aungphyoex'}
           blockSize={9.9}
           colorScheme={theme === 'light' ? 'light' : 'dark'}
           theme={{
-            dark: ['#333333', '#4CAF50', '#81C784', '#A5D6A7', '#C8E6C9'],
+            dark: ['#333333', '#4CAF50', '#81C784', '#A5D6A7', '#C8E6C0'],
             light: ['#EBEDF0', '#C6E48B', '#7BC96F', '#239A3B', '#196127'],
           }}
         />

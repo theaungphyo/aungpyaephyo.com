@@ -18,6 +18,7 @@ const experiences = [
       'Postgresql',
     ],
     logo: '/company/freelance.png',
+    type: 'Freelance',
   },
   {
     id: 2,
@@ -30,6 +31,7 @@ const experiences = [
     durationEnd: 'March 2024',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
     logo: '/company/mml.jpg',
+    type: 'Onsite - Full-time',
   },
   {
     id: 4,
@@ -42,6 +44,17 @@ const experiences = [
     durationEnd: 'Present',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
     logo: '/company/sithu.jpg',
+    type: 'Onsite - Full-time',
+  },
+  {
+    id: 5,
+    title: 'Software Engineer',
+    company: 'Binary',
+    companyLink: 'https://binary.com/',
+    logo: '/company/binary.png',
+    durationStart: 'Nov 2024',
+    durationEnd: 'Present',
+    type: 'Remote - Part-time',
   },
 ];
 export default experiences;
