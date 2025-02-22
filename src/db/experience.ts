@@ -49,8 +49,8 @@ const experiences = [
   {
     id: 5,
     title: 'Software Engineer',
-    company: 'Binary',
-    companyLink: 'https://binary.com/',
+    company: 'BinaryHubz',
+    companyLink: 'https://binaryhubz.com/',
     logo: '/company/binary.png',
     durationStart: 'Nov 2024',
     durationEnd: 'Present',
