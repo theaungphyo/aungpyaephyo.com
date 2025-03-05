@@ -44,7 +44,7 @@ const HeroHome = () => {
         , covering all things technology, coding vlogs, and personal
         development.
       </p>
-      <div className="relative size-44  sm:block">
+      <div className="relative size-44  hidden sm:block">
         <Image
           alt={siteConfig.name}
           src={'/avatar.jpg'}
