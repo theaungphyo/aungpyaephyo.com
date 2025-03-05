@@ -13,7 +13,7 @@ const PostCard = async ({ slug, title, publishedAt }: Props) => {
       <Link
         href={slug}
         className={cn(
-          'cursor-pointer block h-full w-full rounded-md  text-base outline-none transition-all py-2',
+          'cursor-pointer block h-full w-full rounded-md  text-sm outline-none transition-all py-2',
         )}
       >
         <article className="w-full flex flex-wrap lg:flex-nowrap lg:items-baseline lg:gap-5">
