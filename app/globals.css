@@ -158,6 +158,22 @@
   background-size: 5vh 5vh;
 }
 
+.dark .grid-pattern {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1) 0.4px,
+      transparent 0.4px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) 0.4px,
+      transparent 0.4px
+    );
+  background-position: center;
+  background-size: 5vh 5vh;
+}
+
 .prose h1,
 h2,
 h3,

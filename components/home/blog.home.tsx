@@ -5,7 +5,7 @@ const BlogHome = () => {
   return (
     <div>
       <div className="p-5 container">
-        <h1 className="text-base font-semibold mb-3">Writings</h1>
+        <h1 className="text-base font-semibold mb-3 underline">Writings</h1>
         <ul className="space-y-1.5 group/card">
           {postConfig.map((blog) => (
             <PostCard

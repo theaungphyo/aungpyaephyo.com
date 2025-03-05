@@ -4,7 +4,7 @@ import Image from 'next/image';
 const WorkHome = () => {
   return (
     <div className="p-5 container">
-      <h1 className="text-base font-semibold mb-5">Experiences</h1>
+      <h1 className="text-base font-semibold mb-5 underline">Experiences</h1>
       <div className="space-y-6">
         {expConfig.map((experience) => (
           <div

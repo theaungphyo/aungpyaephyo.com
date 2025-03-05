@@ -1,5 +1,6 @@
 import { metadata } from '@/lib/metadata';
 import { cn } from '@/lib/utils';
+import { ThemeProvider } from 'next-themes';
 import { JetBrains_Mono } from 'next/font/google';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 import './globals.css';
@@ -24,10 +25,20 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={cn(Jetbrains_font.className, 'h-full antialiased relative')}
+        className={cn(
+          Jetbrains_font.className,
+          'h-full antialiased relative bg-background',
+        )}
       >
-        <div className="absolute inset-0 grid-pattern -z-20 pointer-events-none"></div>
-        <ViewTransition>{children}</ViewTransition>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <div className="absolute inset-0 grid-pattern -z-20 pointer-events-none"></div>
+          <ViewTransition>{children}</ViewTransition>
+        </ThemeProvider>
       </body>
     </html>
   );
