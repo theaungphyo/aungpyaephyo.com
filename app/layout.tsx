@@ -1,7 +1,10 @@
 import { metadata } from '@/lib/metadata';
 import { cn } from '@/lib/utils';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ThemeProvider } from 'next-themes';
 import { JetBrains_Mono } from 'next/font/google';
+import Script from 'next/script';
 import { unstable_ViewTransition as ViewTransition } from 'react';
 import './globals.css';
 
@@ -39,6 +42,27 @@ export default function RootLayout({
           <div className="absolute inset-0 grid-pattern -z-20 pointer-events-none"></div>
           <ViewTransition>{children}</ViewTransition>
         </ThemeProvider>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
+        />
+        <Script id="" strategy="lazyOnload">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+              });
+          `}
+        </Script>
+        <Script
+          async
+          src={'https://cloud.umami.is/script.js'}
+          data-website-id={process.env.UMAMI_WEBSITE_ID}
+        />
+        <VercelAnalytics mode={'production'} />
+        <SpeedInsights />
       </body>
     </html>
   );

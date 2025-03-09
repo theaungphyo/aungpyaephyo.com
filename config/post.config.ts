@@ -20,4 +20,11 @@ export const postConfig = [
     description:
       'Learn how to create reusable components with Tailwind CSS, clsx, and class-variance-authority for optimized styling in React applications.',
   },
+  {
+    title: 'Next.js 13 with Prettier',
+    publishedAt: '2023-12-20',
+    description:
+      'Learn how to set up Next.js 13 with Prettier for automatic code formatting, ESLint configuration, and Tailwind CSS integration.',
+    slug: '/n/prettier',
+  },
 ];
