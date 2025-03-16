@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed7ed15-7e25-4528-8918-b5518bdf6ab8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/components/home/blog.home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/blog.home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/work.home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/work.home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/n/prettier/page.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/app/n/prettier/page.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/name.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/name.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/mode-toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/mode-toggle.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +76,7 @@
       <workItem from="1741176707964" duration="2837000" />
       <workItem from="1741489441633" duration="4432000" />
       <workItem from="1741574390319" duration="2000" />
-      <workItem from="1742093111802" duration="1189000" />
+      <workItem from="1742093111802" duration="3707000" />
     </task>
     <servers />
   </component>

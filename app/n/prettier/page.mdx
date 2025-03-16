@@ -5,58 +5,57 @@ export async function generateMetadata() {
   return createBlogMetadata('/n/prettier');
 }
 
-<NameTransition className="mb-8 pt-0 text-base" isNavigate />#
+<NameTransition className="mb-8 pt-0 text-base" isNavigate />
 
-### Step 1: Create a New Next.js Project
+# Next.js 13 with prettier
 
-```shell
-pnpm create next-app
+### Step 1: New Next.js Project
+
+```bash
+pnpm create next-app@latest
 ```
 
 ### Step 2: Install Prettier
 
-```shell
+```bash
 pnpm add -D prettier
 ```
 
-### Step 3: Set up Prettier and ESLint without Conflicts
+### Step 3: Prettier + ESLint
 
-```shell
+```bash
 pnpm add -D eslint-config-prettier
 ```
 
-.eslintrc.json
+`.eslintrc.json`
 
 ```json
-{ "extends": ["next", "prettier"] }
+{ "extends": ["next/core-web-vitals", "prettier"] }
 ```
 
-### Step 4: Install and Configure Tailwind CSS
+### Step 4: Install Tailwind CSS
 
-```shell
+```bash
 pnpm add -D tailwindcss postcss autoprefixer
-
-pnpm tailwindcss init -p
+pnpm dlx tailwindcss init -p
 ```
 
-```typescript
+`tailwind.config.js`
+
+```javascript
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
-
-    // Or if using \`src\` directory:
     './src/**/*.{js,ts,jsx,tsx}',
   ],
-  theme: {
-    extend: {},
-  },
+  theme: { extend: {} },
   plugins: [],
 };
 ```
 
-global.css
+`global.css`
 
 ```css
 @tailwind base;
@@ -64,27 +63,47 @@ global.css
 @tailwind utilities;
 ```
 
-### Step 6: Automatically Sort Tailwind Classes with Prettier
+### Step 5: Sort Tailwind Classes
 
-```shell
+```bash
 pnpm add -D prettier-plugin-tailwindcss
-
 touch .prettierrc.json
 ```
 
+`.prettierrc.json`
+
 ```json
-"trailingComma": "es5",
-"semi": true,
-"tabWidth": 2,
-"singleQuote": true,
-"jsxSingleQuote": true,
-"plugins": ["prettier-plugin-tailwindcss"]
+{
+  "trailingComma": "es5",
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
 ```
 
-### Step 7: Configure scripts
+### Step 6: Scripts
+
+`package.json`
 
 ```json
-"scripts" : {
- "format": "prettier --check --ignore-path .gitignore .",
- "format:fix": "prettier --write --ignore-path .gitignore ." }
+"scripts": {
+  "format": "prettier --check --ignore-path .gitignore .",
+  "format:fix": "prettier --write --ignore-path .gitignore ."
+}
+```
+
+### Step 7: Test
+
+`components/Test.jsx`
+
+```jsx
+export default function Test() {
+  return (
+    <div className="bg-gray-800 text-white p-6 rounded-lg shadow-md flex justify-center">
+      <h1 className="text-2xl font-bold">Prettier Works!</h1>
+    </div>
+  );
+}
 ```

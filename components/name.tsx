@@ -13,12 +13,16 @@ export function NameTransition({
 }) {
   return (
     <ViewTransition>
-      <div className="w-full flex justify-between items-center  pt-12 ">
+      <div
+        className={cn(
+          'w-full flex justify-between items-center  pt-12 ',
+          className,
+        )}
+      >
         <Link
           href="/"
           className={cn(
             'group w-full flex items-center gap-2 font-medium cursor-pointer',
-            className,
           )}
         >
           {isNavigate && (
