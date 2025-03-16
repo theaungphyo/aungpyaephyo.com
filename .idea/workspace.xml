@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fed7ed15-7e25-4528-8918-b5518bdf6ab8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/n/prettier/page.mdx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ui/mode-toggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/n/clsx/page.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/app/n/clsx/page.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/n/git/page.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/app/n/git/page.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/n/next-og/page.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/app/n/next-og/page.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/blog.home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/blog.home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/work.home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/work.home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/name.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/name.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/post.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/post.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/metadata.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/metadata.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mdx-components.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/mdx-components.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="fed7ed15-7e25-4528-8918-b5518bdf6ab8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,6 +72,7 @@
       <workItem from="1741159070342" duration="319000" />
       <workItem from="1741176707964" duration="2837000" />
       <workItem from="1741489441633" duration="4432000" />
+      <workItem from="1741574390319" duration="2000" />
     </task>
     <servers />
   </component>
