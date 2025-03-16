@@ -4,7 +4,9 @@ import Image from 'next/image';
 const WorkHome = () => {
   return (
     <div className="p-5 container">
-      <h1 className="text-base font-semibold mb-5 underline text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">Experiences</h1>
+      <h1 className="text-base font-semibold mb-5 underline text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
+        Experiences
+      </h1>
       <div className="space-y-6">
         {expConfig.map((experience) => (
           <div

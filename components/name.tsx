@@ -1,8 +1,8 @@
+import { ModeSwitcher } from '@/components/ui/mode-toggle';
 import { cn } from '@/lib/utils';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { unstable_ViewTransition as ViewTransition } from 'react';
-import { ModeSwitcher } from '@/components/ui/mode-toggle';
 
 export function NameTransition({
   className,
@@ -29,32 +29,32 @@ export function NameTransition({
             aria-hidden="true"
             className="block overflow-hidden group relative"
           >
-          <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
-            {'Aung Pyae Phyo'.split('').map((letter, index) => (
-              <span
-                key={index}
-                className="inline-block"
-                style={{ transitionDelay: `${index * 25}ms` }}
-              >
-                {letter === ' ' ? '\u00A0' : letter}
-              </span>
-            ))}
+            <span className="inline-block transition-all duration-300 ease-in-out group-hover:-translate-y-full whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
+              {'Aung Pyae Phyo'.split('').map((letter, index) => (
+                <span
+                  key={index}
+                  className="inline-block"
+                  style={{ transitionDelay: `${index * 25}ms` }}
+                >
+                  {letter === ' ' ? '\u00A0' : letter}
+                </span>
+              ))}
+            </span>
+            <span className="inline-block absolute left-0 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
+              {'Aung Pyae'.split('').map((letter, index) => (
+                <span
+                  key={index}
+                  className="inline-block"
+                  style={{ transitionDelay: `${index * 25}ms` }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </span>
           </span>
-          <span className="inline-block absolute left-0 top-0 transition-all duration-300 ease-in-out translate-y-full group-hover:translate-y-0 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-500 dark:from-purple-300 dark:to-orange-200">
-            {'Aung Pyae'.split('').map((letter, index) => (
-              <span
-                key={index}
-                className="inline-block"
-                style={{ transitionDelay: `${index * 25}ms` }}
-              >
-                {letter}
-              </span>
-            ))}
-          </span>
-        </span>
         </Link>
         <div>
-          <ModeSwitcher/>
+          <ModeSwitcher />
         </div>
       </div>
     </ViewTransition>

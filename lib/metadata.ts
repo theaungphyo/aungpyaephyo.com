@@ -56,13 +56,6 @@ export const metadata: Metadata = {
   },
 };
 
-type blogMetadata = {
-  title: string;
-  description: string;
-  image?: string;
-  publishedTime: string;
-  slug: string;
-};
 export const createBlogMetadata = (postSlug: string) => {
   const post = postConfig.find((post) => post.slug === postSlug);
   if (!post) {
@@ -71,7 +64,7 @@ export const createBlogMetadata = (postSlug: string) => {
 
   const { title, description, slug, publishedAt } = post;
 
-  let ogImage = `${siteConfig.url}/og?title=${title}&description=${description}`;
+  const ogImage = `${siteConfig.url}/og?title=${title}&description=${description}`;
   return {
     title,
     description,

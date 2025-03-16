@@ -34,7 +34,7 @@ const HeroHome = () => {
         .
         <br />
         <br />
-        I&apos;m {siteConfig.name}, born in Kyaukse. I have been coding for{' '}
+        I&apos;m {siteConfig.name}. I have been coding for{' '}
         {new Date().getFullYear() - 2022} years. As a web developer, I
         specialize in full-stack web development. In addition to coding, I
         create content on my{' '}
