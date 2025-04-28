@@ -17,6 +17,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2tsfBLFxGo1VmgY0QTWsLSNSYHj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -48,6 +51,21 @@
       <recent name="$PROJECT_DIR$/app/(home)" />
     </key>
   </component>
+  <component name="RunManager" selected="npm.Next.js: server-side">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+    <configuration name="Next.js: server-side" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -67,6 +85,10 @@
       <workItem from="1741158528023" duration="346000" />
       <workItem from="1741158940376" duration="42000" />
       <workItem from="1741159070342" duration="319000" />
+      <workItem from="1741176707964" duration="2837000" />
+      <workItem from="1741489441633" duration="4432000" />
+      <workItem from="1741574390319" duration="2000" />
+      <workItem from="1742093111802" duration="4351000" />
     </task>
     <servers />
   </component>

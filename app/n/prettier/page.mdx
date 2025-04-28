@@ -1,0 +1,109 @@
+import { NameTransition } from '@/components/name';
+import { createBlogMetadata } from '@/lib/metadata';
+
+export async function generateMetadata() {
+  return createBlogMetadata('/n/prettier');
+}
+
+<NameTransition className="mb-8 pt-0 text-base" isNavigate />
+
+# Next.js 13 with prettier
+
+### Step 1: New Next.js Project
+
+```bash
+pnpm create next-app@latest
+```
+
+### Step 2: Install Prettier
+
+```bash
+pnpm add -D prettier
+```
+
+### Step 3: Prettier + ESLint
+
+```bash
+pnpm add -D eslint-config-prettier
+```
+
+`.eslintrc.json`
+
+```json
+{ "extends": ["next/core-web-vitals", "prettier"] }
+```
+
+### Step 4: Install Tailwind CSS
+
+```bash
+pnpm add -D tailwindcss postcss autoprefixer
+pnpm dlx tailwindcss init -p
+```
+
+`tailwind.config.js`
+
+```javascript
+module.exports = {
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: { extend: {} },
+  plugins: [],
+};
+```
+
+`global.css`
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Step 5: Sort Tailwind Classes
+
+```bash
+pnpm add -D prettier-plugin-tailwindcss
+touch .prettierrc.json
+```
+
+`.prettierrc.json`
+
+```json
+{
+  "trailingComma": "es5",
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
+}
+```
+
+### Step 6: Scripts
+
+`package.json`
+
+```json
+"scripts": {
+  "format": "prettier --check --ignore-path .gitignore .",
+  "format:fix": "prettier --write --ignore-path .gitignore ."
+}
+```
+
+### Step 7: Test
+
+`components/Test.jsx`
+
+```jsx
+export default function Test() {
+  return (
+    <div className="bg-gray-800 text-white p-6 rounded-lg shadow-md flex justify-center">
+      <h1 className="text-2xl font-bold">Prettier Works!</h1>
+    </div>
+  );
+}
+```

@@ -1,6 +1,36 @@
 import Link from 'next/link';
-import { ComponentPropsWithoutRef } from 'react';
+import { ComponentPropsWithoutRef, createElement, ReactNode } from 'react';
 import { highlight } from 'sugar-high';
+
+function slugify(str: string) {
+  return str
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/&/g, '-and-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/--+/g, '-');
+}
+
+function createHeading(level: number) {
+  // eslint-disable-next-line react/display-name
+  return ({ children }: { children: ReactNode }) => {
+    const slug = slugify(children as string);
+    return createElement(
+      `h${level}`,
+      { id: slug },
+      [
+        createElement('a', {
+          href: `#${slug}`,
+          key: `link-${slug}`,
+          className: 'anchor',
+        }),
+      ],
+      children,
+    );
+  };
+}
 
 type HeadingProps = ComponentPropsWithoutRef<'h1'>;
 type ParagraphProps = ComponentPropsWithoutRef<'p'>;
@@ -19,13 +49,6 @@ const components = {
       {...props}
     />
   ),
-  h3: (props: HeadingProps) => (
-    <h3
-      className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"
-      {...props}
-    />
-  ),
-  h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
   p: (props: ParagraphProps) => (
     <p className="text-gray-800 dark:text-zinc-300 leading-snug" {...props} />
   ),

@@ -28,8 +28,8 @@ export const expConfig = [
     companyLink: 'https://sithucenter.com/',
     description:
       'I work at SiThu Computer Training Center  in August 1, 2024 as Web developer.',
-    durationStart: 'Aug 2024',
-    durationEnd: 'Present',
+    durationStart: 'May 2024',
+    durationEnd: 'March 2025',
     logo: '/company/sithu.jpg',
     type: 'Onsite - Full-time',
   },

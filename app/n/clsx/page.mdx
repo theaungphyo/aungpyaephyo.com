@@ -1,15 +1,8 @@
 import { NameTransition } from '@/components/name';
-import { postConfig } from '@/config/post.config';
+import { createBlogMetadata } from '@/lib/metadata';
 
 export async function generateMetadata() {
-  const post = postConfig.find((post) => post.slug === '/n/git');
-  return {
-    title: post.title,
-    description: post.description,
-    alternates: {
-      canonical: post.slug,
-    },
-  };
+  return createBlogMetadata('/n/prettier');
 }
 
 <NameTransition className="mb-8 pt-0 text-base" isNavigate />
