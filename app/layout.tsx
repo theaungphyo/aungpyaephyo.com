@@ -30,7 +30,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className={cn(
           Jetbrains_font.className,
-          'h-full antialiased relative bg-background',
+          'antialiased relative bg-background',
         )}
       >
         <ThemeProvider
@@ -39,7 +39,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange={false}
         >
-          <div className="absolute inset-0 grid-pattern -z-20 pointer-events-none"></div>
+          <div className="absolute inset-0 -z-20 pointer-events-none"></div>
           <ViewTransition>{children}</ViewTransition>
         </ThemeProvider>
         <Script

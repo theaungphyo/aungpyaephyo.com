@@ -1,4 +1,3 @@
-import { ModeSwitcher } from '@/components/ui/mode-toggle';
 import { cn } from '@/lib/utils';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
@@ -15,7 +14,7 @@ export function NameTransition({
     <ViewTransition>
       <div
         className={cn(
-          'w-full flex justify-between items-center  pt-12 ',
+          'w-full flex justify-between items-center  pt-9 ',
           className,
         )}
       >
@@ -57,9 +56,6 @@ export function NameTransition({
             </span>
           </span>
         </Link>
-        <div>
-          <ModeSwitcher />
-        </div>
       </div>
     </ViewTransition>
   );

@@ -49,8 +49,10 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
       "@vercel/speed-insights",
-      "sharp"
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }
