@@ -22,16 +22,7 @@ const HeroHome = () => {
           write
         </Link>{' '}
         and build stuff on internet. I love working in-between product,
-        engineering and developer experience, currently at{' '}
-        <a
-          href="https://www.binaryhubz.com"
-          target="_blank"
-          rel="noreferrer"
-          className="underline"
-        >
-          BinaryHubz
-        </a>
-        .
+        engineering and developer experience.
         <br />
         <br />
         I&apos;m {siteConfig.name}. I have been coding for{' '}
@@ -48,7 +39,7 @@ const HeroHome = () => {
         <Image
           alt={siteConfig.name}
           src={'/avatar.jpg'}
-          className=" transform-gpu rounded object-cover  bg-neutral-300 dark:bg-neutral-800 scale-x-[-1]"
+          className="object-top transform-gpu rounded object-cover  bg-neutral-300 dark:bg-neutral-800 scale-x-[-1]"
           fill
         />
       </div>

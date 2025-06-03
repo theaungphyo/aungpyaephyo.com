@@ -1,17 +1,17 @@
 export const expConfig = [
-  {
-    id: 1,
-    title: 'Fullstack Developer',
-    company: 'Freelance',
-    description: 'I work at Freelance in Feb 1, 2023 as Full stack developer.',
-    durationStart: 'Feb 2022',
-    durationEnd: 'Present',
-    logo: '/company/freelance.png',
-    type: 'Freelance',
-  },
+  // {
+  //   id: 1,
+  //   title: 'Fullstack Developer',
+  //   company: 'Freelance',
+  //   description: 'I work at Freelance in Feb 1, 2023 as Full stack developer.',
+  //   durationStart: 'Feb 2022',
+  //   durationEnd: 'Present',
+  //   logo: '/company/freelance.png',
+  //   type: 'Freelance',
+  // },
   {
     id: 2,
-    title: 'Frontend Developer',
+    title: 'Developer',
     company: 'Myanmar Media Linkage',
     companyLink: 'https://mml.com.mm/',
     description:
@@ -23,9 +23,9 @@ export const expConfig = [
   },
   {
     id: 4,
-    title: 'Fullstack Developer',
+    title: 'Developer',
     company: 'SiThuLab',
-    companyLink: 'https://sithucenter.com/',
+    companyLink: 'https://www.sithucenter.com/',
     description:
       'I work at SiThu Computer Training Center  in August 1, 2024 as Web developer.',
     durationStart: 'May 2024',
@@ -35,12 +35,22 @@ export const expConfig = [
   },
   {
     id: 5,
-    title: 'Software Engineer',
+    title: 'Developer',
     company: 'BinaryHubz',
-    companyLink: 'https://binaryhubz.com/',
+    companyLink: 'https://www.binaryhubz.com/',
     logo: '/company/binary.png',
     durationStart: 'Nov 2024',
     durationEnd: 'Present',
     type: 'Remote - Part-time',
+  },
+  {
+    id: 6,
+    title: 'Developer',
+    company: 'MySOL',
+    companyLink: 'https://www.mysoltech.com/',
+    logo: '/company/mysol.png',
+    durationStart: 'May 2025',
+    durationEnd: 'Present',
+    type: 'Onsite - Full-time',
   },
 ];
