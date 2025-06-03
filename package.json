@@ -17,7 +17,7 @@
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "next": "15.3.2",
+    "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.2",
@@ -34,8 +34,8 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "eslint": "^9",
-    "eslint-config-next": "15.3.2",
-    "lucide-react": "^0.507.0",
+    "lucide-react": "^0.511.0",
+    "eslint-config-next": "15.3.3",
     "motion": "^12.4.10",
     "next-themes": "^0.4.4",
     "prettier": "^3.5.3",
@@ -49,8 +49,10 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@tailwindcss/oxide",
       "@vercel/speed-insights",
-      "sharp"
+      "sharp",
+      "unrs-resolver"
     ]
   }
 }
