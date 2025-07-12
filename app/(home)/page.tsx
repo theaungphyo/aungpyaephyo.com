@@ -1,6 +1,5 @@
 import BlogHome from '@/components/home/blog.home';
 import HeroHome from '@/components/home/hero.home';
-import WorkHome from '@/components/home/work.home';
 import { NameTransition } from '@/components/name';
 
 const Page = () => {
@@ -20,10 +19,6 @@ const Page = () => {
           <div className="border-x border-x-neutral-400/30 border-y-0">
             <BlogHome />
           </div>
-        </div>
-        <div className="h-[25px]" />
-        <div className="border-t border-t-neutral-400/30 px-5 pb-5">
-          <WorkHome />
         </div>
       </div>
     </section>
