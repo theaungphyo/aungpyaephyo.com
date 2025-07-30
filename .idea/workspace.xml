@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82e8f106-2448-4e6b-90e4-d136dcbd8cb4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(home)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(home)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home/work.home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home/work.home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ui/mode-toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/mode-toggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/exp.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/config/exp.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mdx-components.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/company/binary.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1753485283785</updated>
       <workItem from="1753485284821" duration="54000" />
-      <workItem from="1753888803996" duration="4339000" />
+      <workItem from="1753888803996" duration="4739000" />
     </task>
     <servers />
   </component>
