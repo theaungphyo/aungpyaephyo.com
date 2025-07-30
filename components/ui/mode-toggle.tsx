@@ -1,69 +1,56 @@
 'use client';
 
-import { cn } from '@/lib/utils';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
-export function ModeSwitcher() {
-  const { setTheme, resolvedTheme } = useTheme();
+interface ThemeSwitchProps {
+  className?: string;
+}
 
-  const isDark = resolvedTheme === 'dark';
-
-  const toggleTheme = React.useCallback(() => {
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
-  }, [resolvedTheme, setTheme]);
+export default function ModeSwitcher({ className = '' }: ThemeSwitchProps) {
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  // Toggle theme
+  const toggleTheme = React.useCallback(async () => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+
+    if (!document.startViewTransition || prefersReducedMotion)
+      return setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+    await document.startViewTransition(() =>
+      setTheme(resolvedTheme === 'dark' ? 'light' : 'dark'),
+    ).ready;
+  }, [resolvedTheme, setTheme]);
+
+  if (!mounted) return null;
+
   return (
-    <div
-      className={cn(
-        'flex w-16 h-8 p-1 rounded-full cursor-pointer transition-all duration-300',
-        isDark
-          ? 'bg-zinc-950 border border-zinc-800'
-          : 'bg-white border border-zinc-200',
-      )}
+    <button
       onClick={toggleTheme}
-      role="button"
-      tabIndex={0}
+      className={`relative flex h-8 w-8 items-center justify-center rounded-full text-[var(--text-color-primary)] hover:opacity-80 transition-opacity overflow-hidden ${className}`}
     >
-      <div className="flex justify-between items-center w-full">
-        <div
-          className={cn(
-            'flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300',
-            isDark
-              ? 'transform translate-x-0 bg-zinc-800'
-              : 'transform translate-x-8 bg-gray-200',
-          )}
-        >
-          {isDark ? (
-            <Moon className="w-4 h-4 text-white" strokeWidth={1.5} />
-          ) : (
-            <Sun className="w-4 h-4 text-gray-700" strokeWidth={1.5} />
-          )}
-        </div>
-        <div
-          className={cn(
-            'flex justify-center items-center w-6 h-6 rounded-full transition-transform duration-300',
-            isDark ? 'bg-transparent' : 'transform -translate-x-8',
-          )}
-        >
-          {isDark ? (
-            <Sun className="w-4 h-4 text-gray-500" strokeWidth={1.5} />
-          ) : (
-            <Moon className="w-4 h-4 text-black" strokeWidth={1.5} />
-          )}
-        </div>
-      </div>
-    </div>
+      <Sun
+        className={`absolute h-5 w-5 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+          resolvedTheme === 'light'
+            ? 'scale-100 translate-y-0 opacity-100'
+            : 'scale-50 translate-y-5 opacity-0'
+        }`}
+      />
+      <Moon
+        className={`absolute h-5 w-5 transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+          resolvedTheme === 'dark'
+            ? 'scale-100 translate-y-0 opacity-100'
+            : 'scale-50 translate-y-5 opacity-0'
+        }`}
+      />
+    </button>
   );
 }

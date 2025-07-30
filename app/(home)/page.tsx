@@ -1,14 +1,17 @@
 import BlogHome from '@/components/home/blog.home';
 import HeroHome from '@/components/home/hero.home';
+import WorkHome from '@/components/home/work.home';
 import { NameTransition } from '@/components/name';
+import ModeSwitcher from '@/components/ui/mode-toggle';
 
 const Page = () => {
   return (
     <section className="border-x border-x-neutral-400/30 max-w-fit mx-auto">
       <div>
         <div className="border-b border-b-neutral-400/30 px-5">
-          <div className="container">
-            <NameTransition />
+          <div className="container flex justify-between items-center pt-9">
+            <NameTransition className="pt-0" />
+            <ModeSwitcher />
           </div>
           <HeroHome />
         </div>
@@ -19,6 +22,10 @@ const Page = () => {
           <div className="border-x border-x-neutral-400/30 border-y-0">
             <BlogHome />
           </div>
+        </div>
+        <div className="h-[25px]" />
+        <div className="border-t border-t-neutral-400/30 px-5 pb-5">
+          <WorkHome />
         </div>
       </div>
     </section>
